@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <style>
+      :root {
+        --primary: #16a34a;
+        --primary-dark: #12813b;
+        --dark: #111827;
+      
+        --light-bg: #f8fafc;
+        --border: #e2e8f0;
+      }
+
+    
+
+      .btn-outline-custom {
+        border: 1px solid var(--border);
+        color: var(--dark);
+        padding: 11px 22px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .btn-outline-custom:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* HERO */
+
+      .hero {
+        padding: 90px 0 60px;
+        background:
+          radial-gradient(
+            circle at 80% 10%,
+            rgba(22, 163, 74, 0.1),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 10% 30%,
+            rgba(59, 130, 246, 0.07),
+            transparent 25%
+          ),
+          #fff;
+      }
+
+      .badge-soft {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 50px;
+        background: #ecfdf5;
+        color: #15803d;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+    
+
+      .hero-text {
+        max-width: 700px;
+        margin: 20px auto;
+        color: var(--muted);
+        font-size: 1.15rem;
+        line-height: 1.7;
+      }
+
+      .trust-row {
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      .trust-row i {
+        color: var(--primary);
+      }
+
+      /* PRICING */
+
+      .pricing-section {
+        padding: 40px 0 100px;
+        background: var(--light-bg);
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      .section-subtitle {
+        color: var(--muted);
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      .pricing-card {
+        position: relative;
+        height: 100%;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 35px;
+        transition: 0.25s ease;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+      }
+
+      .pricing-card.featured {
+        border: 2px solid var(--primary);
+        box-shadow: 0 20px 60px rgba(22, 163, 74, 0.12);
+      }
+
+      .popular {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #09AF72 ;
+        color: #fff;
+        padding: 7px 18px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .plan-name {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .price {
+        font-size: 3.2rem;
+        font-weight: 800;
+        letter-spacing: -2px;
+        margin-top: 12px;
+      }
+
+      .price small {
+        font-size: 15px;
+        color: var(--muted);
+        letter-spacing: 0;
+        font-weight: 500;
+      }
+
+      .price-note {
+        color: var(--muted);
+        min-height: 45px;
+        font-size: 14px;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+      }
+
+      .feature-list li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        color: #475569;
+        font-size: 15px;
+      }
+
+      .feature-list i {
+        color: var(--primary);
+        font-size: 18px;
+      }
+
+      /* FEATURES */
+
+      .features-section {
+        padding: 100px 0;
+      }
+
+      .feature-item {
+        padding: 25px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        height: 100%;
+        background: #fff;
+        transition: 0.2s ease;
+      }
+
+      .feature-item:hover {
+        border-color: #bbf7d0;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      }
+
+      .feature-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ecfdf5;
+        color: var(--primary);
+        border-radius: 12px;
+        font-size: 22px;
+        margin-bottom: 18px;
+      }
+
+      .feature-item h5 {
+        font-weight: 700;
+      }
+
+      .feature-item p {
+        color: var(--muted);
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      /* META PRICING */
+
+      .meta-section {
+        padding: 100px 0;
+        background: #f8fafc;
+      }
+
+      .info-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 30px;
+        height: 100%;
+      }
+
+      .info-number {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #ecfdf5;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        margin-bottom: 18px;
+      }
+
+      /* FAQ */
+
+      .faq-section {
+        padding: 100px 0;
+      }
+
+      .accordion-item {
+        border: 1px solid var(--border) !important;
+        border-radius: 12px !important;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .accordion-button {
+        font-weight: 700;
+        padding: 20px;
+        box-shadow: none !important;
+      }
+
+      .accordion-button:not(.collapsed) {
+        color: var(--primary);
+        background: #f0fdf4;
+      }
+
+      .accordion-body {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+
+    </style>
+    <!-- ==================== NAVBAR ==================== -->
+   <header class="nav" data-nav data-testid="nav-sticky-header">
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <a href="/home.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
+        </a>
+        <ul class="nav-links mb-0 ps-0">
+          <li>
+            <a href="home.html" data-testid="nav-link-products">Home</a>
+          </li>
+          <li>
+            <a href="about.html" data-testid="nav-link-products">About</a>
+          </li>
+          <li>
+            <a href="pricing.html" data-testid="nav-link-solutions">Pricing</a>
+          </li>
+          <li>
+            <a href="integration.html" data-testid="nav-link-whatsapp-api"
+              >Integrations</a
+            >
+          </li>
+          <li>
+            <a href="solutions.html" data-testid="nav-link-whatsapp-api"
+              >Solutions</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" data-testid="nav-link-whatsapp-api"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">Login</a>
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn"
+            >Sign Up</a
+          >
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+            >Book a Demo</a
+          >
+        </div>
+        <button
+          class="nav-burger"
+          data-testid="nav-mobile-menu-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="ic ic-20 icon-open"><use href="#i-menu" /></svg>
+          <svg class="ic ic-20 icon-close" style="display: none">
+            <use href="#i-x" />
+          </svg>
+        </button>
+      </nav>
+      <div
+        class="mobile-panel"
+        data-testid="nav-mobile-panel"
+        data-mobile-panel
+      >
+        <ul>
+          <li><a class="mlink" href="about.html">About</a></li>
+          <li><a class="mlink" href="pricing.html">Pricing</a></li>
+          <li><a class="mlink" href="contact.html">Integrations</a></li>
+          <li><a class="mlink" href="contact.html">Solutions</a></li>
+          <li><a class="mlink" href="contact.html">contact</a></li>
+        </ul>
+        <div class="mctas">
+          <a href="#cta" class="m-start" data-testid="nav-mobile-start-btn"
+            >Sign Up</a
+          >
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="m-demo"
+            data-testid="nav-mobile-demo-btn"
+            >Book a Demo</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- HERO -->
+    <section class="hero text-center">
+      <div class="container">
+        <div class="badge-soft mb-4">
+          <i class="bi bi-whatsapp"></i>
+          WhatsApp Business Platform
+        </div>
+
+        <h1>
+          Simple pricing for
+          <span>powerful WhatsApp</span>
+          communication
+        </h1>
+
+        <p class="hero-text">
+         Manage customer conversations, teams, broadcasts, automation and customer engagement from one powerful platform.
+        </p>
+        <p class="hero-text">Choose the plan that fits your business and start building better customer conversations with 11za.</p>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            View Plans
+            <i class="bi bi-arrow-down ms-2"></i>
+          </a>
+
+          <a href="#" class="btn btn-outline-custom btn-lg"> Talk to Sales </a>
+        </div>
+
+        <div
+          class="trust-row d-flex justify-content-center gap-4 flex-wrap mt-5"
+        >
+          <span>
+            <i class="bi bi-check-circle-fill me-1"></i>
+            No hidden platform fees
+          </span>
+
+          <span>
+            <i class="bi bi-check-circle-fill me-1"></i>
+            Team inbox
+          </span>
+
+          <span>
+            <i class="bi bi-check-circle-fill me-1"></i>
+            WhatsApp Business API
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="badge-soft mb-3">Choose your plan</div>
+
+          <h2 class="section-title">Plans that fit your business</h2>
+
+          <p class="section-subtitle mt-3">
+            Start with a plan that matches your requirements. Upgrade or
+            customize your setup as your business grows.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- 6 MONTH -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card">
+              <div class="plan-name">Half Yearly</div>
+
+              <h3 class="price">
+                ₹10,000
+                <small>+ GST</small>
+              </h3>
+
+              <p class="price-note">6 months of 11za platform access.</p>
+
+              <hr />
+
+              <ul class="feature-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Realtime Chat
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Bulk Broadcast Messages
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Teams & Permissions
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Customer Management
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Auto Reply Messages
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Quick Replies
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-outline-custom w-100"> Contact Us </a>
+            </div>
+          </div>
+
+          <!-- YEARLY -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card featured">
+              <div class="popular">MOST POPULAR</div>
+
+              <div class="plan-name">Yearly</div>
+
+              <h3 class="price">
+                ₹15,000
+                <small>+ GST</small>
+              </h3>
+
+              <p class="price-note">12 months of 11za platform access.</p>
+
+              <hr />
+
+              <ul class="feature-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Everything in Half Yearly
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  One Customer to Multiple Agents
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Private Team Messages
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Interactive Buttons
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Files Manager
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Rich Multimedia Support
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-primary w-100"> Get Started </a>
+            </div>
+          </div>
+
+          <!-- CUSTOM -->
+          <div class="col-lg-4 col-md-8">
+            <div class="pricing-card">
+              <div class="plan-name">Custom</div>
+
+              <h3 class="price">
+                ₹50,000
+                <small>+</small>
+              </h3>
+
+              <p class="price-note">
+                One-time setup cost extra. Designed for businesses with custom
+                requirements.
+              </p>
+
+              <hr />
+
+              <ul class="feature-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Custom implementation
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Advanced requirements
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Dedicated assistance
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Business onboarding
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Custom integrations
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Enterprise requirements
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-outline-custom w-100">
+                Talk to Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="badge-soft mb-3">Included with 11za</div>
+
+          <h2 class="section-title">Everything your team needs</h2>
+
+          <p class="section-subtitle mt-3">
+            Your 11za subscription gives your team access to the tools needed to manage customer communication from one platform.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <h5>Realtime Chat</h5>
+              <p>Manage customer conversations from a centralized inbox.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5>Teams & Permissions</h5>
+              <p>Create teams and control access based on roles.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <h5>Bulk Broadcast</h5>
+              <p>Send approved WhatsApp communications to your customers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <h5>Auto Assignment</h5>
+              <p>Route conversations to the right agent automatically.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-person-lines-fill"></i>
+              </div>
+              <h5>Customer Management</h5>
+              <p>Organize customer information and conversations.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-lightning"></i>
+              </div>
+              <h5>Automation</h5>
+              <p>Use auto replies and quick replies to respond faster.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-images"></i>
+              </div>
+              <h5>Rich Media</h5>
+              <p>Support multimedia content and customer files.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-folder2-open"></i>
+              </div>
+              <h5>Files Manager</h5>
+              <p>Keep your business files organized and accessible.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="bi bi-ui-checks-grid"></i>
+              </div>
+              <h5>Interactive Messaging</h5>
+              <p>Create engaging WhatsApp interactions using buttons.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHATSAPP / META PRICING -->
+    <section class="meta-section">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-7">
+            <div class="badge-soft mb-3">WhatsApp conversation pricing</div>
+
+            <h2 class="section-title">
+              Your 11za plan and WhatsApp charges are separate
+            </h2>
+          </div>
+
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <p class="text-secondary">
+              Your subscription gives you access to the 11za platform.
+              WhatsApp/Meta conversation charges may apply separately based on
+              the applicable conversation category and rules.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="info-card">
+              <div class="info-number">01</div>
+
+              <h5 class="fw-bold">Customer initiated</h5>
+
+              <p class="text-secondary">
+                When a customer starts a conversation and your business responds
+                within the applicable service window.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="info-card">
+              <div class="info-number">02</div>
+
+              <h5 class="fw-bold">Business initiated</h5>
+
+              <p class="text-secondary">
+                Business-initiated communication can create a charge depending
+                on the applicable WhatsApp pricing rules.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="info-card">
+              <div class="info-number">03</div>
+
+              <h5 class="fw-bold">Conversation category</h5>
+
+              <p class="text-secondary">
+                Conversation charges depend on the applicable category and
+                WhatsApp's current pricing model.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="http://localhost/11za-wordpress/wp-content/uploads/2026/09/NEW-WABA-Templates-Rules.pdf" class="btn btn-outline-custom" target="_blank">
+            View WhatsApp Pricing Details
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="badge-soft mb-3">FAQ</div>
+
+          <h2 class="section-title">Common questions</h2>
+
+          <p class="section-subtitle mt-3">
+            Everything you need to know before getting started.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    What is the price per team member?
+                  </button>
+                </h2>
+
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Additional team members are priced at ₹2,000 per user per
+                    year.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                  Whatsapp is free. Why do i pay money?
+                  </button>
+                </h2>
+
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                   However, WhatsApp charges for business account, which is used as a sales channel, to communicate with customers and grow at a large scale.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    What are the training charges?
+                  </button>
+                </h2>
+
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Training is available for ₹2,500 for a 4-hour training
+                    session.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                   Can I use my existing WhatsApp number with 11za?
+                  </button>
+                </h2>
+
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+
+                      No, you cannot use an existing WhatsApp number with 11za.
+                    </p>
+                    <p>
+                      Another thing to keep in mind is that if you have a number that is already being used with the WhatsApp Business API then it can be migrated to 11za
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                  >
+                    Do I need to keep my smartphone on all the time to use 11za?
+                  </button>
+                </h2>
+
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    You will only need the phone to receive the activation OTP. Once you are verified, we don`t need the phone anymore for WhatsApp. You can continue to use it for making regular phone calls, receiving SMS text messages etc. But you can`t use WhatsApp on that phone with that number, again. You will need to use WhatsApp via the 11za dashboard or the Official WhatsApp API.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq6"
+                  >
+                   Once my number is activated, can I re-install WhatsApp on my phone?
+                  </button>
+                </h2>
+
+                <div
+                  id="faq6"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    That could be like looking of deployation of WhatsApp on 2 numbers. OnceAPI is set up, it can’t be used on a phone.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to simplify WhatsApp communication?</h2>
+
+          <p>
+            Start managing customer conversations, teams and WhatsApp campaigns
+            from one powerful platform.
+          </p>
+
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
+
+            <a href="https://calendly.com/engees/schedule-a-demo" class="btn btn-outline-light btn-lg"> Contact Sales </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+    <footer class="position-relative">
+      <div class="footer-layer-effect">
+       
+      </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">11<span>za</span>.</div>
+
+            <p>
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Solutions</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Other Links</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Api Documentation</a>
+            <a href="#">11za Documentation</a>
+
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <a href="#"
+              ><a href="tel:(+91) 97266 54060"
+                ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
+              ></a
+            >
+           <a href="mailto:hello@11za.com"><i class="fa-solid  fa-envelope me-3 "></i> hello@11za.com</a>
+           <a href="#"><i class="fa-solid fa-clock me-3 "></i> Mon - Sat | 10am - 7pm</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 11za. All rights reserved. </span>
+
+        <div>
+          <ul class="social-nav widget social-widget d-flex align-items-center gap-3">
+							<li><a href="https://www.linkedin.com/company/11za" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/11zaofficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/11zaofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/11zaofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							
+						</ul>
+        </div>
+        </div>
+      </div>
+    </footer>
+<script src="assets/js/script.js" defer></script>
+<!-- Bootstrap JS --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,1622 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <style>
+      /* ============================================================
+   HERO
+============================================================ */
+
+      .solutions-hero {
+        position: relative;
+
+        padding-top: 155px;
+        padding-bottom: 110px;
+
+        background:
+          radial-gradient(
+            circle at 50% 5%,
+            rgba(16, 185, 129, 0.11),
+            transparent 35%
+          ),
+          linear-gradient(to bottom, #ffffff, #f8fafc);
+      }
+
+      .hero-grid {
+        position: absolute;
+
+        inset: 0;
+
+        opacity: 0.45;
+
+        background-image:
+          linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+
+        background-size: 44px 44px;
+
+        mask-image: linear-gradient(to bottom, black, transparent 75%);
+      }
+
+      .eyebrow,
+      .section-eyebrow,
+      .cta-eyebrow {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        color: var(--emerald-700);
+
+        font-size: 11px;
+        font-weight: 800;
+
+        letter-spacing: 0.12em;
+      }
+
+      .eyebrow {
+        padding: 7px 13px;
+
+        border: 1px solid var(--emerald-200);
+
+        border-radius: 999px;
+
+        background: var(--emerald-50);
+      }
+
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: var(--emerald-500);
+      }
+
+      .hero-title {
+        margin-top: 24px;
+
+        color: var(--slate-900);
+
+        font-size: clamp(42px, 6vw, 72px);
+
+        line-height: 1.03;
+
+        font-weight: 800;
+
+        letter-spacing: -0.045em;
+      }
+
+      .hero-title span {
+        color:#09AF72 ;
+      }
+
+      .hero-description {
+        max-width: 690px;
+
+        margin: 24px auto 0;
+
+        color: var(--slate-600);
+
+        font-size: 18px;
+
+        line-height: 1.7;
+      }
+
+
+      .hero-secondary-btn {
+        color: var(--slate-700);
+
+        border: 1px solid var(--slate-200);
+
+        background: #fff;
+      }
+
+      .hero-note {
+        margin-top: 18px;
+
+        color: var(--slate-500);
+
+        font-size: 12px;
+      }
+
+      .hero-note i {
+        color: var(--emerald-600);
+
+        margin-right: 5px;
+      }
+
+      /* ============================================================
+   HERO DASHBOARD
+============================================================ */
+
+      .solution-dashboard-wrapper {
+        position: relative;
+
+        max-width: 1080px;
+
+        margin: 75px auto 0;
+      }
+
+
+      /* ============================================================
+   INTRO
+============================================================ */
+
+      .intro-section {
+        padding: 120px 0;
+
+        background: #fff;
+      }
+
+      .section-eyebrow {
+        margin-bottom: 15px;
+      }
+
+      .section-title {
+        margin: 0;
+
+        color: var(--slate-900);
+
+        font-size: clamp(34px, 4vw, 50px);
+
+        line-height: 1.08;
+
+        font-weight: 800;
+
+        letter-spacing: -0.035em;
+      }
+
+      .section-title span {
+        display: block;
+
+        color: var(--emerald-600);
+      }
+
+      .section-text {
+        max-width: 600px;
+
+        margin-top: 20px;
+
+        color: var(--slate-600);
+
+        font-size: 16px;
+
+        line-height: 1.75;
+      }
+
+      .text-link {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 12px;
+
+        color: var(--emerald-600);
+
+               font-weight: 700;
+      }
+
+      /* Capability */
+
+      .capability-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
+      }
+
+      .capability-card {
+        padding: 24px;
+
+        border: 1px solid var(--slate-100);
+
+        border-radius: var(--radius-lg);
+
+        background: #fff;
+
+        box-shadow: var(--shadow-card);
+      }
+
+      .capability-icon {
+        display: grid;
+
+        place-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        margin-bottom: 18px;
+
+        border-radius: 10px;
+
+        color: var(--emerald-600);
+
+        background: var(--emerald-50);
+
+        font-size: 18px;
+      }
+
+      .capability-card h5 {
+        margin-bottom: 8px;
+
+        color: var(--slate-800);
+
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .capability-card p {
+        margin: 0;
+
+        color: var(--slate-500);
+/* 
+        font-size: 13px; */
+
+        line-height: 1.6;
+      }
+
+      /* ============================================================
+   INDUSTRIES
+============================================================ */
+
+      .industries-section {
+        padding: 120px 0;
+
+        background: var(--slate-50);
+      }
+
+      .section-heading {
+        margin-bottom: 55px;
+      }
+
+      .industry-card {
+        height: 100%;
+
+        padding: 28px;
+
+        border: 1px solid var(--slate-200);
+
+        border-radius: var(--radius-xl);
+
+        background: #fff;
+
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .industry-card:hover {
+        transform: translateY(-5px);
+
+        border-color: var(--emerald-200);
+
+        box-shadow: var(--shadow-lg);
+      }
+
+      .industry-card.featured {
+        border-color: var(--emerald-200);
+
+        background: linear-gradient(145deg, #ffffff, var(--emerald-50));
+      }
+
+      .industry-top {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        margin-bottom: 25px;
+      }
+
+      .industry-icon-large {
+        display: grid;
+
+        place-items: center;
+
+        width: 48px;
+        height: 48px;
+
+        border-radius: 13px;
+
+        color: var(--emerald-600);
+
+        background: var(--emerald-50);
+
+        font-size: 21px;
+      }
+
+      .industry-number {
+        color: var(--slate-300);
+
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .industry-card h3 {
+        margin-bottom: 12px;
+
+        color: var(--slate-800);
+
+        font-size: 23px;
+        font-weight: 750;
+      }
+
+      .industry-card > p {
+        min-height: 75px;
+
+        margin-bottom: 22px;
+
+        color: var(--slate-500);
+
+        line-height: 1.65;
+      }
+
+      .industry-card ul {
+        list-style: none;
+
+        padding: 0;
+        margin: 0 0 25px;
+      }
+
+      .industry-card li {
+        display: flex;
+
+        gap: 8px;
+
+        margin-bottom: 10px;
+
+        color: var(--slate-600);
+
+      }
+
+      .industry-card li i {
+        color: var(--emerald-500);
+
+        font-size: 14px;
+      }
+
+      .industry-link {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 7px;
+
+        color: var(--emerald-600);
+
+        /* font-size: 12px; */
+        font-weight: 750;
+      }
+
+      .industry-link:hover {
+        color: var(--emerald-800);
+      }
+
+      .industry-more {
+        background: linear-gradient(145deg, var(--slate-900), var(--slate-800));
+
+        border-color: var(--slate-800);
+      }
+
+      .industry-more h3,
+      .industry-more > p {
+        color: #fff;
+      }
+
+      .industry-more > p {
+        color: var(--slate-300);
+      }
+
+      .industry-more .industry-number {
+        color: var(--slate-500);
+      }
+
+      .custom-solution {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 9px;
+
+        margin-bottom: 25px;
+      }
+
+      .custom-solution span {
+        color: var(--slate-300);
+
+      }
+
+      .custom-solution i {
+        margin-right: 5px;
+
+        color: var(--emerald-400);
+      }
+
+      /* ============================================================
+   WORKFLOW
+============================================================ */
+
+      .workflow-section {
+        padding: 120px 0;
+
+        background: #fff;
+      }
+
+      .workflow-box {
+        padding: 30px;
+
+        border: 1px solid var(--slate-100);
+
+        border-radius: var(--radius-xl);
+
+        background: var(--slate-50);
+      }
+
+      .workflow-step {
+        display: grid;
+
+        grid-template-columns: 40px 50px 1fr;
+
+        align-items: center;
+
+        gap: 15px;
+      }
+
+      .workflow-number {
+        color: var(--slate-300);
+
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .workflow-icon {
+        display: grid;
+
+        place-items: center;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 11px;
+
+        color: var(--emerald-600);
+
+        background: #fff;
+
+        border: 1px solid var(--emerald-100);
+      }
+
+      .workflow-step h5 {
+        margin: 0 0 5px;
+
+        color: var(--slate-800);
+
+        /* font-size: 14px; */
+        font-weight: 700;
+      }
+
+      .workflow-step p {
+        margin: 0;
+
+        color: var(--slate-500);
+
+        line-height: 1.6;
+      }
+
+      .workflow-line {
+        width: 1px;
+
+        height: 28px;
+
+        margin-left: 59px;
+
+        background: var(--slate-200);
+      }
+
+      /* ============================================================
+   FEATURES
+============================================================ */
+
+      .features-section {
+        padding: 120px 0;
+
+        background: var(--slate-50);
+      }
+
+      .feature-card {
+        height: 100%;
+
+        padding: 28px;
+
+        border: 1px solid var(--slate-200);
+
+        border-radius: var(--radius-lg);
+
+        background: #fff;
+      }
+
+      .feature-card > i {
+        display: grid;
+
+        place-items: center;
+
+        width: 44px;
+        height: 44px;
+
+        margin-bottom: 18px;
+
+        border-radius: 11px;
+
+        color: var(--emerald-600);
+
+        background: var(--emerald-50);
+
+        font-size: 19px;
+      }
+
+      .feature-card h5 {
+        color: var(--slate-800);
+
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .feature-card p {
+        margin: 10px 0 0;
+
+        color: var(--slate-500);
+
+        font-size: 13px;
+
+        line-height: 1.65;
+      }
+
+
+      /* ============================================================
+   RESPONSIVE
+============================================================ */
+
+      @media (max-width: 991.98px) {
+        .navbar .navbar-collapse {
+          padding: 20px 0;
+        }
+
+        .navbar .d-flex {
+          margin-top: 10px;
+        }
+
+        .solutions-hero {
+          padding-top: 130px;
+        }
+
+        .dashboard-sidebar {
+          width: 150px;
+        }
+
+        .dashboard-content {
+          min-height: 430px;
+        }
+
+      
+
+        .cta-buttons {
+          margin-top: 30px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .hero-title {
+          font-size: 43px;
+        }
+
+        .hero-description {
+          font-size: 16px;
+        }
+
+        .solution-dashboard-wrapper {
+          margin-top: 50px;
+        }
+
+        .dashboard-sidebar {
+          display: none;
+        }
+
+        .dashboard-main {
+          padding: 15px;
+        }
+
+        .mini-industries {
+          grid-template-columns: 1fr;
+        }
+
+        .mini-industry:nth-child(3) {
+          display: none;
+        }
+
+        .capability-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .workflow-box {
+          padding: 20px;
+        }
+
+        .workflow-step {
+          grid-template-columns: 30px 42px 1fr;
+          gap: 10px;
+        }
+
+        .workflow-line {
+          margin-left: 50px;
+        }
+
+      
+      }
+
+      @media (max-width: 575.98px) {
+        .solutions-hero {
+          padding-top: 115px;
+          padding-bottom: 70px;
+        }
+
+        .hero-title {
+          font-size: 38px;
+        }
+
+
+        .intro-section,
+        .industries-section,
+        .workflow-section,
+        .features-section {
+          padding: 80px 0;
+        }
+
+        .section-title {
+          font-size: 35px;
+        }
+
+        .industry-card {
+          padding: 23px;
+        }
+      }
+    </style>
+    <!-- ==================== NAVBAR ==================== -->
+  <header class="nav" data-nav data-testid="nav-sticky-header">
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <a href="/home.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
+        </a>
+        <ul class="nav-links mb-0 ps-0">
+          <li>
+            <a href="home.html" data-testid="nav-link-products">Home</a>
+          </li>
+          <li>
+            <a href="about.html" data-testid="nav-link-products">About</a>
+          </li>
+          <li>
+            <a href="pricing.html" data-testid="nav-link-solutions">Pricing</a>
+          </li>
+          <li>
+            <a href="integration.html" data-testid="nav-link-whatsapp-api"
+              >Integrations</a
+            >
+          </li>
+          <li>
+            <a href="solutions.html" data-testid="nav-link-whatsapp-api"
+              >Solutions</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" data-testid="nav-link-whatsapp-api"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">Login</a>
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn"
+            >Sign Up</a
+          >
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+            >Book a Demo</a
+          >
+        </div>
+        <button
+          class="nav-burger"
+          data-testid="nav-mobile-menu-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="ic ic-20 icon-open"><use href="#i-menu" /></svg>
+          <svg class="ic ic-20 icon-close" style="display: none">
+            <use href="#i-x" />
+          </svg>
+        </button>
+      </nav>
+      <div
+        class="mobile-panel"
+        data-testid="nav-mobile-panel"
+        data-mobile-panel
+      >
+        <ul>
+          <li><a class="mlink" href="about.html">About</a></li>
+          <li><a class="mlink" href="pricing.html">Pricing</a></li>
+          <li><a class="mlink" href="contact.html">Integrations</a></li>
+          <li><a class="mlink" href="contact.html">Solutions</a></li>
+          <li><a class="mlink" href="contact.html">contact</a></li>
+        </ul>
+        <div class="mctas">
+          <a href="#cta" class="m-start" data-testid="nav-mobile-start-btn"
+            >Sign Up</a
+          >
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="m-demo"
+            data-testid="nav-mobile-demo-btn"
+            >Book a Demo</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================================
+     HERO
+============================================================ -->
+
+    <section class="solutions-hero">
+      <div class="hero-grid"></div>
+
+      <div class="container position-relative">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              SOLUTIONS
+            </div>
+
+            <h1 class="hero-title">
+              WhatsApp that works
+              <span>for your business.</span>
+            </h1>
+
+            <p class="hero-description">
+              From your first customer enquiry to repeat purchases, 11za helps
+              businesses sell, support and engage customers on WhatsApp — with
+              automation, AI and a shared team inbox.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#industries" class="btn btn-primary btn-lg">
+                Explore Solutions
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+              <a href="#cta" class="btn btn-light btn-lg hero-secondary-btn">
+                Talk to an Expert
+              </a>
+            </div>
+
+            <div class="hero-note">
+              <i class="bi bi-shield-check"></i>
+              Official WhatsApp Business API · Free onboarding assistance
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Product Visual -->
+
+        <div class="solution-dashboard-wrapper">
+       <img src="assets/images/hero.png" alt="" class="w-100 h-100">
+      </div>
+    </section>
+
+    <!-- ============================================================
+     TRUST / INTRO
+============================================================ -->
+
+    <section class="intro-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="section-eyebrow">ONE PLATFORM</div>
+
+            <h2 class="section-title">
+              Built around how
+              <span>your industry works.</span>
+            </h2>
+
+            <p class="section-text">
+              Every business uses WhatsApp differently. A retailer needs
+              conversations that drive store visits. An e-commerce brand needs
+              order updates and cart recovery. A school needs admissions
+              follow-ups.
+            </p>
+
+            <p class="section-text">
+              11za brings those workflows together in one platform — shared
+              inbox, automation, AI, campaigns, analytics and integrations.
+            </p>
+
+            <a href="#industries" class="text-link">
+              Explore industry solutions
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="capability-grid">
+              <div class="capability-card">
+                <div class="capability-icon">
+                  <i class="bi bi-chat-dots"></i>
+                </div>
+
+                <h5>Engage</h5>
+
+                <p>Respond to every customer from one shared inbox.</p>
+              </div>
+
+              <div class="capability-card">
+                <div class="capability-icon">
+                  <i class="bi bi-lightning"></i>
+                </div>
+
+                <h5>Automate</h5>
+
+                <p>Build workflows that run without manual effort.</p>
+              </div>
+
+              <div class="capability-card">
+                <div class="capability-icon">
+                  <i class="bi bi-stars"></i>
+                </div>
+
+                <h5>AI-powered</h5>
+
+                <p>Answer questions and qualify leads automatically.</p>
+              </div>
+
+              <div class="capability-card">
+                <div class="capability-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <h5>Grow</h5>
+
+                <p>Turn conversations into measurable business results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     INDUSTRIES
+============================================================ -->
+
+    <section id="industries" class="industries-section">
+      <div class="container">
+        <div class="text-center section-heading">
+          <div class="section-eyebrow">INDUSTRIES</div>
+
+          <h2 class="section-title">
+            WhatsApp for
+            <span>every business.</span>
+          </h2>
+
+          <p class="section-text mx-auto">
+            Purpose-built workflows for the way your business sells, supports
+            and grows.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- E-commerce -->
+
+          <div class="col-md-6 col-xl-4" id="ecommerce">
+            <div class="industry-card featured">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-bag"></i>
+                </div>
+
+                <span class="industry-number"> 01 </span>
+              </div>
+
+              <h3>E-commerce</h3>
+
+              <p>
+                Turn WhatsApp into a complete customer journey — from product
+                discovery to delivery.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Abandoned cart recovery
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Order & delivery updates
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Product catalogues
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  COD-to-prepaid conversion
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education -->
+
+          <div class="col-md-6 col-xl-4" id="education">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <span class="industry-number"> 02 </span>
+              </div>
+
+              <h3>Education</h3>
+
+              <p>
+                Capture enquiries, nurture prospects and keep students and
+                parents informed.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Admission enquiries
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Automated follow-ups
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Fee reminders
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Student notifications
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Healthcare -->
+
+          <div class="col-md-6 col-xl-4" id="healthcare">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <span class="industry-number"> 03 </span>
+              </div>
+
+              <h3>Healthcare</h3>
+
+              <p>
+                Make patient communication simpler with timely, automated
+                WhatsApp conversations.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Appointment reminders
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Patient enquiries
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Report notifications
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Follow-up communication
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Real Estate -->
+
+          <div class="col-md-6 col-xl-4" id="realestate">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-buildings"></i>
+                </div>
+
+                <span class="industry-number"> 04 </span>
+              </div>
+
+              <h3>Real Estate</h3>
+
+              <p>
+                Respond to property enquiries instantly and move prospects
+                toward site visits.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Lead qualification
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Property sharing
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Site visit scheduling
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Sales team routing
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Financial -->
+
+          <div class="col-md-6 col-xl-4" id="finance">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-bank"></i>
+                </div>
+
+                <span class="industry-number"> 05 </span>
+              </div>
+
+              <h3>Financial Services</h3>
+
+              <p>
+                Simplify customer communication with secure, timely WhatsApp
+                workflows.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Payment reminders
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  KYC communication
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Document collection
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Customer support
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Travel -->
+
+          <div class="col-md-6 col-xl-4" id="travel">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-airplane"></i>
+                </div>
+
+                <span class="industry-number"> 06 </span>
+              </div>
+
+              <h3>Travel</h3>
+
+              <p>
+                Keep travellers informed before, during and after every booking.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Booking confirmations
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Itinerary updates
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Travel reminders
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Instant support
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Retail -->
+
+          <div class="col-md-6 col-xl-4" id="retail">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-shop"></i>
+                </div>
+
+                <span class="industry-number"> 07 </span>
+              </div>
+
+              <h3>Retail</h3>
+
+              <p>
+                Bring your store closer to customers with WhatsApp catalogues
+                and personalized engagement.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Product catalogues
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Store promotions
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Loyalty campaigns
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Customer support
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SaaS -->
+
+          <div class="col-md-6 col-xl-4" id="saas">
+            <div class="industry-card">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-cloud-check"></i>
+                </div>
+
+                <span class="industry-number"> 08 </span>
+              </div>
+
+              <h3>SaaS</h3>
+
+              <p>
+                Guide users from signup to activation and renewal directly
+                inside WhatsApp.
+              </p>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Trial onboarding
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Product education
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Feature notifications
+                </li>
+
+                <li>
+                  <i class="bi bi-check2"></i>
+                  Renewal reminders
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- More -->
+
+          <div class="col-md-6 col-xl-4">
+            <div class="industry-card industry-more">
+              <div class="industry-top">
+                <div class="industry-icon-large">
+                  <i class="bi bi-grid-3x3-gap"></i>
+                </div>
+
+                <span class="industry-number"> + </span>
+              </div>
+
+              <h3>Your Industry</h3>
+
+              <p>
+                Don't see your industry? 11za can be configured around your
+                customer journey and workflows.
+              </p>
+
+              <div class="custom-solution">
+                <span>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Custom workflows
+                </span>
+
+                <span>
+                  <i class="bi bi-check-circle-fill"></i>
+                  API integrations
+                </span>
+
+                <span>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Dedicated onboarding
+                </span>
+              </div>
+
+              <a href="#cta" class="industry-link">
+                Talk to our team
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     HOW IT WORKS
+============================================================ -->
+
+    <section class="workflow-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <div class="section-eyebrow">HOW IT WORKS</div>
+
+            <h2 class="section-title">
+              One platform.
+              <span>Every customer journey.</span>
+            </h2>
+
+            <p class="section-text">
+              Whatever industry you're in, the foundation stays the same:
+              connect WhatsApp, capture conversations, automate repetitive work
+              and give your team the context they need.
+            </p>
+
+            <a href="#cta" class="btn btn-success">
+              See 11za in action
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="workflow-box">
+              <div class="workflow-step">
+                <div class="workflow-number">01</div>
+
+                <div class="workflow-icon">
+                  <i class="bi bi-chat"></i>
+                </div>
+
+                <div>
+                  <h5>Customer starts a conversation</h5>
+
+                  <p>
+                    From ads, website, store, campaign or your WhatsApp number.
+                  </p>
+                </div>
+              </div>
+
+              <div class="workflow-line"></div>
+
+              <div class="workflow-step">
+                <div class="workflow-number">02</div>
+
+                <div class="workflow-icon">
+                  <i class="bi bi-stars"></i>
+                </div>
+
+                <div>
+                  <h5>11za understands and automates</h5>
+
+                  <p>
+                    AI, chatbots and workflows handle routine conversations
+                    automatically.
+                  </p>
+                </div>
+              </div>
+
+              <div class="workflow-line"></div>
+
+              <div class="workflow-step">
+                <div class="workflow-number">03</div>
+
+                <div class="workflow-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+
+                <div>
+                  <h5>Your team takes over</h5>
+
+                  <p>
+                    Qualified conversations are routed to the right agent with
+                    full context.
+                  </p>
+                </div>
+              </div>
+
+              <div class="workflow-line"></div>
+
+              <div class="workflow-step">
+                <div class="workflow-number">04</div>
+
+                <div class="workflow-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <div>
+                  <h5>Conversations become results</h5>
+
+                  <p>
+                    Track leads, sales, support and campaign performance from
+                    one dashboard.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     FEATURES
+============================================================ -->
+
+    <section class="features-section">
+      <div class="container">
+        <div class="text-center section-heading">
+          <div class="section-eyebrow">ONE PLATFORM</div>
+
+          <h2 class="section-title">
+            Everything your team needs
+            <span>on WhatsApp.</span>
+          </h2>
+
+          <p class="section-text mx-auto">
+            A complete customer engagement platform built around the way modern
+            businesses communicate.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-chat-square-text"></i>
+
+              <h5>Shared Team Inbox</h5>
+
+              <p>
+                Let multiple agents manage conversations from one business
+                number.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-diagram-3"></i>
+
+              <h5>Automation</h5>
+
+              <p>
+                Build customer journeys for sales, support, marketing and
+                operations.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-stars"></i>
+
+              <h5>AI & Chatbots</h5>
+
+              <p>
+                Answer FAQs, qualify leads and automate repetitive
+                conversations.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-bar-chart"></i>
+
+              <h5>Analytics</h5>
+
+              <p>
+                Measure conversations, agents, campaigns and customer
+                engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     CTA
+========================================================= -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to simplify WhatsApp communication?</h2>
+
+          <p>
+            Start managing customer conversations, teams and WhatsApp campaigns
+            from one powerful platform.
+          </p>
+
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
+
+            <a href="https://calendly.com/engees/schedule-a-demo" class="btn btn-outline-light btn-lg"> Contact Sales </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       FOOTER
+  ========================== -->
+
+       <footer class="position-relative">
+      <div class="footer-layer-effect">
+       
+      </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">11<span>za</span>.</div>
+
+            <p>
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Solutions</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Other Links</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Api Documentation</a>
+            <a href="#">11za Documentation</a>
+
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <a href="#"
+              ><a href="tel:(+91) 97266 54060"
+                ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
+              ></a
+            >
+           <a href="mailto:hello@11za.com"><i class="fa-solid  fa-envelope me-3 "></i> hello@11za.com</a>
+           <a href="#"><i class="fa-solid fa-clock me-3 "></i> Mon - Sat | 10am - 7pm</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 11za. All rights reserved. </span>
+
+        <div>
+          <ul class="social-nav widget social-widget d-flex align-items-center gap-3">
+							<li><a href="https://www.linkedin.com/company/11za" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/11zaofficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/11zaofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/11zaofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							
+						</ul>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <style>
+      /* =========================
+       STATS
+    ========================= */
+
+      .stats {
+        padding: 25px 0 80px;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .stat {
+        padding: 38px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-right: 0;
+      }
+
+      .stat-number {
+        font-family: "Manrope", sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        letter-spacing: -2px;
+      }
+
+      .stat-label {
+        margin-top: 5px;
+        color: #09AF72 ;
+        font-weight: 700;
+      }
+
+      /* =========================
+       GENERAL SECTION
+    ========================= */
+
+      section {
+        padding: 105px 0;
+      }
+
+      .section-label {
+        color: var(--green-dark);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+      }
+
+      .section-title {
+        font-family: "Manrope", sans-serif;
+        font-size: clamp(34px, 4vw, 52px);
+        line-height: 1.08;
+        letter-spacing: -2px;
+        font-weight: 800;
+      }
+
+      .section-text {
+        color: var(--muted);
+        font-size: 17px;
+        max-width: 680px;
+      }
+
+      /* =========================
+       WHO WE ARE
+    ========================= */
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 90px;
+        align-items: center;
+      }
+
+      .about-copy p {
+        margin-top: 25px;
+      }
+
+      .about-card {
+        background: var(--dark);
+        color: #fff;
+        border-radius: 30px;
+        padding: 48px;
+        min-height: 420px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-card::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        right: -100px;
+        bottom: -100px;
+        border-radius: 50%;
+        background: rgba(22, 163, 74, 0.22);
+      }
+
+      .quote-mark {
+        font-size: 80px;
+        line-height: 0.8;
+        opacity: 0.25;
+        font-family: Georgia, serif;
+      }
+
+      .about-card h3 {
+        margin-top: 25px;
+        font-family: "Manrope", sans-serif;
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .about-card p {
+        margin-top: 18px;
+        color: #b9c1cd;
+      }
+
+      /* =========================
+       MISSION / VISION
+    ========================= */
+
+      .mission-section {
+        background: var(--bg-soft);
+      }
+
+      .center-heading {
+        text-align: center;
+        max-width: 720px;
+        margin: auto;
+      }
+
+      .mission-grid {
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .mission-card {
+        padding: 42px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: #fff;
+      }
+
+      .mission-icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        background: var(--green-light);
+        color: var(--green-dark);
+        border-radius: 14px;
+        font-weight: 800;
+        margin-bottom: 24px;
+      }
+
+      .mission-card h3 {
+        font-family: "Manrope", sans-serif;
+        font-size: 25px;
+        margin-bottom: 12px;
+      }
+
+      .mission-card p {
+        color: var(--muted);
+      }
+
+      /* =========================
+       WHAT WE DO
+    ========================= */
+
+      .capabilities {
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .capability {
+        padding: 30px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        transition: 0.2s ease;
+      }
+
+      .capability:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 50px rgba(16, 24, 40, 0.08);
+      }
+
+      .capability-number {
+        color: #16a34a;
+
+        font-weight: 800;
+      }
+
+      .capability h3 {
+        font-family: "Manrope", sans-serif;
+        margin: 12px 0 8px;
+        font-size: 20px;
+      }
+
+      .capability p {
+        color: var(--muted);
+      }
+
+      /* =========================
+       STORY
+    ========================= */
+
+      .story-section {
+        background: var(--dark);
+        color: #fff;
+      }
+
+      .story-section .section-label {
+        color: #66dc91;
+      }
+
+      .story-section .section-text {
+        color: #aeb8c5;
+      }
+
+      .timeline {
+        margin-top: 65px;
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 16px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: #364152;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 34px 130px 1fr;
+        gap: 25px;
+        margin-bottom: 45px;
+        position: relative;
+      }
+
+      .timeline-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--green);
+        margin-top: 8px;
+        z-index: 2;
+        box-shadow: 0 0 0 6px var(--dark);
+      }
+
+      .timeline-year {
+        color: #8d99aa;
+        font-weight: 700;
+      }
+
+      .timeline-content h3 {
+        font-family: "Manrope", sans-serif;
+        font-size: 23px;
+      }
+
+      .timeline-content p {
+        color: #9da8b7;
+        margin-top: 7px;
+        max-width: 650px;
+      }
+
+      /* =========================
+       LEADERSHIP
+    ========================= */
+
+      .leadership {
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .leader {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 30px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .leader-photo {
+        width: 105px;
+        height: 105px;
+        border-radius: 20px;
+        background: #edf1f5;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        color: #98a2b3;
+        font-size: 12px;
+      }
+
+      .leader h3 {
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+      }
+
+      .leader-role {
+        color: var(--green-dark);
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 3px;
+      }
+
+      .leader p {
+        color: var(--muted);
+
+        margin-top: 10px;
+      }
+
+      /* =========================
+       WHY 11ZA
+    ========================= */
+
+      .why-section {
+        background: var(--bg-soft);
+      }
+
+      .why-grid {
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      .why-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+      }
+
+      .why-card strong {
+        display: block;
+        font-family: "Manrope", sans-serif;
+        font-size: 18px;
+        margin-bottom: 9px;
+      }
+
+      .why-card p {
+        color: var(--muted);
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================= */
+
+      @media (max-width: 900px) {
+        .about-grid,
+        .mission-grid,
+        .leadership {
+          grid-template-columns: 1fr;
+        }
+
+        .capabilities {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        section {
+          padding: 75px 0;
+        }
+
+        .hero {
+          padding: 75px 0;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stat {
+          border-right: 0;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+          border-bottom: 0;
+        }
+
+        .capabilities,
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-grid {
+          gap: 40px;
+        }
+
+        .about-card {
+          padding: 32px;
+        }
+
+        .timeline-item {
+          grid-template-columns: 25px 75px 1fr;
+          gap: 12px;
+        }
+
+        .leader {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="nav" data-nav data-testid="nav-sticky-header">
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <a href="/home.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
+        </a>
+        <ul class="nav-links mb-0 ps-0">
+          <li>
+            <a href="home.html" data-testid="nav-link-products">Home</a>
+          </li>
+          <li>
+            <a href="about.html" data-testid="nav-link-products">About</a>
+          </li>
+          <li>
+            <a href="pricing.html" data-testid="nav-link-solutions">Pricing</a>
+          </li>
+          <li>
+            <a href="integration.html" data-testid="nav-link-whatsapp-api"
+              >Integrations</a
+            >
+          </li>
+          <li>
+            <a href="solutions.html" data-testid="nav-link-whatsapp-api"
+              >Solutions</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" data-testid="nav-link-whatsapp-api"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">Login</a>
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn"
+            >Sign Up</a
+          >
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+            >Book a Demo</a
+          >
+        </div>
+        <button
+          class="nav-burger"
+          data-testid="nav-mobile-menu-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="ic ic-20 icon-open"><use href="#i-menu" /></svg>
+          <svg class="ic ic-20 icon-close" style="display: none">
+            <use href="#i-x" />
+          </svg>
+        </button>
+      </nav>
+      <div
+        class="mobile-panel"
+        data-testid="nav-mobile-panel"
+        data-mobile-panel
+      >
+        <ul>
+          <li><a class="mlink" href="about.html">About</a></li>
+          <li><a class="mlink" href="pricing.html">Pricing</a></li>
+          <li><a class="mlink" href="contact.html">Integrations</a></li>
+          <li><a class="mlink" href="contact.html">Solutions</a></li>
+          <li><a class="mlink" href="contact.html">contact</a></li>
+        </ul>
+        <div class="mctas">
+          <a href="#cta" class="m-start" data-testid="nav-mobile-start-btn"
+            >Sign Up</a
+          >
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="m-demo"
+            data-testid="nav-mobile-demo-btn"
+            >Book a Demo</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- =========================
+       HERO
+  ========================== -->
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div
+            style="max-width: 60rem; margin-inline: auto; text-align: center"
+          >
+            <div class="hero-badge-anim">
+              <span class="hero-badge">
+                <span class="dot ping-soft"></span>
+                About 11za
+              </span>
+            </div>
+            <h1 data-testid="hero-headline">
+              One Platform.
+              <span>Every Business Conversation.</span>
+            </h1>
+            <p class="hero-sub">
+              11za helps businesses turn WhatsApp into a powerful channel for
+              customer engagement, sales, support and growth.
+            </p>
+            <div class="hero-ctas">
+              <a
+                href="#cta"
+                class="btn btn-primary"
+                data-testid="hero-cta-get-started"
+                >Our Story</a
+              >
+              <a
+                href="https://calendly.com/engees/schedule-a-demo"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-ghost"
+                data-testid="hero-cta-book-demo"
+                >Book a Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         STATS
+    ========================== -->
+
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat">
+              <div class="stat-number">2,000+</div>
+              <div class="stat-label">Businesses onboarded</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-number">10M+</div>
+              <div class="stat-label">Messages every month</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Platform integrations</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         WHO WE ARE
+    ========================== -->
+
+      <section>
+        <div class="container about-grid">
+          <div class="about-copy">
+            <div class="section-label">Who we are</div>
+
+            <h2 class="section-title">Making Business Communication Simple</h2>
+
+            <p class="section-text">
+              11za is a technology platform built to help businesses manage and
+              grow customer conversations on WhatsApp.
+            </p>
+
+            <p class="section-text">
+              We started with a simple observation: as businesses grow, customer
+              conversations grow with them. Managing those conversations across
+              personal phones, spreadsheets and disconnected tools can quickly
+              become difficult.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="quote-mark">“</div>
+
+            <h3>11za brings everything together in one place.</h3>
+
+            <p>
+              From customer enquiries and sales conversations to support,
+              notifications, campaigns and follow-ups, businesses can use 11za
+              to organize their communication, empower their teams and automate
+              repetitive tasks.
+            </p>
+            <p>
+              Our focus is not just on technology. It's on solving real business
+              problems with tools that are simple to use, easy to scale and
+              built around the way businesses communicate today.
+            </p>
+            <p>
+              Whether you're a growing local business, an MSME or an established
+              organization, 11za helps you turn everyday WhatsApp conversations
+              into meaningful customer relationships.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         MISSION / VISION
+    ========================== -->
+
+      <section class="mission-section">
+        <div class="container">
+          <div class="center-heading">
+            <div class="section-label">What drives us</div>
+
+            <h2 class="section-title">
+              Technology should make<span> business feel simpler.</span>
+            </h2>
+
+            <p class="section-text" style="margin: 20px auto 0">
+              We wish to regularize the unorganised local businesses so that
+              they can be more reachable and communicate in real time.
+            </p>
+          </div>
+
+          <div class="mission-grid">
+            <div class="mission-card">
+              <div class="mission-icon">01</div>
+
+              <h3>Our Mission</h3>
+
+              <p>
+                Our Mission is to enable local businesses to use the software as
+                a solution for better customer connect and conversational
+                commerce.
+              </p>
+            </div>
+
+            <div class="mission-card">
+              <div class="mission-icon">02</div>
+
+              <h3>Our Vision</h3>
+
+              <p>
+                Our Vision is to be the leading technology solution provider for
+                MSME businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         WHAT WE DO
+    ========================== -->
+
+      <section>
+        <div class="container">
+          <div class="section-label">What we do</div>
+
+          <h2 class="section-title">
+           Everything You Need to <br>Grow on WhatsApp.
+          </h2>
+
+          <div class="capabilities">
+            <div class="capability">
+              <span class="capability-number">01</span>
+              <h3>WhatsApp Business API</h3>
+              <p>
+                Connect your business with the official WhatsApp Business Platform and communicate with customers at scale.
+              </p>
+            </div>
+
+            <div class="capability">
+              <span class="capability-number">02</span>
+              <h3>Team Inbox</h3>
+              <p>
+                Let multiple team members manage conversations from one WhatsApp number while keeping every interaction organized.
+              </p>
+            </div>
+
+            <div class="capability">
+              <span class="capability-number">03</span>
+              <h3>Automation</h3>
+              <p>
+                Automate repetitive conversations, notifications and customer journeys without adding more manual work.
+              </p>
+            </div>
+
+            <div class="capability">
+              <span class="capability-number">04</span>
+              <h3>Chatbots & AI</h3>
+              <p>
+                Answer common questions, collect information, qualify leads and route conversations to the right team members.
+              </p>
+            </div>
+
+            <div class="capability">
+              <span class="capability-number">05</span>
+              <h3>Campaigns</h3>
+              <p>
+                Create targeted WhatsApp campaigns and track delivery, reads and customer responses.
+              </p>
+            </div>
+
+            <div class="capability">
+              <span class="capability-number">06</span>
+              <h3>Analytics</h3>
+              <p>
+                Understand conversations, campaign performance and team activity with actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         STORY
+    ========================== -->
+
+      <section class="story-section" id="our-story">
+        <div class="container">
+          <div class="section-label">Our journey</div>
+
+          <h2 class="section-title">
+            From a simple idea<br />
+            to a connected platform.
+          </h2>
+
+          <p class="section-text" style="margin-top: 20px">
+            11za started with a simple observation: businesses needed an easier
+            way to communicate with customers on WhatsApp.
+          </p>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+
+              <div class="timeline-year">The beginning</div>
+
+              <div class="timeline-content">
+                <h3>Solving a real business problem</h3>
+
+                <p>
+                  We saw businesses relying on fragmented conversations,
+                  individual phones and manual follow-ups to manage customer
+                  relationships.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+
+              <div class="timeline-year">Growth</div>
+
+              <div class="timeline-content">
+                <h3>Bringing teams onto one number</h3>
+
+                <p>
+                  11za evolved into a shared communication platform, allowing
+                  teams to manage conversations together.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+
+              <div class="timeline-year">Today</div>
+
+              <div class="timeline-content">
+                <h3>Conversations, automation and growth</h3>
+
+                <p>
+                  Today, 11za brings together WhatsApp API, team inboxes,
+                  automation, campaigns, AI, integrations and analytics.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+
+              <div class="timeline-year">Next</div>
+
+              <div class="timeline-content">
+                <h3>Building the future of conversational commerce</h3>
+
+                <p>
+                  We continue to make business conversations more intelligent,
+                  connected and useful for teams of every size.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         LEADERSHIP
+    ========================== -->
+      <style>
+        .team-heading {
+          margin-top: 110px;
+          margin-bottom: 42px;
+        }
+
+        .team-heading .section-label {
+          margin-bottom: 16px;
+        }
+
+        .team-heading h2 {
+          margin: 0;
+
+          font-family: "Outfit", sans-serif;
+          font-size: clamp(34px, 4vw, 52px);
+          font-weight: 650;
+          line-height: 1.05;
+          letter-spacing: -0.04em;
+
+          color: #0f172a;
+        }
+
+        .team-heading h2 span {
+          color: #09AF72 ;
+        }
+
+        /* =========================================
+   FOUNDER
+========================================= */
+
+        .founder-card {
+          display: grid;
+          grid-template-columns: 0.9fr 1.1fr;
+
+          overflow: hidden;
+
+          max-width: 1000px;
+
+          border: 1px solid #e5eaf1;
+          border-radius: 28px;
+
+          background: #ffffff;
+
+          box-shadow: 0 15px 45px rgba(15, 23, 42, 0.06);
+        }
+
+        .founder-image {
+          position: relative;
+          min-height: 430px;
+          overflow: hidden;
+        }
+
+        .founder-image img {
+          width: 100%;
+          height: 100%;
+
+          display: block;
+
+          object-fit: cover;
+
+          transition: transform 0.6s ease;
+        }
+
+        .founder-card:hover .founder-image img {
+          transform: scale(1.04);
+        }
+        .founder-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          padding: 55px;
+        }
+
+        .founder-content h3 {
+          margin: 10px 0 0;
+
+          font-family: "Outfit", sans-serif;
+
+          font-size: 38px;
+          line-height: 1.1;
+          letter-spacing: -0.035em;
+
+          color: #0f172a;
+        }
+
+        .founder-content p {
+          max-width: 480px;
+
+          margin: 24px 0;
+
+          line-height: 1.8;
+
+          color: #64748b;
+        }
+
+        .founder-meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .founder-meta span {
+          padding: 9px 14px;
+
+          border: 1px solid #e5eaf1;
+          border-radius: 999px;
+
+          background: #f8fafc;
+
+          font-size: 11px;
+          font-weight: 600;
+
+          color: #64748b;
+        }
+
+        /* =========================================
+   TEAM GRID
+========================================= */
+
+        .team-grid {
+          display: grid;
+
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+
+          gap: 20px;
+        }
+
+        .team-card {
+          overflow: hidden;
+
+          border: 1px solid #e5eaf1;
+          border-radius: 22px;
+
+          background: #ffffff;
+
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+          transform: translateY(-6px);
+
+          box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .team-photo {
+          aspect-ratio: 1 / 1.05;
+
+          overflow: hidden;
+
+          background: #f1f5f9;
+        }
+
+        .team-photo img {
+          width: 100%;
+          height: 100%;
+
+          display: block;
+
+          object-fit: cover;
+
+          filter: grayscale(15%);
+
+          transition:
+            transform 0.5s ease,
+            filter 0.5s ease;
+        }
+
+        .team-card:hover .team-photo img {
+          transform: scale(1.05);
+          filter: grayscale(0);
+        }
+
+        .team-info {
+          text-align: center;
+          padding: 20px;
+        }
+
+        .team-info h3 {
+          margin: 0;
+
+          font-family: "Outfit", sans-serif;
+
+          font-size: 22px;
+          font-weight: 650;
+
+          color: #0f172a;
+        }
+
+        .team-info p {
+          margin: 5px 0 0;
+          color: #64748b;
+        }
+
+        /* =========================================
+   RESPONSIVE
+========================================= */
+
+        @media (max-width: 1000px) {
+          .team-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .founder-card {
+            grid-template-columns: 1fr;
+          }
+
+          .founder-image {
+            min-height: 450px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .team-heading {
+            margin-top: 75px;
+          }
+
+          .team-grid {
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+          }
+
+          .team-info {
+            padding: 15px;
+          }
+
+          .team-info h3 {
+            font-size: 14px;
+          }
+
+          .founder-image {
+            min-height: 350px;
+          }
+
+          .founder-content {
+            padding: 30px 24px;
+          }
+
+          .founder-content h3 {
+            font-size: 30px;
+          }
+        }
+      </style>
+      <section class="leadership-section">
+        <div class="container">
+          <!-- Leadership -->
+          <div class="leadership-heading">
+            <div class="section-label">Leadership</div>
+
+            <h2 class="section-title">
+              The person behind
+              <span style="color: #09AF72;">11ZA.</span>
+            </h2>
+
+            <p class="leadership-intro">
+              Building simpler ways for businesses to connect with their
+              customers.
+            </p>
+          </div>
+
+          <!-- Founder -->
+          <div class="founder-card">
+            <div class="founder-image">
+              <img src="assets/images/nirmit.png" alt="Nirmitkumar Choraria" />
+            </div>
+
+            <div class="founder-content">
+              <div>
+                <span class="leader-role"> Founder & CEO </span>
+
+                <h3>Nirmitkumar Choraria</h3>
+
+                <p>
+                  With over 12 years of experience working closely with MSME
+                  businesses, Nirmitkumar brings a deep understanding of the
+                  challenges businesses face in building strong customer
+                  relationships and driving sustainable growth. His experience
+                  working with diverse businesses has given him valuable
+                  insights into the gaps between businesses and their customers.
+                  He believes that the right use of technology can simplify
+                  these challenges, improve customer engagement, and create
+                  better business outcomes. As Founder &amp; CEO, he is focused
+                  on building practical, technology-driven solutions that help
+                  MSMEs strengthen customer connections, streamline their
+                  processes, and grow with confidence.
+                </p>
+              </div>
+
+              <div class="founder-meta">
+                <span>12+ Years Experience</span>
+                <span>MSME & Business</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team -->
+          <div class="team-heading">
+            <div class="section-label">Our Team</div>
+
+            <h2>
+              Meet the people
+              <span>building 11ZA.</span>
+            </h2>
+          </div>
+
+          <div class="team-grid">
+            <!-- Team Member 01 -->
+            <article class="team-card">
+              <div class="team-photo">
+                <img src="assets/images/jignesh.png" alt="Team Member" />
+              </div>
+
+              <div class="team-info">
+                <div>
+                  <h3>Jignesh Viradiya</h3>
+                </div>
+              </div>
+            </article>
+
+            <!-- Team Member 02 -->
+            <article class="team-card">
+              <div class="team-photo">
+                <img src="assets/images/denish.png" alt="Team Member" />
+              </div>
+
+              <div class="team-info">
+                <div>
+                  <h3>Denish Ubhal</h3>
+                </div>
+              </div>
+            </article>
+
+            <!-- Team Member 03 -->
+            <article class="team-card">
+              <div class="team-photo">
+                <img src="assets/images/chetan.png" alt="Team Member" />
+              </div>
+
+              <div class="team-info">
+                <div>
+                  <h3>Chetan Chhajer</h3>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         WHY 11ZA
+    ========================== -->
+
+      <section class="why-section">
+        <div class="container">
+          <div class="center-heading">
+            <div class="section-label">Why 11za</div>
+
+            <h2 class="section-title">
+              More than software.<br />
+              A partner for your team.
+            </h2>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-card">
+              <strong>Official API</strong>
+              <p>Built around the official WhatsApp Business Platform.</p>
+            </div>
+
+            <div class="why-card">
+              <strong>Easy onboarding</strong>
+              <p>Get your business set up with guided onboarding.</p>
+            </div>
+
+            <div class="why-card">
+              <strong>Dedicated support</strong>
+              <p>Get help when your team needs it.</p>
+            </div>
+
+            <div class="why-card">
+              <strong>Built to scale</strong>
+              <p>From growing teams to high-volume customer conversations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+     CTA
+========================================================= -->
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Ready to simplify WhatsApp communication?</h2>
+
+            <p>
+              Start managing customer conversations, teams and WhatsApp
+              campaigns from one powerful platform.
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
+
+              <a href="#" class="btn btn-outline-light btn-lg">
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- =========================
+       FOOTER
+  ========================== -->
+    <footer class="position-relative">
+      <div class="footer-layer-effect"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">11<span>za</span>.</div>
+
+            <p>
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Solutions</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Other Links</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Api Documentation</a>
+            <a href="#">11za Documentation</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <a href="#"
+              ><a href="tel:(+91) 97266 54060"
+                ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
+              ></a
+            >
+            <a href="mailto:hello@11za.com"
+              ><i class="fa-solid fa-envelope me-3"></i> hello@11za.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-clock me-3"></i> Mon - Sat | 10am - 7pm</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 11za. All rights reserved. </span>
+
+          <div>
+            <ul
+              class="social-nav widget social-widget d-flex align-items-center gap-3"
+            >
+              <li>
+                <a href="https://www.linkedin.com/company/11za" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/11zaofficial" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/11zaofficial/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/11zaofficial/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js" defer></script>
+  </body>
+</html>
