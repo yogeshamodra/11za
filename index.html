@@ -26,99 +26,260 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   </head>
   <body>
-    <!-- ==================== NAVBAR ==================== -->
-    <header class="nav" data-nav data-testid="nav-sticky-header">
-      <nav class="container nav-inner" aria-label="Main navigation">
-        <a href="home.html" class="brand" data-testid="nav-logo-11za">
-          <img
-            src="assets/images/11za_logo.svg"
-            alt=""
-            class="logo-icon"
-            width="120"
-            height="40"
-          />
-        </a>
-        <ul class="nav-links mb-0 ps-0">
-          <li>
-            <a href="home.html" data-testid="nav-link-products">Home</a>
-          </li>
-          <li>
-            <a href="about.html" data-testid="nav-link-products">About</a>
-          </li>
-          <li>
-            <a href="pricing.html" data-testid="nav-link-solutions">Pricing</a>
-          </li>
-          <li>
-            <a href="integration.html" data-testid="nav-link-whatsapp-api"
-              >Integrations</a
-            >
-          </li>
-          <li>
-            <a href="solutions.html" data-testid="nav-link-whatsapp-api"
-              >Solutions</a
-            >
-          </li>
-          <li>
-            <a href="contact.html" data-testid="nav-link-whatsapp-api"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <div class="nav-ctas">
-          <a href="#cta" class="nav-login" data-testid="nav-login-btn">Login</a>
-          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn"
-            >Sign Up</a
-          >
-          <a
-            href="https://calendly.com/engees/schedule-a-demo"
-            target="_blank"
-            rel="noreferrer"
-            class="nav-demo"
-            data-testid="nav-book-demo-btn"
-            >Book a Demo</a
-          >
-        </div>
-        <button
-          class="nav-burger"
-          data-testid="nav-mobile-menu-btn"
-          aria-label="Toggle menu"
-          aria-expanded="false"
+  
+
+
+<header
+  class="site-header"
+  data-nav
+  data-testid="nav-sticky-header"
+>
+  <nav
+    class="container nav-inner"
+    aria-label="Main navigation"
+  >
+
+    <!-- LOGO -->
+    <a
+      href="home.html"
+      class="brand"
+      data-testid="nav-logo-11za"
+    >
+      <img
+        src="assets/images/11za_logo.svg"
+        alt=""
+        class="logo-icon"
+        width="120"
+        height="40"
+      />
+    </a>
+
+
+    <!-- DESKTOP NAVIGATION -->
+    <ul class="nav-links mb-0 ps-0 list-unstyled">
+
+      <li>
+        <a
+          href="home.html"
+          data-testid="nav-link-home"
         >
-          <svg class="ic ic-20 icon-open"><use href="#i-menu" /></svg>
-          <svg class="ic ic-20 icon-close" style="display: none">
-            <use href="#i-x" />
-          </svg>
-        </button>
-      </nav>
-      <div
-        class="mobile-panel"
-        data-testid="nav-mobile-panel"
-        data-mobile-panel
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="about.html"
+          data-testid="nav-link-about"
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="pricing.html"
+          data-testid="nav-link-pricing"
+        >
+          Pricing
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="integration.html"
+          data-testid="nav-link-integrations"
+        >
+          Integrations
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="solutions.html"
+          data-testid="nav-link-solutions"
+        >
+          Solutions
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="contact.html"
+          data-testid="nav-link-contact"
+        >
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+
+    <!-- DESKTOP CTA -->
+    <div class="nav-ctas">
+
+      <a
+        href="#cta"
+        class="nav-login"
+        data-testid="nav-login-btn"
       >
-        <ul>
-          <li><a class="mlink" href="about.html">About</a></li>
-          <li><a class="mlink" href="pricing.html">Pricing</a></li>
-          <li><a class="mlink" href="contact.html">Integrations</a></li>
-          <li><a class="mlink" href="contact.html">Solutions</a></li>
-          <li><a class="mlink" href="contact.html">contact</a></li>
-        </ul>
-        <div class="mctas">
-          <a href="#cta" class="m-start" data-testid="nav-mobile-start-btn"
-            >Sign Up</a
-          >
-          <a
-            href="https://calendly.com/engees/schedule-a-demo"
-            target="_blank"
-            rel="noreferrer"
-            class="m-demo"
-            data-testid="nav-mobile-demo-btn"
-            >Book a Demo</a
-          >
-        </div>
-      </div>
-    </header>
+        Login
+      </a>
+
+      <a
+        href="#cta"
+        class="nav-start"
+        data-testid="nav-get-started-btn"
+      >
+        Sign Up
+      </a>
+
+      <a
+        href="https://calendly.com/engees/schedule-a-demo"
+        target="_blank"
+        rel="noreferrer"
+        class="nav-demo"
+        data-testid="nav-book-demo-btn"
+      >
+        Book a Demo
+      </a>
+
+    </div>
+
+
+    <!-- MOBILE HAMBURGER -->
+    <button
+      class="nav-burger"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#mobileSidebar"
+      aria-controls="mobileSidebar"
+      aria-label="Toggle menu"
+      data-testid="nav-mobile-menu-btn"
+    >
+    <div class="open-menu">
+
+        <img src="assets/images/menu-icon.svg" alt="" height="27px">
+    </div>
+    <div class="close-menu">
+ <img src="assets/images/close-icon.svg" alt="" height="27px">
+    </div>
+    </button>
+
+  </nav>
+</header>
+
+
+<!-- ============================================================
+     MOBILE SIDEBAR / OFFCANVAS
+============================================================ -->
+
+<div
+  class="offcanvas offcanvas-end mobile-sidebar"
+  tabindex="-1"
+  id="mobileSidebar"
+  aria-labelledby="mobileSidebarLabel"
+  data-mobile-panel
+>
+
+  <!-- SIDEBAR CONTENT -->
+  <div class="offcanvas-body">
+
+    <ul class="mobile-nav list-unstyled mb-0">
+
+      <li>
+        <a
+          class="mlink"
+          href="home.html"
+          data-bs-dismiss="offcanvas"
+        >
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="mlink"
+          href="about.html"
+          data-bs-dismiss="offcanvas"
+        >
+          About
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="mlink"
+          href="pricing.html"
+          data-bs-dismiss="offcanvas"
+        >
+          Pricing
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="mlink"
+          href="integration.html"
+          data-bs-dismiss="offcanvas"
+        >
+          Integrations
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="mlink"
+          href="solutions.html"
+          data-bs-dismiss="offcanvas"
+        >
+          Solutions
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="mlink"
+          href="contact.html"
+          data-bs-dismiss="offcanvas"
+        >
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+
+    <!-- MOBILE CTA -->
+    <div class="mctas">
+
+      <a
+        href="#cta"
+        class="m-start"
+        data-bs-dismiss="offcanvas"
+      >
+        Sign Up
+      </a>
+
+      <a
+        href="https://calendly.com/engees/schedule-a-demo"
+        target="_blank"
+        rel="noreferrer"
+        class="m-demo"
+      >
+        Book a Demo
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
 
     <main>
       <!-- ==================== HERO ==================== -->
@@ -201,6 +362,7 @@
       </section>
 
       <!-- ==================== TRUST ==================== -->
+      
       <section id="trust" class="trust" data-testid="trust-logo-cloud">
         <div class="container">
           <p class="trust-label reveal">
@@ -209,17 +371,36 @@
 
           <div class="marquee" aria-label="Customer logos">
             <div class="marquee-track">
-              <img src="assets/images/growit.png" alt="Sakhiya Skin Care" />
-              <img src="assets/images/hisabkitab.png" alt="IVY Growth" />
-              <img src="assets/images/ivy.png" alt="Zorko" />
-              <img src="assets/images/mcat.png" alt="Stockbox" />
-              <img src="assets/images/rogue.png" alt="Hisabkitab" />
-              <img src="assets/images/pedalstart.png" alt="Marwari Catalyst" />
-              <img src="assets/images/sakhiya.png" alt="Marwari Catalyst" />
+                <div>
+                    <img src="assets/images/growit.png" class="w-100" alt="Sakhiya Skin Care" />
+                </div>
+                <div>
+                    <img src="assets/images/hisabkitab.png" class="w-100" alt="IVY Growth" />
+                </div>
+                <div>
+                    <img src="assets/images/ivy.png" class="w-100" alt="Zorko" />
+                </div>
+                <div>
+                    <img src="assets/images/mcat.png" class="w-100" alt="Stockbox" />
+                </div>
+                <div>
+                    <img src="assets/images/rogue.png" class="w-100" alt="Hisabkitab" />
+                </div>
+                <div>
+                    <img src="assets/images/pedalstart.png" class="w-100" alt="Marwari Catalyst" />
+                </div>
+                <div>
+                    <img src="assets/images/sakhiya.png" class="w-100" alt="Marwari Catalyst" />
+                </div>
             </div>
           </div>
         </div>
       </section>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script>
+ 
+</script>
 
       <!-- ==================== PROBLEM / SOLUTION ==================== -->
       <!-- <section id="problem" class="section">
@@ -910,7 +1091,7 @@
     <!-- Navigation Tabs & Dynamic Subtitle -->
     <div class="row justify-content-center text-center mb-4">
       <div class="col-12">
-        <div class="show-tabs d-inline-flex flex-wrap justify-content-center gap-2 p-2 bg-white rounded-pill shadow-sm border mb-3" role="tablist" data-testid="product-showcase-tab-list">
+        <div class="show-tabs gap-2 p-2 bg-white rounded-pill shadow-sm border mb-3" role="tablist" data-testid="product-showcase-tab-list">
           <button class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold active" role="tab" aria-selected="true" data-tab="inbox" data-blurb="Every customer conversation, one shared workspace.">
             Inbox
           </button>
@@ -1011,44 +1192,7 @@
   </div>
 </section>
 
-<style>
-  /* Tab Button Styling */
-  .show-tab {
-    border: none;
-    background: transparent;
-    transition: all 0.25s ease-in-out;
-  }
-  
-  .show-tab.active {
-    background-color: #09AF72 !important;
-    color: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
-  }
 
-  /* Panels Switching */
-  .show-panel {
-    display: none;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
-  }
-
-  .show-panel.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Glow Effect */
-  .blur-3xl {
-    filter: blur(80px);
-  }
-
-  .show-panel .card {
-    height: 600px;
-    
-  }
-</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -1396,7 +1540,7 @@ Connect 11za with platforms such as:
       </section> -->
 
       <!-- ==================== USE CASES ==================== -->
-      <section id="usecases" class="section">
+      <!-- <section id="usecases" class="section">
         <div class="container">
           <div class="sec-head center">
             <p class="chapter-label center reveal">Solutions</p>
@@ -1511,7 +1655,7 @@ Connect 11za with platforms such as:
             
           </div>
         </div>
-      </section>
+      </section> -->
 
       
 
@@ -1806,7 +1950,7 @@ One Company. One Chat.
           <span> © 2026 11za. All rights reserved. </span>
 
         <div>
-          <ul class="social-nav widget social-widget d-flex align-items-center gap-3">
+          <ul class="social-nav widget social-widget d-flex align-items-center gap-3 ps-0">
 							<li><a href="https://www.linkedin.com/company/11za" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 							<li><a href="https://twitter.com/11zaofficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="https://www.instagram.com/11zaofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -1817,7 +1961,36 @@ One Company. One Chat.
         </div>
       </div>
     </footer>
+    <!-- Bootstrap JS -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
 
     <script src="assets/js/script.js" defer></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const header = document.querySelector("[data-nav]");
+
+  if (!header) return;
+
+  function updateHeader() {
+    header.classList.toggle(
+      "scrolled",
+      window.scrollY > 30
+    );
+  }
+
+  updateHeader();
+
+  window.addEventListener(
+    "scroll",
+    updateHeader,
+    { passive: true }
+  );
+
+});
+</script>
   </body>
 </html>

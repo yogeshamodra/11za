@@ -12,27 +12,6 @@
     onNavScroll();
     window.addEventListener("scroll", onNavScroll, { passive: true });
 
-    /* ---------- mobile menu ---------- */
-    var burger = document.querySelector('[data-testid="nav-mobile-menu-btn"]');
-    var panel = document.querySelector("[data-mobile-panel]");
-    var iconOpen = burger.querySelector(".icon-open");
-    var iconClose = burger.querySelector(".icon-close");
-
-    function closeMenu() {
-        panel.classList.remove("open");
-        burger.setAttribute("aria-expanded", "false");
-        iconOpen.style.display = "";
-        iconClose.style.display = "none";
-    }
-    burger.addEventListener("click", function () {
-        var open = panel.classList.toggle("open");
-        burger.setAttribute("aria-expanded", String(open));
-        iconOpen.style.display = open ? "none" : "";
-        iconClose.style.display = open ? "" : "none";
-    });
-    panel.querySelectorAll("a").forEach(function (a) {
-        a.addEventListener("click", closeMenu);
-    });
 
     /* ---------- scroll reveal (IntersectionObserver) ---------- */
     var revealEls = document.querySelectorAll(".reveal");
@@ -136,3 +115,39 @@
 })();
 
 // contact page
+
+ $(document).ready(function () {
+    $('.marquee-track').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+    
+      cssEase: 'linear',
+      infinite: true,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      variableWidth: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
