@@ -9,16 +9,24 @@
       content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
     />
     <link rel="canonical" href="https://11za.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -26,260 +34,169 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
-  
-
-
-<header
-  class="site-header"
-  data-nav
-  data-testid="nav-sticky-header"
->
-  <nav
-    class="container nav-inner"
-    aria-label="Main navigation"
-  >
-
-    <!-- LOGO -->
-    <a
-      href="index.html"
-      class="brand"
-      data-testid="nav-logo-11za"
-    >
-      <img
-        src="assets/images/11za_logo.svg"
-        alt=""
-        class="logo-icon"
-        width="120"
-        height="40"
-      />
-    </a>
-
-
-    <!-- DESKTOP NAVIGATION -->
-    <ul class="nav-links mb-0 ps-0 list-unstyled">
-
-      <li>
-        <a
-          href="index.html"
-          data-testid="nav-link-home"
-        >
-          Home
+    <header class="site-header" data-nav data-testid="nav-sticky-header">
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <!-- LOGO -->
+        <a href="home.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
         </a>
-      </li>
 
-      <li>
-        <a
-          href="about.html"
-          data-testid="nav-link-about"
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links mb-0 ps-0 list-unstyled">
+          <li>
+            <a href="home.html" data-testid="nav-link-home"> Home </a>
+          </li>
+
+          <li>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
+          </li>
+
+          <li>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
+          </li>
+
+          <li>
+            <a href="integration.html" data-testid="nav-link-integrations">
+              Integrations
+            </a>
+          </li>
+
+          <li>
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
+          </li>
+        </ul>
+
+        <!-- DESKTOP CTA -->
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
+            Login
+          </a>
+
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
+            Sign Up
+          </a>
+
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+          >
+            Book a Demo
+          </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+          class="nav-burger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
+          aria-label="Toggle menu"
+          data-testid="nav-mobile-menu-btn"
         >
-          About
-        </a>
-      </li>
+          <div class="open-menu">
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
+          </div>
+          <div class="close-menu">
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
+          </div>
+        </button>
+      </nav>
+    </header>
 
-      <li>
-        <a
-          href="pricing.html"
-          data-testid="nav-link-pricing"
-        >
-          Pricing
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="integration.html"
-          data-testid="nav-link-integrations"
-        >
-          Integrations
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="solutions.html"
-          data-testid="nav-link-solutions"
-        >
-          Solutions
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="contact.html"
-          data-testid="nav-link-contact"
-        >
-          Contact
-        </a>
-      </li>
-
-    </ul>
-
-
-    <!-- DESKTOP CTA -->
-    <div class="nav-ctas">
-
-      <a
-        href="#cta"
-        class="nav-login"
-        data-testid="nav-login-btn"
-      >
-        Login
-      </a>
-
-      <a
-        href="#cta"
-        class="nav-start"
-        data-testid="nav-get-started-btn"
-      >
-        Sign Up
-      </a>
-
-      <a
-        href="https://calendly.com/engees/schedule-a-demo"
-        target="_blank"
-        rel="noreferrer"
-        class="nav-demo"
-        data-testid="nav-book-demo-btn"
-      >
-        Book a Demo
-      </a>
-
-    </div>
-
-
-    <!-- MOBILE HAMBURGER -->
-    <button
-      class="nav-burger"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#mobileSidebar"
-      aria-controls="mobileSidebar"
-      aria-label="Toggle menu"
-      data-testid="nav-mobile-menu-btn"
-    >
-    <div class="open-menu">
-
-        <img src="assets/images/menu-icon.svg" alt="" height="27px">
-    </div>
-    <div class="close-menu">
- <img src="assets/images/close-icon.svg" alt="" height="27px">
-    </div>
-    </button>
-
-  </nav>
-</header>
-
-
-<!-- ============================================================
+    <!-- ============================================================
      MOBILE SIDEBAR / OFFCANVAS
 ============================================================ -->
 
-<div
-  class="offcanvas offcanvas-end mobile-sidebar"
-  tabindex="-1"
-  id="mobileSidebar"
-  aria-labelledby="mobileSidebarLabel"
-  data-mobile-panel
->
+    <div
+      class="offcanvas offcanvas-end mobile-sidebar"
+      tabindex="-1"
+      id="mobileSidebar"
+      aria-labelledby="mobileSidebarLabel"
+      data-mobile-panel
+    >
+      <!-- SIDEBAR CONTENT -->
+      <div class="offcanvas-body">
+        <ul class="mobile-nav list-unstyled mb-0">
+          <li>
+            <a class="mlink" href="home.html" data-bs-dismiss="offcanvas">
+              Home
+            </a>
+          </li>
 
-  <!-- SIDEBAR CONTENT -->
-  <div class="offcanvas-body">
+          <li>
+            <a class="mlink" href="about.html" data-bs-dismiss="offcanvas">
+              About
+            </a>
+          </li>
 
-    <ul class="mobile-nav list-unstyled mb-0">
+          <li>
+            <a class="mlink" href="pricing.html" data-bs-dismiss="offcanvas">
+              Pricing
+            </a>
+          </li>
 
-      <li>
-        <a
-          class="mlink"
-          href="index.html"
-          data-bs-dismiss="offcanvas"
-        >
-          Home
-        </a>
-      </li>
+          <li>
+            <a
+              class="mlink"
+              href="integration.html"
+              data-bs-dismiss="offcanvas"
+            >
+              Integrations
+            </a>
+          </li>
 
-      <li>
-        <a
-          class="mlink"
-          href="about.html"
-          data-bs-dismiss="offcanvas"
-        >
-          About
-        </a>
-      </li>
+          <li>
+            <a class="mlink" href="solutions.html" data-bs-dismiss="offcanvas">
+              Solutions
+            </a>
+          </li>
 
-      <li>
-        <a
-          class="mlink"
-          href="pricing.html"
-          data-bs-dismiss="offcanvas"
-        >
-          Pricing
-        </a>
-      </li>
+          <li>
+            <a class="mlink" href="contact.html" data-bs-dismiss="offcanvas">
+              Contact
+            </a>
+          </li>
+        </ul>
 
-      <li>
-        <a
-          class="mlink"
-          href="integration.html"
-          data-bs-dismiss="offcanvas"
-        >
-          Integrations
-        </a>
-      </li>
+        <!-- MOBILE CTA -->
+        <div class="mctas">
+          <a href="#cta" class="m-start" data-bs-dismiss="offcanvas">
+            Sign Up
+          </a>
 
-      <li>
-        <a
-          class="mlink"
-          href="solutions.html"
-          data-bs-dismiss="offcanvas"
-        >
-          Solutions
-        </a>
-      </li>
-
-      <li>
-        <a
-          class="mlink"
-          href="contact.html"
-          data-bs-dismiss="offcanvas"
-        >
-          Contact
-        </a>
-      </li>
-
-    </ul>
-
-
-    <!-- MOBILE CTA -->
-    <div class="mctas">
-
-      <a
-        href="#cta"
-        class="m-start"
-        data-bs-dismiss="offcanvas"
-      >
-        Sign Up
-      </a>
-
-      <a
-        href="https://calendly.com/engees/schedule-a-demo"
-        target="_blank"
-        rel="noreferrer"
-        class="m-demo"
-      >
-        Book a Demo
-      </a>
-
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="m-demo"
+          >
+            Book a Demo
+          </a>
+        </div>
+      </div>
     </div>
-
-  </div>
-
-</div>
-
-
 
     <main>
       <!-- ==================== HERO ==================== -->
@@ -297,15 +214,16 @@
             </div>
             <h1 data-testid="hero-headline">
               Unlock Business
- <span>Growth</span>
+              <span>Growth</span>
             </h1>
             <!-- <h1 data-testid="hero-headline">
               Grow Your Business <span>with WhatsApp</span>
             </h1> -->
             <p class="hero-sub">
-              One platform to manage customer conversations, automate engagement, generate leads and grow your business on WhatsApp.
+              One platform to manage customer conversations, automate
+              engagement, generate leads and grow your business on WhatsApp.
             </p>
-           
+
             <div class="hero-ctas">
               <a
                 href="#cta"
@@ -362,45 +280,67 @@
       </section>
 
       <!-- ==================== TRUST ==================== -->
-      
+
       <section id="trust" class="trust" data-testid="trust-logo-cloud">
         <div class="container">
           <p class="trust-label reveal">
-            WhatsApp Blue Tick Verified Customers 
+            WhatsApp Blue Tick Verified Customers
           </p>
 
           <div class="marquee" aria-label="Customer logos">
             <div class="marquee-track">
-                <div>
-                    <img src="assets/images/growit.png" class="w-100" alt="Sakhiya Skin Care" />
-                </div>
-                <div>
-                    <img src="assets/images/hisabkitab.png" class="w-100" alt="IVY Growth" />
-                </div>
-                <div>
-                    <img src="assets/images/ivy.png" class="w-100" alt="Zorko" />
-                </div>
-                <div>
-                    <img src="assets/images/mcat.png" class="w-100" alt="Stockbox" />
-                </div>
-                <div>
-                    <img src="assets/images/rogue.png" class="w-100" alt="Hisabkitab" />
-                </div>
-                <div>
-                    <img src="assets/images/pedalstart.png" class="w-100" alt="Marwari Catalyst" />
-                </div>
-                <div>
-                    <img src="assets/images/sakhiya.png" class="w-100" alt="Marwari Catalyst" />
-                </div>
+              <div>
+                <img
+                  src="assets/images/growit.png"
+                  class="w-100"
+                  alt="Sakhiya Skin Care"
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/images/hisabkitab.png"
+                  class="w-100"
+                  alt="IVY Growth"
+                />
+              </div>
+              <div>
+                <img src="assets/images/ivy.png" class="w-100" alt="Zorko" />
+              </div>
+              <div>
+                <img
+                  src="assets/images/mcat.png"
+                  class="w-100"
+                  alt="Stockbox"
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/images/rogue.png"
+                  class="w-100"
+                  alt="Hisabkitab"
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/images/pedalstart.png"
+                  class="w-100"
+                  alt="Marwari Catalyst"
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/images/sakhiya.png"
+                  class="w-100"
+                  alt="Marwari Catalyst"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-      <script>
- 
-</script>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script></script>
 
       <!-- ==================== PROBLEM / SOLUTION ==================== -->
       <!-- <section id="problem" class="section">
@@ -507,200 +447,345 @@
           </div>
         </div>
       </section> -->
-      
-<!-- Core Capabilities Section -->
-<!-- Core Capabilities Section with Book Demo CTA (No Form) -->
-<section class="py-5 bg-light" id="capabilities">
-  <div class="container py-4">
-    
-    <!-- Section Header -->
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-8">
-        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fw-semibold mb-3">Platform Features</span>
-        <h2 class="fw-bold display-6 text-dark mb-3">Core Capabilities of 11za</h2>
-        <p class="text-secondary lead fs-6">Empower your WhatsApp communication with powerful tools for customer chat, marketing broadcasts, intelligent automations, and enterprise integrations.</p>
-      </div>
-    </div>
 
-    <!-- Main Content Layout: Capabilities Grid (Left) + Book Demo CTA (Right) -->
-    <div class="row g-4 align-items-stretch">
-      
-      <!-- Left Column: 4 Capabilities Cards (2x2 Grid) -->
-      <div class="col-12 col-xl-8">
-        <div class="row g-4">
-          
-          <!-- 1. Chat -->
-          <div class="col-12 col-md-6">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card">
-              <div class="rounded-3 d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success fs-3 p-3 mb-4" style="width: 56px; height: 56px;">
-                <i class="bi bi-chat-dots-fill"></i>
-              </div>
-              <h3 class="h5 fw-bold text-dark mb-3">Chat</h3>
-              <ul class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2">
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Shared Team Inbox:</strong> Single central WhatsApp API number.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Auto-Assignment:</strong> Route chats based on agent load.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Internal Notes:</strong> Tag teammates inside conversation threads.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Rich Media:</strong> Support interactive buttons, catalogs & files.</span>
-                </li>
-              </ul>
+      <!-- Core Capabilities Section -->
+      <!-- Core Capabilities Section with Book Demo CTA (No Form) -->
+      <section class="py-5 bg-light" id="capabilities">
+        <div class="container py-4">
+          <!-- Section Header -->
+          <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+              <span
+                class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fw-semibold mb-3"
+                >Platform Features</span
+              >
+              <h2 class="fw-bold display-6 text-dark mb-3">
+                Core Capabilities of 11za
+              </h2>
+              <p class="text-secondary lead fs-6">
+                Empower your WhatsApp communication with powerful tools for
+                customer chat, marketing broadcasts, intelligent automations,
+                and enterprise integrations.
+              </p>
             </div>
           </div>
 
-          <!-- 2. Broadcast -->
-          <div class="col-12 col-md-6">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card">
-              <div class="rounded-3 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary fs-3 p-3 mb-4" style="width: 56px; height: 56px;">
-                <i class="bi bi-megaphone-fill"></i>
+          <!-- Main Content Layout: Capabilities Grid (Left) + Book Demo CTA (Right) -->
+          <div class="row g-4 align-items-stretch">
+            <!-- Left Column: 4 Capabilities Cards (2x2 Grid) -->
+            <div class="col-12 col-xl-8">
+              <div class="row g-4">
+                <!-- 1. Chat -->
+                <div class="col-12 col-md-6">
+                  <div
+                    class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card"
+                  >
+                    <div
+                      class="rounded-3 d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success fs-3 p-3 mb-4"
+                      style="width: 56px; height: 56px"
+                    >
+                      <i class="bi bi-chat-dots-fill"></i>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark mb-3">Chat</h3>
+                    <ul
+                      class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2"
+                    >
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Shared Team Inbox:</strong> Single central
+                          WhatsApp API number.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Auto-Assignment:</strong> Route chats based
+                          on agent load.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Internal Notes:</strong> Tag teammates inside
+                          conversation threads.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Rich Media:</strong> Support interactive
+                          buttons, catalogs & files.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 2. Broadcast -->
+                <div class="col-12 col-md-6">
+                  <div
+                    class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card"
+                  >
+                    <div
+                      class="rounded-3 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary fs-3 p-3 mb-4"
+                      style="width: 56px; height: 56px"
+                    >
+                      <i class="bi bi-megaphone-fill"></i>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark mb-3">Broadcast</h3>
+                    <ul
+                      class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2"
+                    >
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Bulk Messaging:</strong> Reach thousands with
+                          targeted campaigns.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Campaign Scheduler:</strong> Time broadcasts
+                          for peak response hours.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Dynamic Variables:</strong> Personalize
+                          messages per user data.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Real-time Analytics:</strong> Track open
+                          rates, delivery & failures.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 3. Automation -->
+                <div class="col-12 col-md-6">
+                  <div
+                    class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card"
+                  >
+                    <div
+                      class="rounded-3 d-inline-flex align-items-center justify-content-center fs-3 p-3 mb-4"
+                      style="
+                        width: 56px;
+                        height: 56px;
+                        background-color: rgba(147, 51, 234, 0.1);
+                        color: #9333ea;
+                      "
+                    >
+                      <i class="bi bi-robot"></i>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark mb-3">Automation</h3>
+                    <ul
+                      class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2"
+                    >
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>No-Code Bot Builder:</strong> Deploy 24/7
+                          interactive chatbots.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Order Updates:</strong> Automatic receipts &
+                          shipping alerts.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Abandoned Cart:</strong> Automated recovery
+                          reminders.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Auto-Replies:</strong> Out-of-office &
+                          greeting triggers.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 4. Integration -->
+                <div class="col-12 col-md-6">
+                  <div
+                    class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card"
+                  >
+                    <div
+                      class="rounded-3 d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning fs-3 p-3 mb-4"
+                      style="width: 56px; height: 56px"
+                    >
+                      <i class="bi bi-diagram-3-fill"></i>
+                    </div>
+                    <h3 class="h5 fw-bold text-dark mb-3">Integration</h3>
+                    <ul
+                      class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2"
+                    >
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>E-Commerce:</strong> Direct Shopify &
+                          WooCommerce sync.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>CRM Connections:</strong> HubSpot, Zoho &
+                          Meta Lead Ads.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Payment Gateways:</strong> Razorpay & Pabbly
+                          workflows.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <i
+                          class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
+                        ></i>
+                        <span
+                          ><strong>Custom APIs:</strong> Webhooks for ERPs &
+                          external platforms.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <h3 class="h5 fw-bold text-dark mb-3">Broadcast</h3>
-              <ul class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2">
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Bulk Messaging:</strong> Reach thousands with targeted campaigns.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Campaign Scheduler:</strong> Time broadcasts for peak response hours.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Dynamic Variables:</strong> Personalize messages per user data.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Real-time Analytics:</strong> Track open rates, delivery & failures.</span>
-                </li>
-              </ul>
+            </div>
+
+            <!-- Right Column: Book Demo CTA Banner (No Form) -->
+            <div class="col-12 col-xl-4">
+              <div
+                class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-dark text-white h-100 d-flex flex-column justify-content-between position-relative overflow-hidden"
+              >
+                <!-- Decorative Background Glow -->
+                <div
+                  class="position-absolute top-0 end-0 bg-success opacity-20 rounded-circle"
+                  style="
+                    width: 200px;
+                    height: 200px;
+                    filter: blur(60px);
+                    margin-top: -50px;
+                    margin-right: -50px;
+                  "
+                ></div>
+                <div
+                  class="position-absolute bottom-0 start-0 bg-primary opacity-20 rounded-circle"
+                  style="
+                    width: 200px;
+                    height: 200px;
+                    filter: blur(60px);
+                    margin-bottom: -50px;
+                    margin-left: -50px;
+                  "
+                ></div>
+
+                <div class="position-relative z-1 my-auto">
+                  <h3 class="fw-bold display-6 text-white mb-3">
+                    Ready to transform your customer support & sales?
+                  </h3>
+                  <p class="text-secondary text-light opacity-75 fs-6 mb-4">
+                    Book a 1-on-1 walk-through with our WhatsApp API
+                    specialists. We'll show you how to automate workflows, set
+                    up chatbots, and run successful campaign broadcasts.
+                  </p>
+
+                  <ul
+                    class="list-unstyled d-flex flex-column gap-2 mb-4 text-light opacity-90 small"
+                  >
+                    <li class="d-flex align-items-center gap-2">
+                      <i class="bi bi-check2 text-success fw-bold fs-5"></i>
+                      <span>30-minute interactive live walkthrough</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                      <i class="bi bi-check2 text-success fw-bold fs-5"></i>
+                      <span>Custom pricing & integration strategy</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                      <i class="bi bi-check2 text-success fw-bold fs-5"></i>
+                      <span>WhatsApp Business API verification guide</span>
+                    </li>
+                  </ul>
+
+                  <div class="d-grid gap-3">
+                    <a
+                      href="#book-demo"
+                      class="btn btn-success btn-lg fw-bold py-3 shadow-sm d-flex align-items-center justify-content-center gap-2"
+                    >
+                      <span>Book a Live Demo</span>
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- 3. Automation -->
-          <div class="col-12 col-md-6">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card">
-              <div class="rounded-3 d-inline-flex align-items-center justify-content-center fs-3 p-3 mb-4" style="width: 56px; height: 56px; background-color: rgba(147, 51, 234, 0.1); color: #9333ea;">
-                <i class="bi bi-robot"></i>
-              </div>
-              <h3 class="h5 fw-bold text-dark mb-3">Automation</h3>
-              <ul class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2">
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>No-Code Bot Builder:</strong> Deploy 24/7 interactive chatbots.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Order Updates:</strong> Automatic receipts & shipping alerts.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Abandoned Cart:</strong> Automated recovery reminders.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Auto-Replies:</strong> Out-of-office & greeting triggers.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 4. Integration -->
-          <div class="col-12 col-md-6">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 capability-card">
-              <div class="rounded-3 d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning fs-3 p-3 mb-4" style="width: 56px; height: 56px;">
-                <i class="bi bi-diagram-3-fill"></i>
-              </div>
-              <h3 class="h5 fw-bold text-dark mb-3">Integration</h3>
-              <ul class="list-unstyled text-secondary small mb-0 d-flex flex-column gap-2">
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>E-Commerce:</strong> Direct Shopify & WooCommerce sync.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>CRM Connections:</strong> HubSpot, Zoho & Meta Lead Ads.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Payment Gateways:</strong> Razorpay & Pabbly workflows.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2">
-                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
-                  <span><strong>Custom APIs:</strong> Webhooks for ERPs & external platforms.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      <!-- Right Column: Book Demo CTA Banner (No Form) -->
-      <div class="col-12 col-xl-4">
-        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-dark text-white h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
-          
-          <!-- Decorative Background Glow -->
-          <div class="position-absolute top-0 end-0 bg-success opacity-20 rounded-circle" style="width: 200px; height: 200px; filter: blur(60px); margin-top: -50px; margin-right: -50px;"></div>
-          <div class="position-absolute bottom-0 start-0 bg-primary opacity-20 rounded-circle" style="width: 200px; height: 200px; filter: blur(60px); margin-bottom: -50px; margin-left: -50px;"></div>
+        <style>
+          .capability-card {
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+          }
+          .capability-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+          }
+        </style>
+      </section>
 
-          <div class="position-relative z-1 my-auto">
-          
-            <h3 class="fw-bold display-6 text-white mb-3">Ready to transform your customer support & sales?</h3>
-            <p class="text-secondary text-light opacity-75 fs-6 mb-4">Book a 1-on-1 walk-through with our WhatsApp API specialists. We'll show you how to automate workflows, set up chatbots, and run successful campaign broadcasts.</p>
-
-            <ul class="list-unstyled d-flex flex-column gap-2 mb-4 text-light opacity-90 small">
-              <li class="d-flex align-items-center gap-2">
-                <i class="bi bi-check2 text-success fw-bold fs-5"></i>
-                <span>30-minute interactive live walkthrough</span>
-              </li>
-              <li class="d-flex align-items-center gap-2">
-                <i class="bi bi-check2 text-success fw-bold fs-5"></i>
-                <span>Custom pricing & integration strategy</span>
-              </li>
-              <li class="d-flex align-items-center gap-2">
-                <i class="bi bi-check2 text-success fw-bold fs-5"></i>
-                <span>WhatsApp Business API verification guide</span>
-              </li>
-            </ul>
-
-            <div class="d-grid gap-3">
-              <a href="#book-demo" class="btn btn-success btn-lg fw-bold py-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
-                <span>Book a Live Demo</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-
-            </div>
-          </div>
-
-       
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <style>
-    .capability-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .capability-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
-    }
-  </style>
-</section>
-
-<!-- Core Capabilities Section with Book Demo CTA (No Form) -->
-<!-- <section class="py-5 bg-light" id="capabilities">
+      <!-- Core Capabilities Section with Book Demo CTA (No Form) -->
+      <!-- <section class="py-5 bg-light" id="capabilities">
   <div class="container py-4">
     
    
@@ -1068,175 +1153,253 @@
         </div>
       </section> -->
 
-      
       <!-- ==================== PRODUCT SHOWCASE ==================== -->
-  <section id="showcase" class="section py-5 position-relative overflow-hidden bg-light">
-  <div class="container py-4">
-    
-    <!-- Section Header -->
-    <div class="row justify-content-center text-center mb-4">
-      <div class="sec-head col-lg-8">
-       <p class="chapter-label center reveal">Product Tour</p>
-         <h2 class="reveal" data-delay="0.08">
+      <section
+        id="showcase"
+        class="section py-5 position-relative overflow-hidden bg-light"
+      >
+        <div class="container py-4">
+          <!-- Section Header -->
+          <div class="row justify-content-center text-center mb-4">
+            <div class="sec-head col-lg-8">
+              <p class="chapter-label center reveal">Product Tour</p>
+              <h2 class="reveal" data-delay="0.08">
+                A workspace your whole team will love
+              </h2>
+              <p class="text-secondary lead fs-6">
+                Four views, one platform. Click through the product your team
+                will actually use every day.
+              </p>
+            </div>
+          </div>
 
-              A workspace your whole team will love
+          <!-- Navigation Tabs & Dynamic Subtitle -->
+          <div class="row justify-content-center text-center mb-4">
+            <div class="col-12">
+              <div
+                class="show-tabs gap-2 p-2 bg-white rounded-pill shadow-sm border mb-3"
+                role="tablist"
+                data-testid="product-showcase-tab-list"
+              >
+                <button
+                  class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold active"
+                  role="tab"
+                  aria-selected="true"
+                  data-tab="inbox"
+                  data-blurb="Every customer conversation, one shared workspace."
+                >
+                  Inbox
+                </button>
+                <button
+                  class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold text-secondary"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="automation"
+                  data-blurb="Visual journeys that run while you sleep."
+                >
+                  Automation
+                </button>
+                <button
+                  class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold text-secondary"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="campaigns"
+                  data-blurb="Broadcasts with real delivery intelligence."
+                >
+                  Campaigns
+                </button>
+                <button
+                  class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold text-secondary"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="analytics"
+                  data-blurb="Know what every message earns you."
+                >
+                  Analytics
+                </button>
+              </div>
 
-            </h2>
-        <p class="text-secondary lead fs-6">
-          Four views, one platform. Click through the product your team will actually use every day.
-        </p>
-      </div>
-    </div>
+              <!-- Dynamic Blurb -->
+              <p
+                class="show-blurb text-muted small fw-medium mb-0"
+                data-show-blurb
+              >
+                Every customer conversation, one shared workspace.
+              </p>
+            </div>
+          </div>
 
-    <!-- Navigation Tabs & Dynamic Subtitle -->
-    <div class="row justify-content-center text-center mb-4">
-      <div class="col-12">
-        <div class="show-tabs gap-2 p-2 bg-white rounded-pill shadow-sm border mb-3" role="tablist" data-testid="product-showcase-tab-list">
-          <button class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold active" role="tab" aria-selected="true" data-tab="inbox" data-blurb="Every customer conversation, one shared workspace.">
-            Inbox
-          </button>
-          <button class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold text-secondary" role="tab" aria-selected="false" data-tab="automation" data-blurb="Visual journeys that run while you sleep.">
-            Automation
-          </button>
-          <button class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold text-secondary" role="tab" aria-selected="false" data-tab="campaigns" data-blurb="Broadcasts with real delivery intelligence.">
-            Campaigns
-          </button>
-          <button class="show-tab btn btn-sm rounded-pill px-4 py-2 fw-semibold text-secondary" role="tab" aria-selected="false" data-tab="analytics" data-blurb="Know what every message earns you.">
-            Analytics
-          </button>
+          <!-- Showcase Stage (Panels containing 2 images each) -->
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-12">
+              <div class="show-stage position-relative">
+                <div
+                  class="show-frame position-relative z-1 rounded-4 overflow-hidden border shadow-lg bg-white p-3 p-md-4"
+                  data-testid="product-showcase-view-container"
+                >
+                  <!-- PANEL: INBOX (2 IMAGES) -->
+                  <div class="show-panel active h-100" data-panel="inbox">
+                    <div class="row g-3">
+                      <div class="col-12 col-md-8">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1000&q=80"
+                            alt="Shared Team Inbox Desktop View"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                            alt="Mobile Chat App View"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PANEL: AUTOMATION (2 IMAGES) -->
+                  <div class="show-panel h-100" data-panel="automation">
+                    <div class="row g-3">
+                      <div class="col-12 col-md-8">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
+                            alt="Bot Flow Builder Interface"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                            alt="Automated Trigger Settings"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PANEL: CAMPAIGNS (2 IMAGES) -->
+                  <div class="show-panel h-100" data-panel="campaigns">
+                    <div class="row g-3">
+                      <div class="col-12 col-md-8">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80"
+                            alt="Broadcast Campaign Manager"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80"
+                            alt="Audience Segment Targeting"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PANEL: ANALYTICS (2 IMAGES) -->
+                  <div class="show-panel h-100" data-panel="analytics">
+                    <div class="row g-3">
+                      <div class="col-12 col-md-8">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+                            alt="Revenue & ROI Analytics Dashboard"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div
+                          class="card border-0 shadow-sm rounded-3 overflow-hidden"
+                        >
+                          <img
+                            src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80"
+                            alt="Real-time Message Conversion Metrics"
+                            class="img-fluid w-100 h-100 object-fit-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Dynamic Blurb -->
-        <p class="show-blurb text-muted small fw-medium mb-0" data-show-blurb>
-          Every customer conversation, one shared workspace.
-        </p>
-      </div>
-    </div>
-   
+      </section>
 
-    <!-- Showcase Stage (Panels containing 2 images each) -->
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-12">
-        <div class="show-stage position-relative">
-           <div class="show-frame position-relative z-1 rounded-4 overflow-hidden border shadow-lg bg-white p-3 p-md-4" data-testid="product-showcase-view-container">
-      
-      <!-- PANEL: INBOX (2 IMAGES) -->
-      <div class="show-panel active h-100" data-panel="inbox">
-        <div class="row g-3">
-          <div class="col-12 col-md-8">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden ">
-              <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1000&q=80" alt="Shared Team Inbox Desktop View" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Mobile Chat App View" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-        </div>
-      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const tabs = document.querySelectorAll(".show-tab");
+          const panels = document.querySelectorAll(".show-panel");
+          const blurb = document.querySelector("[data-show-blurb]");
 
-      <!-- PANEL: AUTOMATION (2 IMAGES) -->
-      <div class="show-panel h-100" data-panel="automation">
-        <div class="row g-3">
-          <div class="col-12 col-md-8">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80" alt="Bot Flow Builder Interface" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Automated Trigger Settings" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-        </div>
-      </div>
+          tabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+              const target = tab.getAttribute("data-tab");
+              const description = tab.getAttribute("data-blurb");
 
-      <!-- PANEL: CAMPAIGNS (2 IMAGES) -->
-      <div class="show-panel h-100" data-panel="campaigns">
-        <div class="row g-3">
-          <div class="col-12 col-md-8">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Broadcast Campaign Manager" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Audience Segment Targeting" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-        </div>
-      </div>
+              // Deactivate all tabs
+              tabs.forEach(function (item) {
+                item.classList.remove("active");
+                item.classList.add("text-secondary");
+                item.setAttribute("aria-selected", "false");
+              });
 
-      <!-- PANEL: ANALYTICS (2 IMAGES) -->
-      <div class="show-panel h-100" data-panel="analytics">
-        <div class="row g-3">
-          <div class="col-12 col-md-8">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Revenue & ROI Analytics Dashboard" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm rounded-3 overflow-hidden ">
-              <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" alt="Real-time Message Conversion Metrics" class="img-fluid w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-        </div>
-      </div>
+              // Hide all panels
+              panels.forEach(function (panel) {
+                panel.classList.remove("active");
+              });
 
-    </div>
-        </div>
-      </div>
-    </div>
+              // Activate clicked tab
+              tab.classList.add("active");
+              tab.classList.remove("text-secondary");
+              tab.setAttribute("aria-selected", "true");
 
-  </div>
-</section>
+              // Show matching panel
+              const targetPanel = document.querySelector(
+                '.show-panel[data-panel="' + target + '"]',
+              );
+              if (targetPanel) {
+                targetPanel.classList.add("active");
+              }
 
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".show-tab");
-    const panels = document.querySelectorAll(".show-panel");
-    const blurb = document.querySelector("[data-show-blurb]");
-
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        const target = tab.getAttribute("data-tab");
-        const description = tab.getAttribute("data-blurb");
-
-        // Deactivate all tabs
-        tabs.forEach(function (item) {
-          item.classList.remove("active");
-          item.classList.add("text-secondary");
-          item.setAttribute("aria-selected", "false");
+              // Update description blurb
+              if (blurb && description) {
+                blurb.textContent = description;
+              }
+            });
+          });
         });
-
-        // Hide all panels
-        panels.forEach(function (panel) {
-          panel.classList.remove("active");
-        });
-
-        // Activate clicked tab
-        tab.classList.add("active");
-        tab.classList.remove("text-secondary");
-        tab.setAttribute("aria-selected", "true");
-
-        // Show matching panel
-        const targetPanel = document.querySelector('.show-panel[data-panel="' + target + '"]');
-        if (targetPanel) {
-          targetPanel.classList.add("active");
-        }
-
-        // Update description blurb
-        if (blurb && description) {
-          blurb.textContent = description;
-        }
-      });
-    });
-  });
-</script>
-<!-- ==================== INTEGRATIONS ==================== -->
+      </script>
+      <!-- ==================== INTEGRATIONS ==================== -->
       <section id="integrations" class="section section-alt">
         <div class="container">
           <div class="sec-head center">
@@ -1245,8 +1408,8 @@
               Connect 11za With the Tools You Already Use
             </h2>
             <p class="sub reveal" data-delay="0.16">
-             Bring WhatsApp communication into your existing business workflow.
-Connect 11za with platforms such as:
+              Bring WhatsApp communication into your existing business workflow.
+              Connect 11za with platforms such as:
             </p>
           </div>
           <div class="int-grid" data-testid="integrations-category-grid">
@@ -1657,8 +1820,6 @@ Connect 11za with platforms such as:
         </div>
       </section> -->
 
-      
-
       <!-- ================================
      LATEST CASE STUDIES
 ================================ -->
@@ -1826,7 +1987,8 @@ Connect 11za with platforms such as:
                   class="btn btn-light"
                   data-testid="pricing-talk-to-sales-btn"
                   >Talk to Sales
-                  <svg class="ic"><use href="#i-arrow-right" /></svg></a>
+                  <svg class="ic"><use href="#i-arrow-right" /></svg
+                ></a>
               </div>
             </div>
             <div class="reveal" data-delay="0.12">
@@ -1856,7 +2018,6 @@ Connect 11za with platforms such as:
                     <p class="c2">per-conversation</p>
                   </div>
                 </div>
-              
               </div>
             </div>
           </div>
@@ -1871,8 +2032,9 @@ Connect 11za with platforms such as:
           <div class="cta-box">
             <h2>Ready to simplify WhatsApp communication?</h2>
             <p>
-             Bring your customer conversations, team and automation together in one platform.<br>
-             Start with 11za today.
+              Bring your customer conversations, team and automation together in
+              one platform.<br />
+              Start with 11za today.
             </p>
             <p></p>
 
@@ -1895,16 +2057,12 @@ Connect 11za with platforms such as:
   ========================== -->
 
     <footer class="position-relative">
-      <div class="footer-layer-effect">
-       
-      </div>
+      <div class="footer-layer-effect"></div>
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="logo">11<span>za</span>.</div>
-            <div>
-One Company. One Chat.
-            </div>
+            <div>One Company. One Chat.</div>
             <p>
               11za observed the need for an influential yet simple platform with
               clear pricing for business to hold WhatsApp Business efficiently
@@ -1923,14 +2081,13 @@ One Company. One Chat.
             <a href="#">Integrations</a>
             <a href="#">Solutions</a>
           </div>
-          
+
           <div class="footer-column">
             <h4>Other Links</h4>
             <a href="#">Terms & Conditions</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Api Documentation</a>
             <a href="#">11za Documentation</a>
-
           </div>
 
           <div class="footer-column">
@@ -1941,56 +2098,67 @@ One Company. One Chat.
                 ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
               ></a
             >
-           <a href="mailto:hello@11za.com"><i class="fa-solid  fa-envelope me-3 "></i> hello@11za.com</a>
-           <a href="#"><i class="fa-solid fa-clock me-3 "></i> Mon - Sat | 10am - 7pm</a>
+            <a href="mailto:hello@11za.com"
+              ><i class="fa-solid fa-envelope me-3"></i> hello@11za.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-clock me-3"></i> Mon - Sat | 10am - 7pm</a
+            >
           </div>
         </div>
 
         <div class="footer-bottom">
           <span> © 2026 11za. All rights reserved. </span>
 
-        <div>
-          <ul class="social-nav widget social-widget d-flex align-items-center gap-3 ps-0">
-							<li><a href="https://www.linkedin.com/company/11za" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="https://twitter.com/11zaofficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="https://www.instagram.com/11zaofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="https://www.facebook.com/11zaofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							
-						</ul>
-        </div>
+          <div>
+            <ul
+              class="social-nav widget social-widget d-flex align-items-center gap-3 ps-0"
+            >
+              <li>
+                <a href="https://www.linkedin.com/company/11za" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/11zaofficial" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/11zaofficial/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/11zaofficial/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
     <!-- Bootstrap JS -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/script.js" defer></script>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("[data-nav]");
 
-  const header = document.querySelector("[data-nav]");
+        if (!header) return;
 
-  if (!header) return;
+        function updateHeader() {
+          header.classList.toggle("scrolled", window.scrollY > 30);
+        }
 
-  function updateHeader() {
-    header.classList.toggle(
-      "scrolled",
-      window.scrollY > 30
-    );
-  }
+        updateHeader();
 
-  updateHeader();
-
-  window.addEventListener(
-    "scroll",
-    updateHeader,
-    { passive: true }
-  );
-
-});
-</script>
+        window.addEventListener("scroll", updateHeader, { passive: true });
+      });
+    </script>
   </body>
 </html>

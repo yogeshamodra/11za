@@ -13,8 +13,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
     <!-- Bootstrap 5 -->
     <link
@@ -29,12 +31,10 @@
         --primary: #16a34a;
         --primary-dark: #12813b;
         --dark: #111827;
-      
+
         --light-bg: #f8fafc;
         --border: #e2e8f0;
       }
-
-    
 
       .btn-outline-custom {
         border: 1px solid var(--border);
@@ -78,8 +78,6 @@
         font-size: 14px;
         font-weight: 700;
       }
-
-    
 
       .hero-text {
         max-width: 700px;
@@ -142,7 +140,7 @@
         top: -15px;
         left: 50%;
         transform: translateX(-50%);
-        background: #09AF72 ;
+        background: #09af72;
         color: #fff;
         padding: 7px 18px;
         border-radius: 50px;
@@ -297,13 +295,12 @@
         color: var(--muted);
         line-height: 1.7;
       }
-
-
     </style>
     <!-- ==================== NAVBAR ==================== -->
-   <header class="nav" data-nav data-testid="nav-sticky-header">
+    <header class="site-header" data-nav data-testid="nav-sticky-header">
       <nav class="container nav-inner" aria-label="Main navigation">
-        <a href="index.html" class="brand" data-testid="nav-logo-11za">
+        <!-- LOGO -->
+        <a href="home.html" class="brand" data-testid="nav-logo-11za">
           <img
             src="assets/images/11za_logo.svg"
             alt=""
@@ -312,84 +309,77 @@
             height="40"
           />
         </a>
-        <ul class="nav-links mb-0 ps-0">
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links mb-0 ps-0 list-unstyled">
           <li>
-            <a href="index.html" data-testid="nav-link-products">Home</a>
+            <a href="home.html" data-testid="nav-link-home"> Home </a>
           </li>
+
           <li>
-            <a href="about.html" data-testid="nav-link-products">About</a>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
           </li>
+
           <li>
-            <a href="pricing.html" data-testid="nav-link-solutions">Pricing</a>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
           </li>
+
           <li>
-            <a href="integration.html" data-testid="nav-link-whatsapp-api"
-              >Integrations</a
-            >
+            <a href="integration.html" data-testid="nav-link-integrations">
+              Integrations
+            </a>
           </li>
+
           <li>
-            <a href="solutions.html" data-testid="nav-link-whatsapp-api"
-              >Solutions</a
-            >
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
+            </a>
           </li>
+
           <li>
-            <a href="contact.html" data-testid="nav-link-whatsapp-api"
-              >Contact</a
-            >
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
           </li>
         </ul>
+
+        <!-- DESKTOP CTA -->
         <div class="nav-ctas">
-          <a href="#cta" class="nav-login" data-testid="nav-login-btn">Login</a>
-          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn"
-            >Sign Up</a
-          >
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
+            Login
+          </a>
+
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
+            Sign Up
+          </a>
+
           <a
             href="https://calendly.com/engees/schedule-a-demo"
             target="_blank"
             rel="noreferrer"
             class="nav-demo"
             data-testid="nav-book-demo-btn"
-            >Book a Demo</a
           >
+            Book a Demo
+          </a>
         </div>
+
+        <!-- MOBILE HAMBURGER -->
         <button
           class="nav-burger"
-          data-testid="nav-mobile-menu-btn"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
           aria-label="Toggle menu"
-          aria-expanded="false"
+          data-testid="nav-mobile-menu-btn"
         >
-          <svg class="ic ic-20 icon-open"><use href="#i-menu" /></svg>
-          <svg class="ic ic-20 icon-close" style="display: none">
-            <use href="#i-x" />
-          </svg>
+          <div class="open-menu">
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
+          </div>
+          <div class="close-menu">
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
+          </div>
         </button>
       </nav>
-      <div
-        class="mobile-panel"
-        data-testid="nav-mobile-panel"
-        data-mobile-panel
-      >
-        <ul>
-          <li><a class="mlink" href="about.html">About</a></li>
-          <li><a class="mlink" href="pricing.html">Pricing</a></li>
-          <li><a class="mlink" href="contact.html">Integrations</a></li>
-          <li><a class="mlink" href="contact.html">Solutions</a></li>
-          <li><a class="mlink" href="contact.html">contact</a></li>
-        </ul>
-        <div class="mctas">
-          <a href="#cta" class="m-start" data-testid="nav-mobile-start-btn"
-            >Sign Up</a
-          >
-          <a
-            href="https://calendly.com/engees/schedule-a-demo"
-            target="_blank"
-            rel="noreferrer"
-            class="m-demo"
-            data-testid="nav-mobile-demo-btn"
-            >Book a Demo</a
-          >
-        </div>
-      </div>
     </header>
     <!-- HERO -->
     <section class="hero text-center">
@@ -406,9 +396,13 @@
         </h1>
 
         <p class="hero-text">
-         Manage customer conversations, teams, broadcasts, automation and customer engagement from one powerful platform.
+          Manage customer conversations, teams, broadcasts, automation and
+          customer engagement from one powerful platform.
         </p>
-        <p class="hero-text">Choose the plan that fits your business and start building better customer conversations with 11za.</p>
+        <p class="hero-text">
+          Choose the plan that fits your business and start building better
+          customer conversations with 11za.
+        </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
           <a href="#pricing" class="btn btn-primary btn-lg">
@@ -624,7 +618,8 @@
           <h2 class="section-title">Everything your team needs</h2>
 
           <p class="section-subtitle mt-3">
-            Your 11za subscription gives your team access to the tools needed to manage customer communication from one platform.
+            Your 11za subscription gives your team access to the tools needed to
+            manage customer communication from one platform.
           </p>
         </div>
 
@@ -785,7 +780,11 @@
         </div>
 
         <div class="text-center mt-5">
-          <a href="http://localhost/11za-wordpress/wp-content/uploads/2026/09/NEW-WABA-Templates-Rules.pdf" class="btn btn-outline-custom" target="_blank">
+          <a
+            href="http://localhost/11za-wordpress/wp-content/uploads/2026/09/NEW-WABA-Templates-Rules.pdf"
+            class="btn btn-outline-custom"
+            target="_blank"
+          >
             View WhatsApp Pricing Details
             <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -841,7 +840,7 @@
                     data-bs-toggle="collapse"
                     data-bs-target="#faq2"
                   >
-                  Whatsapp is free. Why do i pay money?
+                    Whatsapp is free. Why do i pay money?
                   </button>
                 </h2>
 
@@ -851,7 +850,9 @@
                   data-bs-parent="#faqAccordion"
                 >
                   <div class="accordion-body">
-                   However, WhatsApp charges for business account, which is used as a sales channel, to communicate with customers and grow at a large scale.
+                    However, WhatsApp charges for business account, which is
+                    used as a sales channel, to communicate with customers and
+                    grow at a large scale.
                   </div>
                 </div>
               </div>
@@ -888,7 +889,7 @@
                     data-bs-toggle="collapse"
                     data-bs-target="#faq4"
                   >
-                   Can I use my existing WhatsApp number with 11za?
+                    Can I use my existing WhatsApp number with 11za?
                   </button>
                 </h2>
 
@@ -899,11 +900,12 @@
                 >
                   <div class="accordion-body">
                     <p>
-
                       No, you cannot use an existing WhatsApp number with 11za.
                     </p>
                     <p>
-                      Another thing to keep in mind is that if you have a number that is already being used with the WhatsApp Business API then it can be migrated to 11za
+                      Another thing to keep in mind is that if you have a number
+                      that is already being used with the WhatsApp Business API
+                      then it can be migrated to 11za
                     </p>
                   </div>
                 </div>
@@ -927,7 +929,13 @@
                   data-bs-parent="#faqAccordion"
                 >
                   <div class="accordion-body">
-                    You will only need the phone to receive the activation OTP. Once you are verified, we don`t need the phone anymore for WhatsApp. You can continue to use it for making regular phone calls, receiving SMS text messages etc. But you can`t use WhatsApp on that phone with that number, again. You will need to use WhatsApp via the 11za dashboard or the Official WhatsApp API.
+                    You will only need the phone to receive the activation OTP.
+                    Once you are verified, we don`t need the phone anymore for
+                    WhatsApp. You can continue to use it for making regular
+                    phone calls, receiving SMS text messages etc. But you can`t
+                    use WhatsApp on that phone with that number, again. You will
+                    need to use WhatsApp via the 11za dashboard or the Official
+                    WhatsApp API.
                   </div>
                 </div>
               </div>
@@ -939,7 +947,8 @@
                     data-bs-toggle="collapse"
                     data-bs-target="#faq6"
                   >
-                   Once my number is activated, can I re-install WhatsApp on my phone?
+                    Once my number is activated, can I re-install WhatsApp on my
+                    phone?
                   </button>
                 </h2>
 
@@ -949,7 +958,8 @@
                   data-bs-parent="#faqAccordion"
                 >
                   <div class="accordion-body">
-                    That could be like looking of deployation of WhatsApp on 2 numbers. OnceAPI is set up, it can’t be used on a phone.
+                    That could be like looking of deployation of WhatsApp on 2
+                    numbers. OnceAPI is set up, it can’t be used on a phone.
                   </div>
                 </div>
               </div>
@@ -973,19 +983,22 @@
           <div class="d-flex justify-content-center gap-3 flex-wrap">
             <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
 
-            <a href="https://calendly.com/engees/schedule-a-demo" class="btn btn-outline-light btn-lg"> Contact Sales </a>
+            <a
+              href="https://calendly.com/engees/schedule-a-demo"
+              class="btn btn-outline-light btn-lg"
+            >
+              Contact Sales
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-  <!-- =========================
+    <!-- =========================
        FOOTER
   ========================== -->
     <footer class="position-relative">
-      <div class="footer-layer-effect">
-       
-      </div>
+      <div class="footer-layer-effect"></div>
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
@@ -1009,14 +1022,13 @@
             <a href="#">Integrations</a>
             <a href="#">Solutions</a>
           </div>
-          
+
           <div class="footer-column">
             <h4>Other Links</h4>
             <a href="#">Terms & Conditions</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Api Documentation</a>
             <a href="#">11za Documentation</a>
-
           </div>
 
           <div class="footer-column">
@@ -1027,30 +1039,52 @@
                 ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
               ></a
             >
-           <a href="mailto:hello@11za.com"><i class="fa-solid  fa-envelope me-3 "></i> hello@11za.com</a>
-           <a href="#"><i class="fa-solid fa-clock me-3 "></i> Mon - Sat | 10am - 7pm</a>
+            <a href="mailto:hello@11za.com"
+              ><i class="fa-solid fa-envelope me-3"></i> hello@11za.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-clock me-3"></i> Mon - Sat | 10am - 7pm</a
+            >
           </div>
         </div>
 
         <div class="footer-bottom">
           <span> © 2026 11za. All rights reserved. </span>
 
-        <div>
-          <ul class="social-nav widget social-widget d-flex align-items-center gap-3">
-							<li><a href="https://www.linkedin.com/company/11za" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="https://twitter.com/11zaofficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="https://www.instagram.com/11zaofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="https://www.facebook.com/11zaofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							
-						</ul>
-        </div>
+          <div>
+            <ul
+              class="social-nav widget social-widget d-flex align-items-center gap-3"
+            >
+              <li>
+                <a href="https://www.linkedin.com/company/11za" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/11zaofficial" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/11zaofficial/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/11zaofficial/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
-<script src="assets/js/script.js" defer></script>
-<!-- Bootstrap JS --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  
-</script>
-</body>
+    <script src="assets/js/script.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script></script>
+  </body>
 </html>

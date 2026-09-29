@@ -769,9 +769,10 @@
   <!-- =====================================
        NAVBAR
   ====================================== -->
-<header class="nav" data-nav data-testid="nav-sticky-header">
+ <header class="site-header" data-nav data-testid="nav-sticky-header">
       <nav class="container nav-inner" aria-label="Main navigation">
-        <a href="index.html" class="brand" data-testid="nav-logo-11za">
+        <!-- LOGO -->
+        <a href="home.html" class="brand" data-testid="nav-logo-11za">
           <img
             src="assets/images/11za_logo.svg"
             alt=""
@@ -780,86 +781,78 @@
             height="40"
           />
         </a>
-        <ul class="nav-links mb-0 ps-0">
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links mb-0 ps-0 list-unstyled">
           <li>
-            <a href="index.html" data-testid="nav-link-products">Home</a>
+            <a href="home.html" data-testid="nav-link-home"> Home </a>
           </li>
+
           <li>
-            <a href="about.html" data-testid="nav-link-products">About</a>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
           </li>
+
           <li>
-            <a href="pricing.html" data-testid="nav-link-solutions">Pricing</a>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
           </li>
+
           <li>
-            <a href="integration.html" data-testid="nav-link-whatsapp-api"
-              >Integrations</a
-            >
+            <a href="integration.html" data-testid="nav-link-integrations">
+              Integrations
+            </a>
           </li>
+
           <li>
-            <a href="solutions.html" data-testid="nav-link-whatsapp-api"
-              >Solutions</a
-            >
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
+            </a>
           </li>
+
           <li>
-            <a href="contact.html" data-testid="nav-link-whatsapp-api"
-              >Contact</a
-            >
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
           </li>
         </ul>
+
+        <!-- DESKTOP CTA -->
         <div class="nav-ctas">
-          <a href="#cta" class="nav-login" data-testid="nav-login-btn">Login</a>
-          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn"
-            >Sign Up</a
-          >
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
+            Login
+          </a>
+
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
+            Sign Up
+          </a>
+
           <a
             href="https://calendly.com/engees/schedule-a-demo"
             target="_blank"
             rel="noreferrer"
             class="nav-demo"
             data-testid="nav-book-demo-btn"
-            >Book a Demo</a
           >
+            Book a Demo
+          </a>
         </div>
+
+        <!-- MOBILE HAMBURGER -->
         <button
           class="nav-burger"
-          data-testid="nav-mobile-menu-btn"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
           aria-label="Toggle menu"
-          aria-expanded="false"
+          data-testid="nav-mobile-menu-btn"
         >
-          <svg class="ic ic-20 icon-open"><use href="#i-menu" /></svg>
-          <svg class="ic ic-20 icon-close" style="display: none">
-            <use href="#i-x" />
-          </svg>
+          <div class="open-menu">
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
+          </div>
+          <div class="close-menu">
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
+          </div>
         </button>
       </nav>
-      <div
-        class="mobile-panel"
-        data-testid="nav-mobile-panel"
-        data-mobile-panel
-      >
-        <ul>
-          <li><a class="mlink" href="about.html">About</a></li>
-          <li><a class="mlink" href="pricing.html">Pricing</a></li>
-          <li><a class="mlink" href="contact.html">Integrations</a></li>
-          <li><a class="mlink" href="contact.html">Solutions</a></li>
-          <li><a class="mlink" href="contact.html">contact</a></li>
-        </ul>
-        <div class="mctas">
-          <a href="#cta" class="m-start" data-testid="nav-mobile-start-btn"
-            >Sign Up</a
-          >
-          <a
-            href="https://calendly.com/engees/schedule-a-demo"
-            target="_blank"
-            rel="noreferrer"
-            class="m-demo"
-            data-testid="nav-mobile-demo-btn"
-            >Book a Demo</a
-          >
-        </div>
-      </div>
     </header>
-
   <main>
 
 
