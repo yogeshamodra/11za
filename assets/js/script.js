@@ -151,3 +151,16 @@
       ]
     });
   });
+  $(document).ready(function () {
+    const $header = $("[data-nav]");
+
+    if (!$header.length) return;
+
+    function updateHeader() {
+        $header.toggleClass("scrolled", $(window).scrollTop() > 30);
+    }
+
+    updateHeader();
+
+    $(window).on("scroll", updateHeader);
+});
