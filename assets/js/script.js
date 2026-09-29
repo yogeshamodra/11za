@@ -1,4 +1,5 @@
 /* 11za static site — vanilla JS interactions (no frameworks) */
+
 (function () {
     "use strict";
 
