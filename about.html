@@ -63,7 +63,7 @@
 
       .stat-label {
         margin-top: 5px;
-        color: #09AF72 ;
+        color: #09af72;
         font-weight: 700;
       }
 
@@ -463,7 +463,7 @@
     </style>
 
     <!-- ==================== NAVBAR ==================== -->
-     <header class="site-header" data-nav data-testid="nav-sticky-header">
+    <header class="site-header" data-nav data-testid="nav-sticky-header">
       <nav class="container nav-inner" aria-label="Main navigation">
         <!-- LOGO -->
         <a href="index.html" class="brand" data-testid="nav-logo-11za">
@@ -594,28 +594,86 @@
       <!-- =========================
          STATS
     ========================== -->
+      <!-- =========================
+     STATS COUNTER
+========================= -->
 
       <section class="stats">
         <div class="container">
           <div class="stats-grid">
             <div class="stat">
-              <div class="stat-number">2,000+</div>
+              <div
+                class="stat-number"
+                data-start="1000"
+                data-target="2000"
+                data-suffix="+"
+              >
+                1000+
+              </div>
+
               <div class="stat-label">Businesses onboarded</div>
             </div>
 
             <div class="stat">
-              <div class="stat-number">10M+</div>
+              <div
+                class="stat-number"
+                data-start="5"
+                data-target="10"
+                data-suffix="M+"
+              >
+                5M+
+              </div>
+
               <div class="stat-label">Messages every month</div>
             </div>
 
             <div class="stat">
-              <div class="stat-number">50+</div>
+              <div
+                class="stat-number"
+                data-start="10"
+                data-target="50"
+                data-suffix="+"
+              >
+                10+
+              </div>
+
               <div class="stat-label">Platform integrations</div>
             </div>
           </div>
         </div>
       </section>
 
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const counters = document.querySelectorAll(".stat-number");
+
+          counters.forEach(function (counter) {
+            const start = parseInt(counter.getAttribute("data-start"));
+            const target = parseInt(counter.getAttribute("data-target"));
+            const suffix = counter.getAttribute("data-suffix");
+
+            const duration = 2000;
+            const steps = 60;
+            const increment = (target - start) / steps;
+            const intervalTime = duration / steps;
+
+            let current = start;
+
+            const counterInterval = setInterval(function () {
+              current += increment;
+
+              if (current >= target) {
+                current = target;
+
+                clearInterval(counterInterval);
+              }
+
+              counter.textContent =
+                Math.floor(current).toLocaleString() + suffix;
+            }, intervalTime);
+          });
+        });
+      </script>
       <!-- =========================
          WHO WE ARE
     ========================== -->
@@ -720,7 +778,7 @@
           <div class="section-label">What we do</div>
 
           <h2 class="section-title">
-           Everything You Need to <br>Grow on WhatsApp.
+            Everything You Need to <br />Grow on WhatsApp.
           </h2>
 
           <div class="capabilities">
@@ -728,7 +786,8 @@
               <span class="capability-number">01</span>
               <h3>WhatsApp Business API</h3>
               <p>
-                Connect your business with the official WhatsApp Business Platform and communicate with customers at scale.
+                Connect your business with the official WhatsApp Business
+                Platform and communicate with customers at scale.
               </p>
             </div>
 
@@ -736,7 +795,8 @@
               <span class="capability-number">02</span>
               <h3>Team Inbox</h3>
               <p>
-                Let multiple team members manage conversations from one WhatsApp number while keeping every interaction organized.
+                Let multiple team members manage conversations from one WhatsApp
+                number while keeping every interaction organized.
               </p>
             </div>
 
@@ -744,7 +804,8 @@
               <span class="capability-number">03</span>
               <h3>Automation</h3>
               <p>
-                Automate repetitive conversations, notifications and customer journeys without adding more manual work.
+                Automate repetitive conversations, notifications and customer
+                journeys without adding more manual work.
               </p>
             </div>
 
@@ -752,7 +813,8 @@
               <span class="capability-number">04</span>
               <h3>Chatbots & AI</h3>
               <p>
-                Answer common questions, collect information, qualify leads and route conversations to the right team members.
+                Answer common questions, collect information, qualify leads and
+                route conversations to the right team members.
               </p>
             </div>
 
@@ -760,7 +822,8 @@
               <span class="capability-number">05</span>
               <h3>Campaigns</h3>
               <p>
-                Create targeted WhatsApp campaigns and track delivery, reads and customer responses.
+                Create targeted WhatsApp campaigns and track delivery, reads and
+                customer responses.
               </p>
             </div>
 
@@ -768,7 +831,8 @@
               <span class="capability-number">06</span>
               <h3>Analytics</h3>
               <p>
-                Understand conversations, campaign performance and team activity with actionable insights.
+                Understand conversations, campaign performance and team activity
+                with actionable insights.
               </p>
             </div>
           </div>
@@ -801,7 +865,7 @@
         }
 
         .team-heading h2 span {
-          color: #09AF72 ;
+          color: #09af72;
         }
 
         /* =========================================
@@ -998,7 +1062,7 @@
           }
 
           .team-grid {
-            grid-template-columns: 1fr ;
+            grid-template-columns: 1fr;
 
             gap: 12px;
           }
@@ -1032,7 +1096,7 @@
 
             <h2 class="section-title">
               The person behind
-              <span style="color: #09AF72;">11ZA.</span>
+              <span style="color: #09af72">11ZA.</span>
             </h2>
 
             <p class="leadership-intro">
@@ -1282,6 +1346,5 @@
       </div>
     </footer>
     <script src="assets/js/script.js" defer></script>
-    
   </body>
 </html>
