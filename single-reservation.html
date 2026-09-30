@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WhatsApp Reservation Automation | 11ZA</title>
+
+    <meta
+        name="description"
+        content="Automate reservations, bookings, customer enquiries and confirmations through WhatsApp with 11ZA."
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --light-blue: #f3f8ff;
+            --dark: #151515;
+            --muted: #6c757d;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        /* =================================================
+           HERO
+        ================================================= */
+
+        .hero-section {
+            padding: 100px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fbff 0%,
+                    #eef6ff 100%
+                );
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            background: #e7f1ff;
+            color: var(--primary);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.05;
+
+            font-weight: 800;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            font-size: 19px;
+            line-height: 1.7;
+
+            color: var(--muted);
+
+            max-width: 620px;
+
+            margin-bottom: 32px;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            border-color: var(--primary);
+
+            color: #fff;
+
+            padding: 13px 25px;
+
+            border-radius: 8px;
+
+            font-weight: 600;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+
+            color: #fff;
+        }
+
+        .video-wrapper {
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, .15);
+        }
+
+
+        /* =================================================
+           TRUST
+        ================================================= */
+
+        .trust-section {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+
+            background: #fff;
+        }
+
+        .trust-item {
+            padding: 15px;
+        }
+
+        .trust-number {
+            font-size: 30px;
+
+            font-weight: 800;
+
+            color: var(--primary);
+        }
+
+        .trust-label {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* =================================================
+           SECTION
+        ================================================= */
+
+        .section-label {
+            color: var(--primary);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(34px, 4vw, 50px);
+
+            font-weight: 800;
+
+            line-height: 1.15;
+
+            letter-spacing: -1px;
+        }
+
+        .section-description {
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           CHALLENGE
+        ================================================= */
+
+        .challenge-card {
+            height: 100%;
+
+            padding: 30px;
+
+            border: 1px solid #eee;
+
+            border-radius: 18px;
+
+            background: #fff;
+
+            transition: all .3s ease;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, .08);
+        }
+
+        .icon-box {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #e8f2ff;
+
+            color: var(--primary);
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+        }
+
+        .challenge-card h3 {
+            font-size: 20px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+        .challenge-card p {
+            color: var(--muted);
+
+            line-height: 1.7;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =================================================
+           SOLUTION
+        ================================================= */
+
+        .solution-section {
+            background: #f8fbff;
+        }
+
+        .solution-card {
+            height: 100%;
+
+            background: #fff;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            border: 1px solid #eee;
+
+            transition: all .3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 45px rgba(13, 110, 253, .12);
+        }
+
+        .solution-card h3 {
+            font-size: 19px;
+
+            font-weight: 700;
+        }
+
+        .solution-card p {
+            color: var(--muted);
+
+            line-height: 1.7;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =================================================
+           STEPS
+        ================================================= */
+
+        .step-card {
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        .step-number {
+            width: 55px;
+            height: 55px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--primary);
+
+            color: #fff;
+
+            border-radius: 50%;
+
+            font-weight: 800;
+        }
+
+        .step-card h3 {
+            font-size: 20px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            color: var(--muted);
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           CHAT DEMO
+        ================================================= */
+
+        .chat-section {
+            background: #fafafa;
+        }
+
+        .chat-window {
+            max-width: 500px;
+
+            margin: auto;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            background: #fff;
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, .12);
+        }
+
+        .chat-header {
+            padding: 18px 20px;
+
+            background: var(--primary);
+
+            color: #fff;
+        }
+
+        .chat-header-icon {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            color: var(--primary);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+        }
+
+        .chat-body {
+            padding: 25px;
+
+            background: #f4f4f4;
+        }
+
+        .chat-message {
+            padding: 13px 16px;
+
+            border-radius: 14px;
+
+            margin-bottom: 12px;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+        .bot-message {
+            background: #fff;
+
+            max-width: 85%;
+        }
+
+        .user-message {
+            background: var(--primary);
+
+            color: #fff;
+
+            max-width: 85%;
+
+            margin-left: auto;
+        }
+
+        .chat-option {
+            width: 100%;
+
+            padding: 12px 15px;
+
+            margin-bottom: 8px;
+
+            border: 1px solid #ddd;
+
+            background: #fff;
+
+            border-radius: 10px;
+
+            text-align: left;
+
+            font-size: 14px;
+        }
+
+        .chat-option:hover {
+            border-color: var(--primary);
+
+            color: var(--primary);
+        }
+
+
+        /* =================================================
+           VIDEO
+        ================================================= */
+
+        .video-section {
+            background: #fff;
+        }
+
+
+        /* =================================================
+           CTA
+        ================================================= */
+
+        .cta-section {
+            padding: 100px 0;
+        }
+
+        .cta-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf3ff,
+                    #f7fbff
+                );
+
+            border-radius: 25px;
+
+            padding: 70px 30px;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(35px, 4vw, 52px);
+
+            font-weight: 800;
+        }
+
+        .cta-box p {
+            color: var(--muted);
+
+            font-size: 18px;
+
+            max-width: 700px;
+
+            margin: 20px auto 30px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           FOOTER
+        ================================================= */
+
+        footer {
+            padding: 35px 0;
+
+            border-top: 1px solid #eee;
+
+            color: var(--muted);
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+        @media (max-width: 991px) {
+
+            .hero-section {
+                padding: 70px 0;
+            }
+
+            .section-padding {
+                padding: 70px 0;
+            }
+
+            .hero-title {
+                font-size: 46px;
+            }
+
+        }
+
+        @media (max-width: 575px) {
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .section-padding {
+                padding: 55px 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="hero-badge">
+
+                    <i class="bi bi-calendar-check"></i>
+
+                    WhatsApp Automation for Reservations
+
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    Turn WhatsApp into your Reservation Assistant.
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Let customers check availability, make reservations,
+                    ask questions and receive booking confirmations
+                    through an automated WhatsApp conversation.
+
+                </p>
+
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a
+                        href="#cta"
+                        class="btn btn-primary-custom"
+                    >
+                        Start Automating
+                    </a>
+
+
+                    <a
+                        href="#demo"
+                        class="btn btn-outline-dark px-4 py-3"
+                    >
+                        <i class="bi bi-play-circle me-2"></i>
+
+                        Watch Demo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="video-wrapper">
+
+                    <div class="ratio ratio-16x9">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ZGRYnHqAbUc"
+                            title="11ZA Reservation Automation"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRUST
+===================================================== -->
+
+<section class="trust-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center text-center g-4">
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="trust-item">
+
+                    <div class="trust-number">
+                        24/7
+                    </div>
+
+                    <div class="trust-label">
+                        Reservation Enquiries
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="trust-item">
+
+                    <div class="trust-number">
+                        Instant
+                    </div>
+
+                    <div class="trust-label">
+                        Automated Replies
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="trust-item">
+
+                    <div class="trust-number">
+                        One
+                    </div>
+
+                    <div class="trust-label">
+                        WhatsApp Inbox
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="trust-item">
+
+                    <div class="trust-number">
+                        Multiple
+                    </div>
+
+                    <div class="trust-label">
+                        Team Members
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CHALLENGE
+===================================================== -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    The Challenge
+                </div>
+
+
+                <h2 class="section-title mb-4">
+
+                    Reservation communication
+                    shouldn't be complicated.
+
+                </h2>
+
+
+                <p class="section-description">
+
+                    Customers want quick answers about availability,
+                    timings, pricing and bookings. Your team needs a
+                    simple way to manage reservation enquiries without
+                    manually handling every conversation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-md-4">
+
+                <div class="challenge-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-telephone"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Too Many Enquiries
+                    </h3>
+
+
+                    <p>
+
+                        Staff spend valuable time answering repetitive
+                        questions about availability, timings, pricing
+                        and reservation details.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-md-4">
+
+                <div class="challenge-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-chat-left-dots"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Missed Reservations
+                    </h3>
+
+
+                    <p>
+
+                        Customers may enquire outside business hours
+                        and expect a quick response before making
+                        their reservation elsewhere.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-md-4">
+
+                <div class="challenge-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Manual Follow-ups
+                    </h3>
+
+
+                    <p>
+
+                        Confirmation messages, reminders and follow-ups
+                        can become repetitive tasks for your reservation
+                        team.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOLUTION
+===================================================== -->
+
+<section class="solution-section section-padding">
+
+    <div class="container">
+
+
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    The 11ZA Solution
+                </div>
+
+
+                <h2 class="section-title mb-4">
+
+                    A smarter way to handle
+                    reservation conversations.
+
+                </h2>
+
+
+                <p class="section-description">
+
+                    Create a personalized WhatsApp experience that helps
+                    customers check availability, make reservations and
+                    receive important booking updates.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- 1 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="solution-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-chat-dots"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Automated Replies
+                    </h3>
+
+
+                    <p>
+
+                        Respond instantly to common customer questions
+                        about reservations, timings, pricing and availability.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 2 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="solution-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-calendar-check"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Reservation Enquiries
+                    </h3>
+
+
+                    <p>
+
+                        Guide customers through reservation-related
+                        questions without requiring your team to manually
+                        answer every conversation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 3 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="solution-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-list-check"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Interactive Conversations
+                    </h3>
+
+
+                    <p>
+
+                        Use structured options and interactive messages
+                        to make reservation conversations easier to navigate.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 4 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="solution-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-bell"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Booking Notifications
+                    </h3>
+
+
+                    <p>
+
+                        Keep customers informed with timely reservation
+                        confirmations, reminders and updates.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 5 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="solution-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-people"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Multiple Agents
+                    </h3>
+
+
+                    <p>
+
+                        Give your team a shared environment to manage
+                        WhatsApp reservation conversations when human
+                        assistance is required.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 6 -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="solution-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-inbox"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Conversations in One Place
+                    </h3>
+
+
+                    <p>
+
+                        Organize customer conversations and make it easier
+                        for your team to manage reservation enquiries.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    How It Works
+                </div>
+
+
+                <h2 class="section-title mb-4">
+
+                    From WhatsApp message
+                    to reservation.
+
+                </h2>
+
+
+                <p class="section-description">
+
+                    Create a simple conversational journey for your
+                    customers.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- STEP 01 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+
+                    <h3>
+                        Customer Messages
+                    </h3>
+
+
+                    <p>
+
+                        A customer starts a conversation with your
+                        business on WhatsApp.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STEP 02 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+
+                    <h3>
+                        Chatbot Responds
+                    </h3>
+
+
+                    <p>
+
+                        The personalized chatbot automatically responds
+                        to the customer's reservation request.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STEP 03 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+
+                    <h3>
+                        Customer Selects
+                    </h3>
+
+
+                    <p>
+
+                        Customers can select dates, timings, services
+                        or other available reservation options.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STEP 04 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+
+                    <h3>
+                        Reservation Confirmed
+                    </h3>
+
+
+                    <p>
+
+                        The customer receives confirmation and your team
+                        can take over whenever human assistance is needed.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSONALIZED CHATBOT
+===================================================== -->
+
+<section id="demo" class="chat-section section-padding">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    Personalized Chatbot
+                </div>
+
+
+                <h2 class="section-title mb-4">
+
+                    Give customers
+                    a simple reservation conversation.
+
+                </h2>
+
+
+                <p class="section-description">
+
+                    Instead of making customers search through your
+                    website or wait for a call, guide them through
+                    a clear WhatsApp reservation conversation.
+
+                </p>
+
+
+                <ul class="list-unstyled mt-4">
+
+
+                    <li class="mb-3">
+
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                        Answer common reservation questions automatically.
+
+                    </li>
+
+
+                    <li class="mb-3">
+
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                        Guide customers using interactive options.
+
+                    </li>
+
+
+                    <li class="mb-3">
+
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                        Reduce repetitive conversations for your team.
+
+                    </li>
+
+
+                    <li class="mb-3">
+
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                        Hand conversations to your team when human
+                        assistance is needed.
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="col-lg-6">
+
+
+                <div class="chat-window">
+
+
+                    <!-- HEADER -->
+
+                    <div class="chat-header">
+
+                        <div class="d-flex align-items-center gap-3">
+
+
+                            <div class="chat-header-icon">
+
+                                <i class="bi bi-calendar-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="fw-bold">
+
+                                    Reservation WhatsApp Assistant
+
+                                </div>
+
+
+                                <small>
+                                    Online
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BODY -->
+
+                    <div class="chat-body">
+
+
+                        <div class="chat-message bot-message">
+
+                            Hello! 👋
+
+                            <br><br>
+
+                            Welcome! How can we help you today?
+
+                        </div>
+
+
+
+                        <button class="chat-option">
+
+                            <i class="bi bi-calendar-check me-2"></i>
+
+                            Make a Reservation
+
+                        </button>
+
+
+
+                        <button class="chat-option">
+
+                            <i class="bi bi-search me-2"></i>
+
+                            Check Availability
+
+                        </button>
+
+
+
+                        <button class="chat-option">
+
+                            <i class="bi bi-clock me-2"></i>
+
+                            Reservation Timings
+
+                        </button>
+
+
+
+                        <button class="chat-option">
+
+                            <i class="bi bi-person me-2"></i>
+
+                            Talk to Support
+
+                        </button>
+
+
+
+                        <div class="chat-message user-message mt-3">
+
+                            I want to make a reservation.
+
+                        </div>
+
+
+
+                        <div class="chat-message bot-message">
+
+                            Sure! Please select an option.
+
+                        </div>
+
+
+
+                        <button class="chat-option">
+
+                            Today
+
+                        </button>
+
+
+
+                        <button class="chat-option">
+
+                            Tomorrow
+
+                        </button>
+
+
+
+                        <button class="chat-option">
+
+                            Select Another Date
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VIDEO
+===================================================== -->
+
+<section class="video-section section-padding">
+
+    <div class="container">
+
+
+        <div class="row justify-content-center text-center">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    See It In Action
+                </div>
+
+
+                <h2 class="section-title mb-4">
+
+                    Reservation conversations
+                    on WhatsApp.
+
+                </h2>
+
+
+                <p class="section-description mb-5">
+
+                    See how a personalized WhatsApp chatbot can help
+                    automate customer reservation conversations.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="video-wrapper">
+
+                    <div class="ratio ratio-16x9">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ZGRYnHqAbUc"
+                            title="11ZA Reservation Automation"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section id="cta" class="cta-section">
+
+    <div class="container">
+
+
+        <div class="cta-box text-center">
+
+
+            <div class="section-label">
+
+                GET STARTED WITH 11ZA
+
+            </div>
+
+
+            <h2>
+
+                Ready to simplify
+                reservation conversations?
+
+            </h2>
+
+
+            <p>
+
+                Turn your business's WhatsApp number into a personalized
+                reservation communication channel with 11ZA.
+
+            </p>
+
+
+            <a
+                href="/contact/"
+                class="btn btn-primary-custom btn-lg"
+            >
+
+                Talk to 11ZA
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="text-center">
+
+            WhatsApp Business Solutions for modern businesses.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+</html>

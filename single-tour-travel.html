@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WhatsApp Tour & Travel Automation | 11ZA</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --light-blue: #f3f8ff;
+            --dark: #151515;
+            --muted: #6c757d;
+            --border: #e9ecef;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        /* HERO */
+        .hero-section {
+            padding: 110px 0 90px;
+            background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e8f2ff;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 58px;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            font-size: 19px;
+            line-height: 1.7;
+            color: var(--muted);
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            color: #fff;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid #dce3eb;
+            color: var(--dark);
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .video-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 420px;
+            border: 0;
+            display: block;
+        }
+
+        /* TRUST */
+        .trust-section {
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .trust-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .trust-label {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* COMMON */
+        .section-label {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        /* CHALLENGE */
+        .challenge-section {
+            background: #fff;
+        }
+
+        .challenge-card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            height: 100%;
+            transition: 0.3s;
+            background: #fff;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+        }
+
+        .icon-box {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-blue);
+            color: var(--primary);
+            border-radius: 12px;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .challenge-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .challenge-card p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* SOLUTION */
+        .solution-section {
+            background: var(--light-blue);
+        }
+
+        .solution-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            height: 100%;
+            border: 1px solid #e5eefb;
+        }
+
+        .solution-card h4 {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .solution-card p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* HOW IT WORKS */
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .step-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* CHAT */
+        .chat-section {
+            background: #fff;
+        }
+
+        .chat-window {
+            max-width: 430px;
+            margin: auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
+            border: 1px solid var(--border);
+        }
+
+        .chat-header {
+            background: var(--primary);
+            color: #fff;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-header-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .chat-header strong {
+            display: block;
+            font-size: 15px;
+        }
+
+        .chat-status {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+
+        .chat-body {
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .chat-message {
+            max-width: 85%;
+            padding: 12px 15px;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .bot-message {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+        }
+
+        .user-message {
+            margin-left: auto;
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .chat-options {
+            margin-bottom: 15px;
+        }
+
+        .chat-option {
+            display: block;
+            background: #fff;
+            border: 1px solid #dce3eb;
+            padding: 11px 14px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* VIDEO */
+        .video-section {
+            background: var(--light-blue);
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 80px 0;
+        }
+
+        .cta-box {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 70px 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .cta-box p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .cta-box .btn {
+            background: #fff;
+            color: var(--primary);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .hero-title {
+                font-size: 46px;
+            }
+
+            .video-wrapper {
+                margin-top: 40px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-padding {
+                padding: 65px 0;
+            }
+
+            .hero-section {
+                padding: 75px 0 65px;
+            }
+
+            .hero-title {
+                font-size: 38px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .video-wrapper iframe {
+                height: 250px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .cta-box {
+                padding: 50px 25px;
+            }
+
+            .cta-box h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="hero-badge">
+                    <i class="bi bi-airplane"></i>
+                    WhatsApp Automation for Tour & Travel
+                </div>
+
+                <h1 class="hero-title">
+                    Turn WhatsApp into your Travel Assistant.
+                </h1>
+
+                <p class="hero-description">
+                    Let travelers discover destinations, explore tour packages,
+                    ask questions and start their bookings through an automated
+                    WhatsApp conversation.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a href="#" class="btn btn-primary-custom">
+                        Start Automating
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#demo" class="btn btn-outline-custom">
+                        <i class="bi bi-play-circle me-2"></i>
+                        Watch Demo
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/ZGRYnHqAbUc"
+                        title="Tour & Travel WhatsApp Automation"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     TRUST / STATS
+========================= -->
+<section class="trust-section">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="trust-item">
+                    <div class="trust-number">24/7</div>
+                    <div class="trust-label">Travel Enquiries</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="trust-item">
+                    <div class="trust-number">Instant</div>
+                    <div class="trust-label">Automated Replies</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="trust-item">
+                    <div class="trust-number">One</div>
+                    <div class="trust-label">WhatsApp Inbox</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="trust-item">
+                    <div class="trust-number">Multiple</div>
+                    <div class="trust-label">Team Members</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     CHALLENGE
+========================= -->
+<section class="section-padding challenge-section">
+    <div class="container">
+
+        <div class="row mb-5">
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    THE CHALLENGE
+                </div>
+
+                <h2 class="section-title">
+                    Travel communication shouldn't be complicated.
+                </h2>
+
+                <p class="section-description">
+                    Travelers want quick answers about destinations, packages,
+                    pricing and availability. Your travel team needs a simple
+                    way to manage enquiries without manually handling every
+                    WhatsApp conversation.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+                <div class="challenge-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+
+                    <h4>Too Many Enquiries</h4>
+
+                    <p>
+                        Travel teams spend valuable time answering repetitive
+                        questions about destinations, packages, prices and
+                        travel dates.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="challenge-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-envelope-exclamation"></i>
+                    </div>
+
+                    <h4>Missed Travel Leads</h4>
+
+                    <p>
+                        Customers may enquire outside working hours and expect
+                        quick responses before choosing another travel option.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="challenge-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+
+                    <h4>Manual Follow-ups</h4>
+
+                    <p>
+                        Package details, travel dates, quotation requests and
+                        booking follow-ups can become repetitive tasks for your
+                        sales team.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     SOLUTION
+========================= -->
+<section class="section-padding solution-section">
+
+    <div class="container">
+
+        <div class="row mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    THE 11ZA SOLUTION
+                </div>
+
+                <h2 class="section-title">
+                    A smarter way to handle travel conversations.
+                </h2>
+
+                <p class="section-description">
+                    Create a personalized WhatsApp chatbot experience that
+                    guides travelers through destinations, packages,
+                    availability and booking enquiries.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="solution-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-chat-square-text"></i>
+                    </div>
+
+                    <h4>Automated Replies</h4>
+
+                    <p>
+                        Respond instantly to common travel questions with
+                        automated WhatsApp conversations.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="solution-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h4>Destination Enquiries</h4>
+
+                    <p>
+                        Help travelers discover destinations and get relevant
+                        information without requiring staff to answer every
+                        conversation manually.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="solution-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-ui-checks-grid"></i>
+                    </div>
+
+                    <h4>Interactive Conversations</h4>
+
+                    <p>
+                        Use structured options and interactive messages to
+                        make travel conversations easier to navigate.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="solution-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-airplane"></i>
+                    </div>
+
+                    <h4>Tour Package Enquiries</h4>
+
+                    <p>
+                        Guide customers through available packages, travel
+                        dates, pricing and other trip-related information.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="solution-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Multiple Agents</h4>
+
+                    <p>
+                        Give your sales team a shared environment to manage
+                        WhatsApp conversations when human assistance is needed.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="solution-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-inbox"></i>
+                    </div>
+
+                    <h4>Conversations in One Place</h4>
+
+                    <p>
+                        Organize customer conversations and make it easier for
+                        your travel team to manage enquiries and leads.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="row mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    HOW IT WORKS
+                </div>
+
+                <h2 class="section-title">
+                    From WhatsApp message to travel booking.
+                </h2>
+
+                <p class="section-description">
+                    Create a simple conversational journey for your travelers
+                    from the first enquiry to the next step.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h4>Traveler Messages</h4>
+
+                    <p>
+                        A traveler starts a conversation with your travel
+                        business on WhatsApp.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h4>Chatbot Responds</h4>
+
+                    <p>
+                        The personalized chatbot automatically responds to
+                        the traveler's request.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h4>Traveler Selects</h4>
+
+                    <p>
+                        Travelers can explore destinations, packages and
+                        provide the required travel information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h4>Team Takes Over</h4>
+
+                    <p>
+                        When needed, your travel team can continue the
+                        conversation and assist the customer.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHATBOT
+========================= -->
+<section class="section-padding chat-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    PERSONALIZED CHATBOT
+                </div>
+
+                <h2 class="section-title">
+                    Give travelers a simple conversation.
+                </h2>
+
+                <p class="section-description mb-4">
+                    Instead of making travelers search through your website
+                    or wait for a call, guide them through a clear WhatsApp
+                    conversation.
+                </p>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        Answer common travel questions automatically.
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        Guide travelers using interactive options.
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        Reduce repetitive conversations for your sales team.
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        Hand conversations to your team when human assistance
+                        is needed.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="chat-window">
+
+                    <div class="chat-header">
+
+                        <div class="chat-header-icon">
+                            <i class="bi bi-airplane"></i>
+                        </div>
+
+                        <div>
+                            <strong>Travel WhatsApp Assistant</strong>
+                            <span class="chat-status">
+                                Online
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-body">
+
+                        <div class="chat-message bot-message">
+                            Hello! 👋<br>
+                            Welcome to our Travel Assistant.
+                            How can we help you today?
+                        </div>
+
+
+                        <div class="chat-options">
+
+                            <div class="chat-option">
+                                Explore Destinations
+                            </div>
+
+                            <div class="chat-option">
+                                View Tour Packages
+                            </div>
+
+                            <div class="chat-option">
+                                Check Travel Availability
+                            </div>
+
+                            <div class="chat-option">
+                                Talk to Travel Expert
+                            </div>
+
+                        </div>
+
+
+                        <div class="chat-message user-message">
+                            I want to explore a Dubai tour package.
+                        </div>
+
+
+                        <div class="chat-message bot-message">
+                            Sure! ✈️ Please select what you'd like to explore.
+                        </div>
+
+
+                        <div class="chat-options">
+
+                            <div class="chat-option">
+                                Dubai Holiday Package
+                            </div>
+
+                            <div class="chat-option">
+                                Dubai Family Tour
+                            </div>
+
+                            <div class="chat-option">
+                                Dubai Couple Package
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VIDEO
+========================= -->
+<section class="section-padding video-section" id="demo">
+
+    <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    SEE IT IN ACTION
+                </div>
+
+                <h2 class="section-title">
+                    Tour & Travel conversations on WhatsApp.
+                </h2>
+
+                <p class="section-description mx-auto">
+                    See how a personalized WhatsApp chatbot can help automate
+                    travel enquiries and customer conversations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="video-wrapper">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/ZGRYnHqAbUc"
+                        title="Tour & Travel WhatsApp Automation"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2>
+                Ready to simplify travel conversations?
+            </h2>
+
+            <p>
+                Turn your travel business's WhatsApp number into a personalized
+                travel communication channel with 11ZA.
+            </p>
+
+            <a href="#" class="btn">
+                Talk to 11ZA
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+
+    <div class="container">
+
+        <div class="text-center">
+            WhatsApp Business Solutions for modern businesses.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

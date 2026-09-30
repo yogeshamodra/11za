@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <style>
+      :root {
+        --primary: #18a558;
+        --primary-dark: #087f3f;
+        --dark: #10231a;
+        --text: #52635a;
+        --light: #f5faf7;
+        --border: #dcebe2;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        color: var(--dark);
+        background: #fff;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .section-padding {
+        padding: 90px 0;
+      }
+
+      /* =========================================
+         HERO
+      ========================================= */
+
+      .hero {
+        padding: 100px 0 90px;
+        background:
+          radial-gradient(
+            circle at 85% 20%,
+            rgba(24, 165, 88, 0.12),
+            transparent 30%
+          ),
+          linear-gradient(180deg, #f7fcf9 0%, #ffffff 100%);
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 5vw, 68px);
+        line-height: 1.05;
+        font-weight: 800;
+        letter-spacing: -2px;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+      }
+
+      .hero-text {
+        color: var(--text);
+        font-size: 19px;
+        margin-bottom: 32px;
+      }
+
+      .hero-video {
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(16, 35, 26, 0.12);
+}
+
+.hero-video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.hero-video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+      /* =========================================
+         TRUST STRIP
+      ========================================= */
+
+      .trust-strip {
+        padding: 24px 0;
+        background: var(--dark);
+        color: #fff;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        font-weight: 600;
+      }
+
+      .trust-item i {
+        color: #55d88d;
+        font-size: 20px;
+      }
+
+      /* =========================================
+         SECTION HEADING
+      ========================================= */
+
+      .eyebrow {
+        display: inline-block;
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: clamp(34px, 4vw, 50px);
+        line-height: 1.1;
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-bottom: 18px;
+      }
+
+      .section-title span {
+        color: var(--primary);
+      }
+
+      .section-description {
+        max-width: 700px;
+        color: var(--text);
+        margin: 0 auto;
+        font-size: 17px;
+      }
+
+      /* =========================================
+         PROBLEM
+      ========================================= */
+
+      .problem-section {
+        background: #fff;
+      }
+
+      .problem-card {
+        height: 100%;
+        padding: 30px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: #fff;
+      }
+
+      .problem-icon {
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff0f0;
+        color: #dc3545;
+        border-radius: 14px;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .problem-card h3 {
+        font-size: 21px;
+        font-weight: 750;
+        margin-bottom: 10px;
+       
+      }
+
+      .problem-card p {
+        color: var(--text);
+        margin-bottom: 0;
+      }
+
+      /* =========================================
+         SOLUTION
+      ========================================= */
+
+      .solution-section {
+        background: var(--light);
+      }
+
+      .solution-card {
+        height: 100%;
+        padding: 32px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        transition: 0.3s ease;
+      }
+
+      .solution-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 40px rgba(16, 35, 26, 0.08);
+      }
+
+      .solution-icon {
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e8f8ef;
+        color: var(--primary-dark);
+        border-radius: 15px;
+        font-size: 25px;
+        margin-bottom: 22px;
+      }
+
+      .solution-card h3 {
+        font-size: 21px;
+        font-weight: 750;
+        margin-bottom: 12px;
+        color: black;
+      }
+
+      .solution-card p {
+        color: var(--text);
+        margin-bottom: 0;
+      }
+
+      /* =========================================
+         HOW IT WORKS
+      ========================================= */
+
+      .step-card {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .step-number {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        margin: 0 auto 20px;
+      }
+
+      .step-card h3 {
+        font-size: 20px;
+        font-weight: 750;
+        margin-bottom: 10px;
+      }
+
+      .step-card p {
+        color: var(--text);
+      }
+
+      /* =========================================
+         PERSONALIZED CHATBOT
+      ========================================= */
+
+      .demo-section {
+        background: #f8fbf9;
+      }
+
+      .chatbot-image-wrapper {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 15px;
+        box-shadow: 0 25px 60px rgba(16, 35, 26, 0.12);
+      }
+
+      .chatbot-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 18px;
+      }
+
+      /* =========================================
+         BENEFITS
+      ========================================= */
+
+      .benefit-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .benefit-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: var(--text);
+      }
+
+      .benefit-list i {
+        color: var(--primary);
+        font-size: 21px;
+        margin-top: 2px;
+      }
+
+      /* =========================================
+         MOBILE
+      ========================================= */
+
+      @media (max-width: 991px) {
+        .hero {
+          padding: 70px 0;
+        }
+
+        .hero-content {
+          text-align: center;
+        }
+
+        .hero-text {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .section-padding {
+          padding: 65px 0;
+        }
+
+        .hero h1 {
+          letter-spacing: -1px;
+        }
+
+        .trust-item {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+ <header class="site-header" data-nav data-testid="nav-sticky-header">
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <!-- LOGO -->
+        <a href="index.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links mb-0 ps-0 list-unstyled">
+          <li>
+            <a href="index.html" data-testid="nav-link-home"> Home </a>
+          </li>
+
+          <li>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
+          </li>
+
+          <li>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
+          </li>
+
+          <li>
+            <a href="integration.html" data-testid="nav-link-integrations">
+              Integrations
+            </a>
+          </li>
+
+          <li>
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
+          </li>
+        </ul>
+
+        <!-- DESKTOP CTA -->
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
+            Login
+          </a>
+
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
+            Sign Up
+          </a>
+
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+          >
+            Book a Demo
+          </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+          class="nav-burger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
+          aria-label="Toggle menu"
+          data-testid="nav-mobile-menu-btn"
+        >
+          <div class="open-menu">
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
+          </div>
+          <div class="close-menu">
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
+          </div>
+        </button>
+      </nav>
+    </header>
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+ <section class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6 hero-content">
+
+        <h1>
+          Turn WhatsApp into your <span>Hospital Appointment Assistant.</span>
+        </h1>
+
+        <p class="hero-text">
+          Let patients enquire, choose appointments and receive timely
+          updates through an automated WhatsApp conversation.
+        </p>
+
+      </div>
+
+
+      <!-- RIGHT VIDEO -->
+      <div class="col-lg-6">
+
+        <div class="hero-video">
+          <div class="hero-video-container">
+
+            <iframe
+              src="https://www.youtube.com/embed/ZGRYnHqAbUc"
+              title="Personalized Chatbot on WhatsApp for Hospital Appointment - 11ZA"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- =========================================================
+         TRUST STRIP
+    ========================================================= -->
+
+    <section class="trust-strip">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-md-3">
+            <div class="trust-item">
+              <i class="bi bi-chat-dots"></i>
+              WhatsApp Conversations
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="trust-item">
+              <i class="bi bi-robot"></i>
+              Automated Replies
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="trust-item">
+              <i class="bi bi-calendar-check"></i>
+              Appointment Workflows
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="trust-item">
+              <i class="bi bi-headset"></i>
+              Team Support
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PROBLEM
+    ========================================================= -->
+
+    <section class="section-padding problem-section">
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+
+          <div class="eyebrow">
+            THE CHALLENGE
+          </div>
+
+          <h2 class="section-title">
+            Hospital appointment
+            <span>communication shouldn't be complicated.</span>
+          </h2>
+
+          <p class="section-description">
+            Patients want quick answers. Hospital teams need a simple way to
+            handle repetitive appointment conversations without losing
+            important enquiries.
+          </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+          <div class="col-md-4">
+
+            <div class="problem-card">
+
+              <div class="problem-icon">
+                <i class="bi bi-telephone-x"></i>
+              </div>
+
+              <h3>
+                Too Many Calls
+              </h3>
+
+              <p>
+                Staff spend valuable time answering repetitive questions about
+                doctors, timings and appointments.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-4">
+
+            <div class="problem-card">
+
+              <div class="problem-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+
+              <h3>
+                Missed Enquiries
+              </h3>
+
+              <p>
+                Patients may enquire outside working hours and expect a quick
+                response.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-4">
+
+            <div class="problem-card">
+
+              <div class="problem-icon">
+                <i class="bi bi-calendar-x"></i>
+              </div>
+
+              <h3>
+                Manual Follow-ups
+              </h3>
+
+              <p>
+                Appointment reminders and follow-ups can become repetitive
+                tasks for reception teams.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SOLUTION
+    ========================================================= -->
+
+    <section class="section-padding solution-section" id="solution">
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+
+          <div class="eyebrow">
+            THE 11ZA SOLUTION
+          </div>
+
+          <h2 class="section-title">
+            A smarter way to handle
+            <span>patient conversations.</span>
+          </h2>
+
+          <p class="section-description">
+            Create a personalized WhatsApp chatbot experience that guides
+            patients through common appointment conversations.
+          </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="solution-card">
+
+              <div class="solution-icon">
+                <i class="bi bi-robot"></i>
+              </div>
+
+              <h3>
+                Automated Replies
+              </h3>
+
+              <p>
+                Respond instantly to common patient questions with automated
+                WhatsApp conversations.
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="solution-card">
+
+              <div class="solution-icon">
+                <i class="bi bi-calendar2-check"></i>
+              </div>
+
+              <h3>
+                Appointment Enquiries
+              </h3>
+
+              <p>
+                Guide patients through appointment-related questions without
+                requiring staff to answer every conversation manually.
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="solution-card">
+
+              <div class="solution-icon">
+                <i class="bi bi-ui-checks-grid"></i>
+              </div>
+
+              <h3>
+                Interactive Conversations
+              </h3>
+
+              <p>
+                Use structured options and interactive messages to make patient
+                conversations easier to navigate.
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="solution-card">
+
+              <div class="solution-icon">
+                <i class="bi bi-bell"></i>
+              </div>
+
+              <h3>
+                Patient Notifications
+              </h3>
+
+              <p>
+                Keep patients informed with timely communication throughout
+                the appointment journey.
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="solution-card">
+
+              <div class="solution-icon">
+                <i class="bi bi-people"></i>
+              </div>
+
+              <h3>
+                Multiple Agents
+              </h3>
+
+              <p>
+                Give your team a shared environment to manage WhatsApp
+                conversations when human assistance is required.
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="solution-card">
+
+              <div class="solution-icon">
+                <i class="bi bi-inbox"></i>
+              </div>
+
+              <h3>
+                Conversations in One Place
+              </h3>
+
+              <p>
+                Organize customer conversations and make it easier for your
+                team to manage patient enquiries.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         HOW IT WORKS
+    ========================================================= -->
+
+    <section class="section-padding" id="how-it-works">
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+
+          <div class="eyebrow">
+            HOW IT WORKS
+          </div>
+
+          <h2 class="section-title">
+            From WhatsApp message
+            <span>to appointment.</span>
+          </h2>
+
+          <p class="section-description">
+            Create a simple conversational journey for your patients.
+          </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+          <div class="col-md-3">
+
+            <div class="step-card">
+
+              <div class="step-number">
+                01
+              </div>
+
+              <h3>
+                Patient Messages
+              </h3>
+
+              <p>
+                A patient starts a conversation with your hospital on WhatsApp.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-3">
+
+            <div class="step-card">
+
+              <div class="step-number">
+                02
+              </div>
+
+              <h3>
+                Chatbot Responds
+              </h3>
+
+              <p>
+                The personalized chatbot automatically responds to the
+                patient's request.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-3">
+
+            <div class="step-card">
+
+              <div class="step-number">
+                03
+              </div>
+
+              <h3>
+                Patient Selects
+              </h3>
+
+              <p>
+                Patients can follow the available options and provide the
+                required information.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-3">
+
+            <div class="step-card">
+
+              <div class="step-number">
+                04
+              </div>
+
+              <h3>
+                Team Takes Over
+              </h3>
+
+              <p>
+                When needed, your team can continue the conversation and
+                assist the patient.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PERSONALIZED CHATBOT
+    ========================================================= -->
+
+    <section class="section-padding demo-section" id="demo">
+
+      <div class="container">
+
+        <div class="row align-items-center g-5">
+
+          <!-- LEFT CONTENT -->
+
+          <div class="col-lg-6">
+
+            <div class="eyebrow">
+              PERSONALIZED CHATBOT
+            </div>
+
+            <h2 class="section-title">
+              Give patients a
+              <span>simple conversation.</span>
+            </h2>
+
+            <p class="section-description mb-4">
+              Instead of making patients search through your website or wait
+              for a call, guide them through a clear WhatsApp conversation.
+            </p>
+
+            <ul class="benefit-list">
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+                  Answer common appointment questions automatically.
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+                  Guide patients using interactive options.
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+                  Reduce repetitive conversations for reception teams.
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+
+                <span>
+                  Hand conversations to your team when human assistance is
+                  needed.
+                </span>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- RIGHT IMAGE -->
+
+          <div class="col-lg-6">
+
+            <div class="chatbot-image-wrapper">
+
+              <img
+                src="images/hospital-chatbot.png"
+                class="img-fluid chatbot-image"
+                alt="Hospital WhatsApp Chatbot"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer class="position-relative">
+      <div class="footer-layer-effect"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">11<span>za</span>.</div>
+            <div>One Company. One Chat.</div>
+            <p>
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Solutions</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Other Links</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Api Documentation</a>
+            <a href="#">11za Documentation</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <a href="#"
+              ><a href="tel:(+91) 97266 54060"
+                ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
+              ></a
+            >
+            <a href="mailto:hello@11za.com"
+              ><i class="fa-solid fa-envelope me-3"></i> hello@11za.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-clock me-3"></i> Mon - Sat | 10am - 7pm</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 11za. All rights reserved. </span>
+
+          <div>
+            <ul
+              class="social-nav widget social-widget d-flex align-items-center gap-3 ps-0"
+            >
+              <li>
+                <a href="https://www.linkedin.com/company/11za" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/11zaofficial" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/11zaofficial/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/11zaofficial/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    <script src="assets/js/script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("[data-nav]");
+
+        if (!header) return;
+
+        function updateHeader() {
+          header.classList.toggle("scrolled", window.scrollY > 30);
+        }
+
+        updateHeader();
+
+        window.addEventListener("scroll", updateHeader, { passive: true });
+      });
+    </script>
+  </body>
+</html>
+
+
+  </body>
+</html>
