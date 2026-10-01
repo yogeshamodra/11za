@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <style>
+      :root {
+        --brand: #0b8f5a;
+        --brand-d: #076b43;
+        --ink: #0f1f2e;
+        --soft: #eefaf4;
+        --muted: #5d6b78;
+      } /* Buttons */
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        line-height: 1.1;
+        letter-spacing: -1px;
+      }
+      .hero h1 span {
+        color: var(--brand);
+      }
+      .btn-brand {
+        background: var(--brand);
+        color: #fff;
+        border: 0;
+        font-weight: 700;
+        padding: 0.8rem 1.6rem;
+        border-radius: 50px;
+      }
+      .btn-brand:hover {
+        background: var(--brand-d);
+        color: #fff;
+      }
+      .btn-ghost {
+        border: 2px solid var(--ink);
+        color: var(--ink);
+        font-weight: 700;
+        padding: 0.75rem 1.6rem;
+        border-radius: 50px;
+      }
+      .btn-ghost:hover {
+        background: var(--ink);
+        color: #fff;
+      } /* Sections */
+      section {
+        padding: 80px 0;
+      }
+      .bg-soft {
+        background: var(--soft);
+      } /* Section headings */
+      .eyebrow {
+        color: var(--brand);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+      }
+     
+      .title {
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      } /* Feature cards */
+      .card-f {
+        border: 1px solid #e6eef0;
+        border-radius: 20px;
+        padding: 28px;
+        height: 100%;
+        transition: 0.25s;
+        background: #fff;
+      }
+      .card-f:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 40px rgba(11, 143, 90, 0.15);
+        border-color: var(--brand);
+      }
+      .ico {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        background: var(--soft);
+        display: grid;
+        place-items: center;
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+      } /* Template cards */
+      .tpl {
+        background: #fff;
+        border-radius: 16px;
+        padding: 22px;
+        height: 100%;
+        border-left: 5px solid var(--brand);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      } /* Footer */
+      footer {
+        background: var(--ink);
+        color: #b9c6d0;
+        padding: 50px 0 30px;
+      }
+      footer a {
+        color: #b9c6d0;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+    </style>
+   <header class="site-header" data-nav data-testid="nav-sticky-header">
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <!-- LOGO -->
+        <a href="index.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links mb-0 ps-0 list-unstyled">
+          <li>
+            <a href="index.html" data-testid="nav-link-home"> Home </a>
+          </li>
+
+          <li>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
+          </li>
+
+          <li>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
+          </li>
+
+          <li>
+            <a href="ecommerce.html" data-testid="nav-link-integrations">
+              Ecommerce
+            </a>
+          </li>
+          <li>
+            <a href="integration.html" data-testid="nav-link-integrations">
+              Integrations
+            </a>
+          </li>
+
+          <li>
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
+          </li>
+        </ul>
+
+        <!-- DESKTOP CTA -->
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
+            Login
+          </a>
+
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
+            Sign Up
+          </a>
+
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+          >
+            Book a Demo
+          </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+          class="nav-burger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
+          aria-label="Toggle menu"
+          data-testid="nav-mobile-menu-btn"
+        >
+          <div class="open-menu">
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
+          </div>
+          <div class="close-menu">
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
+          </div>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+     MOBILE SIDEBAR / OFFCANVAS
+============================================================ -->
+
+    <div
+      class="offcanvas offcanvas-end mobile-sidebar"
+      tabindex="-1"
+      id="mobileSidebar"
+      aria-labelledby="mobileSidebarLabel"
+      data-mobile-panel
+    >
+      <!-- SIDEBAR CONTENT -->
+      <div class="offcanvas-body">
+        <ul class="mobile-nav list-unstyled mb-0">
+          <li>
+            <a class="mlink" href="index.html" data-bs-dismiss="offcanvas">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="about.html" data-bs-dismiss="offcanvas">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="pricing.html" data-bs-dismiss="offcanvas">
+              Pricing
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="mlink"
+              href="integration.html"
+              data-bs-dismiss="offcanvas"
+            >
+              Integrations
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="solutions.html" data-bs-dismiss="offcanvas">
+              Solutions
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="contact.html" data-bs-dismiss="offcanvas">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- MOBILE CTA -->
+        <div class="mctas">
+          <a href="#cta" class="m-start" data-bs-dismiss="offcanvas">
+            Sign Up
+          </a>
+
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="m-demo"
+          >
+            Book a Demo
+          </a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <h1 class="mt-3">
+                Turn your online store into a
+                <span>WhatsApp sales machine</span>
+              </h1>
+              <p class="lead text-secondary my-4">
+                Confirm COD orders, recover abandoned carts, share tracking
+                updates and run personalised campaigns on WhatsApp,
+                automatically, for Shopify, WooCommerce or your own website.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#" class="btn btn-brand">Get Started Free</a>
+                <a href="#templates" class="btn btn-ghost"
+                  >See Message Templates</a
+                >
+              </div>
+              <p class=" text-secondary mt-3 mb-0">
+                ✔ No-code setup &nbsp; ✔ Official WhatsApp Business API &nbsp; ✔
+                Works with your store
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <img
+                src="assets/images/integrate-shopify.svg"
+                alt="WhatsApp order confirmation, cart recovery and tracking messages"
+                class="hero-img img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="container">
+          <div class="col-lg-9 mx-auto text-center mb-5">
+            <div class="eyebrow">Why 11za</div>
+            <h1 class="title">
+              Everything your store needs to sell on WhatsApp
+            </h1>
+            <p class="text-secondary">
+              Better shopping experiences from first message to repeat purchase.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card-f">
+                <div class="ico">📦</div>
+                <h5 class="fw-bold">Share Your Catalog</h5>
+                <p class="text-secondary mb-0">
+                  Showcase products on WhatsApp and keep customers updated with
+                  the latest stock and offers.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-f">
+                <div class="ico">⚡</div>
+                <h5 class="fw-bold">Fast Response to Offers</h5>
+                <p class="text-secondary mb-0">
+                  Reach customers where they already read messages and drive
+                  quick replies to every sale.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-f">
+                <div class="ico">✅</div>
+                <h5 class="fw-bold">Confirmation &amp; Support</h5>
+                <p class="text-secondary mb-0">
+                  Send automatic order confirmations and billing updates, and
+                  automate FAQs with no-code chatbots.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-f">
+                <div class="ico">🎯</div>
+                <h5 class="fw-bold">Personalised Promotions</h5>
+                <p class="text-secondary mb-0">
+                  Target campaigns by purchase behaviour, season or festival to
+                  lift conversions.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-f">
+                <div class="ico">🏆</div>
+                <h5 class="fw-bold">Loyalty Updates</h5>
+                <p class="text-secondary mb-0">
+                  Enrol customers in loyalty programs and share points and
+                  special offers.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-f">
+                <div class="ico">🔔</div>
+                <h5 class="fw-bold">Back in Stock &amp; New Launches</h5>
+                <p class="text-secondary mb-0">
+                  Alert customers instantly when items return and promote upsell
+                  and cross-sell products.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="templates" class="bg-soft">
+        <div class="container">
+          <div class="col-lg-9 mx-auto text-center mb-5">
+            <div class="eyebrow">Template Messages</div>
+            <h1 class="title">Personalised messages for every order stage</h1>
+            <p class="text-secondary mx-auto" style="max-width: 700px">
+              Share personalised messages with customers when they shop from
+              your store, to increase engagement and acquire customers
+              effectively.
+            </p>
+          </div>
+          <div class="row align-items-center g-5 tpl-row">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 01</span>
+              <h3 class="fw-bold mt-1">COD Order Confirmation Message</h3>
+              <p class="text-secondary">
+                Ask for order confirmation directly on WhatsApp when customers
+                have placed a COD order, so you never suffer from extra
+                logistics charges. And share prepaid order confirmation message
+                directly on WhatsApp.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">
+                  ✔ Cut extra logistics charges from fake COD orders
+                </li>
+                <li class="mb-2">✔ One-tap Confirm / Cancel buttons</li>
+                <li class="mb-2">✔ Sent automatically on every COD order</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/example1.png"
+                  alt="COD Order Confirmation Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-5 tpl-row flex-lg-row-reverse">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 02</span>
+              <h3 class="fw-bold mt-1">Prepaid Confirmation Message</h3>
+              <p class="text-secondary">
+                Let your customers know that their order has been confirmed with
+                a personalized message and a View Order button directly on
+                WhatsApp.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">
+                  ✔ Instant confirmation once payment is received
+                </li>
+                <li class="mb-2">✔ View Order button inside the message</li>
+                <li class="mb-2">✔ Personalised with name and order details</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/example2.png"
+                  alt="Prepaid Confirmation Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-5 tpl-row">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 03</span>
+              <h3 class="fw-bold mt-1">Shipping Confirmation Message</h3>
+              <p class="text-secondary">
+                Keep your customers informed about their order status. Share
+                tracking details and updates seamlessly through WhatsApp,
+                enhancing the overall customer experience.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">✔ Tracking details shared automatically</li>
+                <li class="mb-2">✔ Status updates at every step</li>
+                <li class="mb-2">✔ Fewer “where is my order?” queries</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/example3.png"
+                  alt="Shipping Confirmation Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-5 tpl-row flex-lg-row-reverse">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 04</span>
+              <h3 class="fw-bold mt-1">Abandoned Cart Recovery Message</h3>
+              <p class="text-secondary">
+                Help your customers make a decision by sharing with them a
+                personalised WhatsApp message with a coupon code and redirect
+                them to the checkout page of your website in just few clicks.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">✔ Coupon code included in the message</li>
+                <li class="mb-2">✔ One-click redirect to your checkout page</li>
+                <li class="mb-2">✔ Win back customers who left at checkout</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/example4.png"
+                  alt="Abandoned Cart Recovery Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-5 tpl-row">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 05</span>
+              <h3 class="fw-bold mt-1">Customer Feedback Message</h3>
+              <p class="text-secondary">
+                Ask and record feedbacks from your customers with a thank you
+                personalised message directly on WhatsApp.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">
+                  ✔ Thank-you message with a feedback request
+                </li>
+                <li class="mb-2">✔ Quick tap replies, recorded in 11za</li>
+                <li class="mb-2">✔ Feedback captured directly on WhatsApp</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/cod_order.png"
+                  alt="Customer Feedback Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-5 tpl-row flex-lg-row-reverse">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 06</span>
+              <h3 class="fw-bold mt-1">COD to Prepaid Convert Message</h3>
+              <p class="text-secondary">
+                Convert your customers COD order to Prepaid by sharing with them
+                a personalised WhatsApp message with a coupon code and redirect
+                them to the checkout page of your website in just few clicks.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">✔ Coupon nudges customers to pay online</li>
+                <li class="mb-2">✔ Direct link to your checkout page</li>
+                <li class="mb-2">✔ Lower COD handling risk</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/confirm_order.png"
+                  alt="COD to Prepaid Convert Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-5 tpl-row">
+            <div class="col-lg-6">
+              <span class="eyebrow">Template 07</span>
+              <h3 class="fw-bold mt-1">Order Cancellation Message</h3>
+              <p class="text-secondary">
+                Notify your customer directly on WhatsApp if they cancel their
+                order.
+              </p>
+              <ul class="list-unstyled fw-semibold  mb-4">
+                <li class="mb-2">
+                  ✔ Instant cancellation notice to the customer
+                </li>
+                <li class="mb-2">
+                  ✔ Keeps customers informed and builds trust
+                </li>
+                <li class="mb-2">✔ Prompt to shop again</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="tpl-right rounded-5  text-center">
+                <img
+                  src="assets/images/customer-feedback.png"
+                  alt="Order Cancellation Message demo on WhatsApp"
+                  class="tpl-img w-50"
+                />
+              </div>
+            </div>
+          </div>
+          <p class=" text-secondary text-center mb-0">
+            * Message demos are samples; variables like {{name}} are filled from
+            your store data.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========================================================
+     CTA
+========================================================= -->
+      <section class="cta-section" data-aos="fade-up">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Ready to simplify WhatsApp communication?</h2>
+            <p>
+              Bring your customer conversations, team and automation together in
+              one platform.<br />
+              Start with 11za today.
+            </p>
+            <p></p>
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
+
+              <a
+                href="https://calendly.com/engees/schedule-a-demo"
+                class="btn btn-outline-light btn-lg"
+              >
+                Book a 1-on-1 Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- =========================
+       FOOTER
+  ========================== -->
+
+    <footer class="position-relative">
+      <div class="footer-layer-effect"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">11<span>za</span>.</div>
+            <div>One Company. One Chat.</div>
+            <p>
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Solutions</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Other Links</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="knowledge-series.html">Knowledge Series</a>
+            <!-- <a href="#">Api Documentation</a>
+            <a href="#">11za Documentation</a> -->
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <a href="#"
+              ><a href="tel:(+91) 97266 54060"
+                ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
+              ></a
+            >
+            <a href="mailto:hello@11za.com"
+              ><i class="fa-solid fa-envelope me-3"></i> hello@11za.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-clock me-3"></i> Mon - Sat | 10am - 7pm</a
+            >
+          </div>
+          <!-- App / Platform Badges Section -->
+        </div>
+        <div class="footer-apps w-100 d-flex justify-content-end">
+          <div class="app-badges">
+            <a
+              href="https://apps.apple.com/in/app/11za/id6443972158"
+              target="_blank"
+              aria-label="Download on App Store"
+            >
+              <img
+                src="assets/images/googleplay.png"
+                alt="Download on App Store"
+                height="40px"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.engees11za"
+              target="_blank"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="assets/images/appstore.png"
+                alt="Get it on Google Play"
+                height="40px"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/in/app/11za/id6443972158"
+              target="_blank"
+              aria-label="Download on App Store"
+            >
+              <img
+                src="assets/images/googleplay.png"
+                alt="Download on App Store"
+                height="40px"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.engees11za"
+              target="_blank"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="assets/images/appstore.png"
+                alt="Get it on Google Play"
+                height="40px"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 11za. All rights reserved. </span>
+
+          <div>
+            <ul
+              class="social-nav widget social-widget d-flex align-items-center gap-3 ps-0"
+            >
+              <li>
+                <a href="https://www.linkedin.com/company/11za" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/11zaofficial" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/11zaofficial/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/11zaofficial/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="assets/js/script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("[data-nav]");
+
+        if (!header) return;
+
+        function updateHeader() {
+          header.classList.toggle("scrolled", window.scrollY > 30);
+        }
+
+        updateHeader();
+
+        window.addEventListener("scroll", updateHeader, { passive: true });
+      });
+    </script>
+  </body>
+</html>

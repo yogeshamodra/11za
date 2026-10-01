@@ -59,23 +59,12 @@
         opacity: 0.45;
 
         background-image:
-          linear-gradient(
-            rgba(148, 163, 184, 0.12) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            90deg,
-            rgba(148, 163, 184, 0.12) 1px,
-            transparent 1px
-          );
+          linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
 
         background-size: 44px 44px;
 
-        mask-image: linear-gradient(
-          to bottom,
-          black,
-          transparent 75%
-        );
+        mask-image: linear-gradient(to bottom, black, transparent 75%);
       }
 
       .eyebrow,
@@ -300,12 +289,7 @@
       .industry-card.featured {
         border-color: var(--emerald-200);
 
-        background:
-          linear-gradient(
-            145deg,
-            #ffffff,
-            var(--emerald-50)
-          );
+        background: linear-gradient(145deg, #ffffff, var(--emerald-50));
       }
 
       .industry-top {
@@ -625,111 +609,65 @@
   </head>
 
   <body>
-
     <!-- ============================================================
          NAVBAR
     ============================================================ -->
-
     <header class="site-header" data-nav data-testid="nav-sticky-header">
-
       <nav class="container nav-inner" aria-label="Main navigation">
-
         <!-- LOGO -->
-
-        <a
-          href="index.html"
-          class="brand"
-          data-testid="nav-logo-11za"
-        >
+        <a href="index.html" class="brand" data-testid="nav-logo-11za">
           <img
             src="assets/images/11za_logo.svg"
-            alt="11za"
+            alt=""
             class="logo-icon"
             width="120"
             height="40"
           />
         </a>
 
-
         <!-- DESKTOP NAVIGATION -->
-
         <ul class="nav-links mb-0 ps-0 list-unstyled">
-
           <li>
-            <a
-              href="index.html"
-              data-testid="nav-link-home"
-            >
-              Home
-            </a>
+            <a href="index.html" data-testid="nav-link-home"> Home </a>
           </li>
 
           <li>
-            <a
-              href="about.html"
-              data-testid="nav-link-about"
-            >
-              About
-            </a>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
           </li>
 
           <li>
-            <a
-              href="pricing.html"
-              data-testid="nav-link-pricing"
-            >
-              Pricing
-            </a>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
           </li>
 
           <li>
-            <a
-              href="integration.html"
-              data-testid="nav-link-integrations"
-            >
+            <a href="ecommerce.html" data-testid="nav-link-integrations">
+              Ecommerce
+            </a>
+          </li>
+          <li>
+            <a href="integration.html" data-testid="nav-link-integrations">
               Integrations
             </a>
           </li>
 
           <li>
-            <a
-              href="industry.html"
-              class="active"
-              data-testid="nav-link-industry"
-            >
-              Industries
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
             </a>
           </li>
 
           <li>
-            <a
-              href="contact.html"
-              data-testid="nav-link-contact"
-            >
-              Contact
-            </a>
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
           </li>
-
         </ul>
 
-
         <!-- DESKTOP CTA -->
-
         <div class="nav-ctas">
-
-          <a
-            href="#cta"
-            class="nav-login"
-            data-testid="nav-login-btn"
-          >
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
             Login
           </a>
 
-          <a
-            href="#cta"
-            class="nav-start"
-            data-testid="nav-get-started-btn"
-          >
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
             Sign Up
           </a>
 
@@ -742,12 +680,9 @@
           >
             Book a Demo
           </a>
-
         </div>
 
-
         <!-- MOBILE HAMBURGER -->
-
         <button
           class="nav-burger"
           type="button"
@@ -757,398 +692,228 @@
           aria-label="Toggle menu"
           data-testid="nav-mobile-menu-btn"
         >
-
           <div class="open-menu">
-            <img
-              src="assets/images/menu-icon.svg"
-              alt=""
-              height="27"
-            />
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
           </div>
-
           <div class="close-menu">
-            <img
-              src="assets/images/close-icon.svg"
-              alt=""
-              height="27"
-            />
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
           </div>
-
         </button>
-
       </nav>
-
     </header>
-
-
     <!-- ============================================================
          HERO
     ============================================================ -->
 
     <section class="industry-hero">
-
       <div class="hero-grid"></div>
 
       <div class="container position-relative">
-
         <div class="row justify-content-center text-center">
-
           <div class="col-lg-9">
-
             <div class="eyebrow">
-
               <span class="eyebrow-dot"></span>
 
               INDUSTRY SOLUTIONS
-
             </div>
 
-
             <h1 class="hero-title">
-
               WhatsApp built
 
-              <span>
-                for your industry.
-              </span>
-
+              <span> for your industry. </span>
             </h1>
 
-
             <p class="hero-description">
-
-              Every industry has different customer journeys.
-              11za helps you manage enquiries, bookings, sales,
-              support and follow-ups on WhatsApp with automation,
-              AI and a shared team inbox.
-
+              Every industry has different customer journeys. 11za helps you
+              manage enquiries, bookings, sales, support and follow-ups on
+              WhatsApp with automation, AI and a shared team inbox.
             </p>
 
-
-            <div
-              class="d-flex justify-content-center gap-3 flex-wrap mt-4"
-            >
-
-              <a
-                href="#industries"
-                class="btn btn-primary btn-lg"
-              >
-
+            <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+              <a href="#industries" class="btn btn-primary btn-lg">
                 Explore Industries
 
                 <i class="bi bi-arrow-right"></i>
-
               </a>
-
 
               <a
                 href="contact.html"
                 class="btn btn-light btn-lg hero-secondary-btn"
               >
-
                 Talk to an Expert
-
               </a>
-
             </div>
 
-
             <div class="hero-note">
-
               <i class="bi bi-shield-check"></i>
 
               Official WhatsApp Business API · Free onboarding assistance
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- ============================================================
          INTRO
     ============================================================ -->
 
     <section class="intro-section">
-
       <div class="container">
-
         <div class="row align-items-center g-5">
-
-
           <!-- LEFT -->
 
           <div class="col-lg-6">
-
-            <div class="section-eyebrow">
-              BUILT FOR YOUR INDUSTRY
-            </div>
-
+            <div class="section-eyebrow">BUILT FOR YOUR INDUSTRY</div>
 
             <h2 class="section-title">
-
               One platform.
 
-              <span>
-                Industry-specific workflows.
-              </span>
-
+              <span> Industry-specific workflows. </span>
             </h2>
 
-
             <p class="section-text">
-
-              Every business uses WhatsApp differently.
-              A hospital needs appointment communication.
-              A jewellery business needs product enquiries.
-              A reservation business needs confirmations and
-              reminders. A travel company needs enquiries,
-              bookings and itinerary communication.
-
+              Every business uses WhatsApp differently. A hospital needs
+              appointment communication. A jewellery business needs product
+              enquiries. A reservation business needs confirmations and
+              reminders. A travel company needs enquiries, bookings and
+              itinerary communication.
             </p>
 
-
             <p class="section-text">
-
-              11za brings these customer journeys together in
-              one platform with shared inbox, automation,
-              AI, campaigns, analytics and integrations.
-
+              11za brings these customer journeys together in one platform with
+              shared inbox, automation, AI, campaigns, analytics and
+              integrations.
             </p>
 
-
-            <a
-              href="#industries"
-              class="text-link"
-            >
-
+            <a href="#industries" class="text-link">
               Explore industry solutions
 
               <i class="bi bi-arrow-right"></i>
-
             </a>
-
           </div>
-
 
           <!-- RIGHT / CAPABILITIES -->
 
           <div class="col-lg-6">
-
             <div class="row g-3">
-
-
               <!-- ENGAGE -->
 
               <div class="col-md-6">
-
                 <div class="capability-card">
-
                   <div
                     class="capability-icon d-flex align-items-center justify-content-center"
                   >
-
                     <i class="bi bi-chat-dots"></i>
-
                   </div>
 
-                  <h5>
-                    Engage
-                  </h5>
+                  <h5>Engage</h5>
 
-                  <p>
-                    Respond to every customer from one shared inbox.
-                  </p>
-
+                  <p>Respond to every customer from one shared inbox.</p>
                 </div>
-
               </div>
-
 
               <!-- AUTOMATE -->
 
               <div class="col-md-6">
-
                 <div class="capability-card">
-
                   <div
                     class="capability-icon d-flex align-items-center justify-content-center"
                   >
-
                     <i class="bi bi-lightning"></i>
-
                   </div>
 
-                  <h5>
-                    Automate
-                  </h5>
+                  <h5>Automate</h5>
 
-                  <p>
-                    Build workflows that run without manual effort.
-                  </p>
-
+                  <p>Build workflows that run without manual effort.</p>
                 </div>
-
               </div>
-
 
               <!-- AI -->
 
               <div class="col-md-6">
-
                 <div class="capability-card">
-
                   <div
                     class="capability-icon d-flex align-items-center justify-content-center"
                   >
-
                     <i class="bi bi-stars"></i>
-
                   </div>
 
-                  <h5>
-                    AI-powered
-                  </h5>
+                  <h5>AI-powered</h5>
 
-                  <p>
-                    Answer questions and qualify leads automatically.
-                  </p>
-
+                  <p>Answer questions and qualify leads automatically.</p>
                 </div>
-
               </div>
-
 
               <!-- GROW -->
 
               <div class="col-md-6">
-
                 <div class="capability-card">
-
                   <div
                     class="capability-icon d-flex align-items-center justify-content-center"
                   >
-
                     <i class="bi bi-graph-up-arrow"></i>
-
                   </div>
 
-                  <h5>
-                    Grow
-                  </h5>
+                  <h5>Grow</h5>
 
-                  <p>
-                    Turn conversations into measurable business results.
-                  </p>
-
+                  <p>Turn conversations into measurable business results.</p>
                 </div>
-
               </div>
-
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- ============================================================
          INDUSTRIES
     ============================================================ -->
 
-    <section
-      id="industries"
-      class="industries-section"
-    >
-
+    <section id="industries" class="industries-section">
       <div class="container">
-
-
         <div class="text-center section-heading">
-
-          <div class="section-eyebrow">
-            INDUSTRIES
-          </div>
-
+          <div class="section-eyebrow">INDUSTRIES</div>
 
           <h2 class="section-title">
-
             WhatsApp for
 
-            <span>
-              every business.
-            </span>
-
+            <span> every business. </span>
           </h2>
 
-
           <p class="section-text mx-auto">
-
-            Powerful WhatsApp solutions built around the
-            workflows and customer journeys of your industry.
-
+            Powerful WhatsApp solutions built around the workflows and customer
+            journeys of your industry.
           </p>
-
         </div>
 
-
         <div class="row g-4">
-
-
           <!-- ======================================================
                HOSPITAL
           ======================================================= -->
 
           <div class="col-md-6 col-xl-3">
-
             <div class="industry-card featured">
-
               <div
                 class="industry-top d-flex align-items-center justify-content-between"
               >
-
                 <div
                   class="industry-icon-large d-flex align-items-center justify-content-center"
                 >
-
                   <i class="bi bi-hospital"></i>
-
                 </div>
 
-
-                <span class="industry-number">
-                  01
-                </span>
-
+                <span class="industry-number"> 01 </span>
               </div>
 
-
-              <h3>
-                Hospital Appointment
-              </h3>
-
+              <h3>Hospital Appointment</h3>
 
               <p>
-
-                Make patient communication simple with
-                WhatsApp appointment booking, reminders
-                and follow-ups.
-
+                Make patient communication simple with WhatsApp appointment
+                booking, reminders and follow-ups.
               </p>
 
-
               <ul>
-
                 <li>
                   <i class="bi bi-check2"></i>
                   Appointment booking
@@ -1168,69 +933,42 @@
                   <i class="bi bi-check2"></i>
                   Follow-up notifications
                 </li>
-
               </ul>
 
-
-              <a
-                href="single-hospital.html"
-                class="industry-link"
-              >
-
+              <a href="single-hospital.html" class="industry-link">
                 Explore solution
 
                 <i class="bi bi-arrow-right"></i>
-
               </a>
-
             </div>
-
           </div>
-
 
           <!-- ======================================================
                JEWELLERY
           ======================================================= -->
 
           <div class="col-md-6 col-xl-3">
-
             <div class="industry-card">
-
               <div
                 class="industry-top d-flex align-items-center justify-content-between"
               >
-
                 <div
                   class="industry-icon-large d-flex align-items-center justify-content-center"
                 >
-
                   <i class="bi bi-gem"></i>
-
                 </div>
 
-
-                <span class="industry-number">
-                  02
-                </span>
-
+                <span class="industry-number"> 02 </span>
               </div>
 
-
-              <h3>
-                Jewellery
-              </h3>
-
+              <h3>Jewellery</h3>
 
               <p>
-
-                Showcase your jewellery collections on WhatsApp
-                and turn customer enquiries into sales.
-
+                Showcase your jewellery collections on WhatsApp and turn
+                customer enquiries into sales.
               </p>
 
-
               <ul>
-
                 <li>
                   <i class="bi bi-check2"></i>
                   Product catalogue sharing
@@ -1250,69 +988,42 @@
                   <i class="bi bi-check2"></i>
                   Customer follow-ups
                 </li>
-
               </ul>
 
-
-              <a
-                href="single-jewellery.html"
-                class="industry-link"
-              >
-
+              <a href="single-jewellery.html" class="industry-link">
                 Explore solution
 
                 <i class="bi bi-arrow-right"></i>
-
               </a>
-
             </div>
-
           </div>
-
 
           <!-- ======================================================
                RESERVATION
           ======================================================= -->
 
           <div class="col-md-6 col-xl-3">
-
             <div class="industry-card">
-
               <div
                 class="industry-top d-flex align-items-center justify-content-between"
               >
-
                 <div
                   class="industry-icon-large d-flex align-items-center justify-content-center"
                 >
-
                   <i class="bi bi-calendar-check"></i>
-
                 </div>
 
-
-                <span class="industry-number">
-                  03
-                </span>
-
+                <span class="industry-number"> 03 </span>
               </div>
 
-
-              <h3>
-                Reservation
-              </h3>
-
+              <h3>Reservation</h3>
 
               <p>
-
-                Simplify reservations with WhatsApp enquiries,
-                booking confirmations, reminders and updates.
-
+                Simplify reservations with WhatsApp enquiries, booking
+                confirmations, reminders and updates.
               </p>
 
-
               <ul>
-
                 <li>
                   <i class="bi bi-check2"></i>
                   Reservation enquiries
@@ -1332,69 +1043,42 @@
                   <i class="bi bi-check2"></i>
                   Reminder notifications
                 </li>
-
               </ul>
 
-
-              <a
-                href="single-reservation.html"
-                class="industry-link"
-              >
-
+              <a href="single-reservation.html" class="industry-link">
                 Explore solution
 
                 <i class="bi bi-arrow-right"></i>
-
               </a>
-
             </div>
-
           </div>
-
 
           <!-- ======================================================
                TOUR & TRAVEL
           ======================================================= -->
 
           <div class="col-md-6 col-xl-3">
-
             <div class="industry-card">
-
               <div
                 class="industry-top d-flex align-items-center justify-content-between"
               >
-
                 <div
                   class="industry-icon-large d-flex align-items-center justify-content-center"
                 >
-
                   <i class="bi bi-airplane"></i>
-
                 </div>
 
-
-                <span class="industry-number">
-                  04
-                </span>
-
+                <span class="industry-number"> 04 </span>
               </div>
 
-
-              <h3>
-                Tour &amp; Travel
-              </h3>
-
+              <h3>Tour &amp; Travel</h3>
 
               <p>
-
-                Manage tour enquiries, bookings and traveller
-                communication directly through WhatsApp.
-
+                Manage tour enquiries, bookings and traveller communication
+                directly through WhatsApp.
               </p>
 
-
               <ul>
-
                 <li>
                   <i class="bi bi-check2"></i>
                   Tour package enquiries
@@ -1414,486 +1098,277 @@
                   <i class="bi bi-check2"></i>
                   Travel reminders
                 </li>
-
               </ul>
 
-
-              <a
-                href="single-travel.html"
-                class="industry-link"
-              >
-
+              <a href="single-travel.html" class="industry-link">
                 Explore solution
 
                 <i class="bi bi-arrow-right"></i>
-
               </a>
-
             </div>
-
           </div>
-
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- ============================================================
          HOW IT WORKS
     ============================================================ -->
 
     <section class="workflow-section">
-
       <div class="container">
-
         <div class="row align-items-center g-5">
-
-
           <!-- LEFT -->
 
           <div class="col-lg-5">
-
-            <div class="section-eyebrow">
-              HOW IT WORKS
-            </div>
-
+            <div class="section-eyebrow">HOW IT WORKS</div>
 
             <h2 class="section-title">
-
               One platform.
 
-              <span>
-                Every customer journey.
-              </span>
-
+              <span> Every customer journey. </span>
             </h2>
 
-
             <p class="section-text">
-
-              Whatever industry you're in, the foundation stays
-              the same: connect WhatsApp, capture conversations,
-              automate repetitive work and give your team the
-              context they need.
-
+              Whatever industry you're in, the foundation stays the same:
+              connect WhatsApp, capture conversations, automate repetitive work
+              and give your team the context they need.
             </p>
 
-
-            <a
-              href="contact.html"
-              class="btn btn-success"
-            >
-
+            <a href="contact.html" class="btn btn-success">
               See 11za in action
 
               <i class="bi bi-arrow-right"></i>
-
             </a>
-
           </div>
-
 
           <!-- RIGHT -->
 
           <div class="col-lg-7">
-
             <div class="workflow-box">
-
-
               <!-- STEP 01 -->
 
-              <div
-                class="workflow-step d-flex align-items-center gap-3"
-              >
-
-                <div class="workflow-number flex-shrink-0">
-                  01
-                </div>
-
+              <div class="workflow-step d-flex align-items-center gap-3">
+                <div class="workflow-number flex-shrink-0">01</div>
 
                 <div
                   class="workflow-icon d-flex align-items-center justify-content-center flex-shrink-0"
                 >
-
                   <i class="bi bi-chat"></i>
-
                 </div>
-
 
                 <div>
-
-                  <h5>
-                    Customer starts a conversation
-                  </h5>
+                  <h5>Customer starts a conversation</h5>
 
                   <p>
-                    From ads, website, store, campaign or your
-                    WhatsApp number.
+                    From ads, website, store, campaign or your WhatsApp number.
                   </p>
-
                 </div>
-
               </div>
 
-
               <div class="workflow-line"></div>
-
 
               <!-- STEP 02 -->
 
-              <div
-                class="workflow-step d-flex align-items-center gap-3"
-              >
-
-                <div class="workflow-number flex-shrink-0">
-                  02
-                </div>
-
+              <div class="workflow-step d-flex align-items-center gap-3">
+                <div class="workflow-number flex-shrink-0">02</div>
 
                 <div
                   class="workflow-icon d-flex align-items-center justify-content-center flex-shrink-0"
                 >
-
                   <i class="bi bi-stars"></i>
-
                 </div>
-
 
                 <div>
-
-                  <h5>
-                    11za understands and automates
-                  </h5>
+                  <h5>11za understands and automates</h5>
 
                   <p>
-                    AI, chatbots and workflows handle routine
-                    conversations automatically.
+                    AI, chatbots and workflows handle routine conversations
+                    automatically.
                   </p>
-
                 </div>
-
               </div>
 
-
               <div class="workflow-line"></div>
-
 
               <!-- STEP 03 -->
 
-              <div
-                class="workflow-step d-flex align-items-center gap-3"
-              >
-
-                <div class="workflow-number flex-shrink-0">
-                  03
-                </div>
-
+              <div class="workflow-step d-flex align-items-center gap-3">
+                <div class="workflow-number flex-shrink-0">03</div>
 
                 <div
                   class="workflow-icon d-flex align-items-center justify-content-center flex-shrink-0"
                 >
-
                   <i class="bi bi-person-check"></i>
-
                 </div>
-
 
                 <div>
-
-                  <h5>
-                    Your team takes over
-                  </h5>
+                  <h5>Your team takes over</h5>
 
                   <p>
-                    Qualified conversations are routed to the
-                    right agent with full context.
+                    Qualified conversations are routed to the right agent with
+                    full context.
                   </p>
-
                 </div>
-
               </div>
-
 
               <div class="workflow-line"></div>
 
-
               <!-- STEP 04 -->
 
-              <div
-                class="workflow-step d-flex align-items-center gap-3"
-              >
-
-                <div class="workflow-number flex-shrink-0">
-                  04
-                </div>
-
+              <div class="workflow-step d-flex align-items-center gap-3">
+                <div class="workflow-number flex-shrink-0">04</div>
 
                 <div
                   class="workflow-icon d-flex align-items-center justify-content-center flex-shrink-0"
                 >
-
                   <i class="bi bi-graph-up-arrow"></i>
-
                 </div>
-
 
                 <div>
-
-                  <h5>
-                    Conversations become results
-                  </h5>
+                  <h5>Conversations become results</h5>
 
                   <p>
-                    Track leads, sales, support and campaign
-                    performance from one dashboard.
+                    Track leads, sales, support and campaign performance from
+                    one dashboard.
                   </p>
-
                 </div>
-
               </div>
-
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- ============================================================
          FEATURES
     ============================================================ -->
 
     <section class="features-section">
-
       <div class="container">
-
-
         <div class="text-center section-heading">
-
-          <div class="section-eyebrow">
-            ONE PLATFORM
-          </div>
-
+          <div class="section-eyebrow">ONE PLATFORM</div>
 
           <h2 class="section-title">
-
             Everything your team needs
 
-            <span>
-              on WhatsApp.
-            </span>
-
+            <span> on WhatsApp. </span>
           </h2>
 
-
           <p class="section-text mx-auto">
-
-            A complete customer engagement platform built around
-            the way modern businesses communicate.
-
+            A complete customer engagement platform built around the way modern
+            businesses communicate.
           </p>
-
         </div>
 
-
         <div class="row g-4">
-
-
           <!-- SHARED INBOX -->
 
           <div class="col-md-6 col-lg-3">
-
             <div class="feature-card">
-
               <div
                 class="feature-icon d-flex align-items-center justify-content-center"
               >
-
                 <i class="bi bi-chat-square-text"></i>
-
               </div>
 
-
-              <h5>
-                Shared Team Inbox
-              </h5>
-
+              <h5>Shared Team Inbox</h5>
 
               <p>
-
-                Let multiple agents manage conversations from
-                one business number.
-
+                Let multiple agents manage conversations from one business
+                number.
               </p>
-
             </div>
-
           </div>
-
 
           <!-- AUTOMATION -->
 
           <div class="col-md-6 col-lg-3">
-
             <div class="feature-card">
-
               <div
                 class="feature-icon d-flex align-items-center justify-content-center"
               >
-
                 <i class="bi bi-diagram-3"></i>
-
               </div>
 
-
-              <h5>
-                Automation
-              </h5>
-
+              <h5>Automation</h5>
 
               <p>
-
-                Build customer journeys for sales, support,
-                marketing and operations.
-
+                Build customer journeys for sales, support, marketing and
+                operations.
               </p>
-
             </div>
-
           </div>
-
 
           <!-- AI -->
 
           <div class="col-md-6 col-lg-3">
-
             <div class="feature-card">
-
               <div
                 class="feature-icon d-flex align-items-center justify-content-center"
               >
-
                 <i class="bi bi-stars"></i>
-
               </div>
 
-
-              <h5>
-                AI &amp; Chatbots
-              </h5>
-
+              <h5>AI &amp; Chatbots</h5>
 
               <p>
-
-                Answer FAQs, qualify leads and automate
-                repetitive conversations.
-
+                Answer FAQs, qualify leads and automate repetitive
+                conversations.
               </p>
-
             </div>
-
           </div>
-
 
           <!-- ANALYTICS -->
 
           <div class="col-md-6 col-lg-3">
-
             <div class="feature-card">
-
               <div
                 class="feature-icon d-flex align-items-center justify-content-center"
               >
-
                 <i class="bi bi-bar-chart"></i>
-
               </div>
 
-
-              <h5>
-                Analytics
-              </h5>
-
+              <h5>Analytics</h5>
 
               <p>
-
-                Measure conversations, agents, campaigns and
-                customer engagement.
-
+                Measure conversations, agents, campaigns and customer
+                engagement.
               </p>
-
             </div>
-
           </div>
-
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- ============================================================
          CTA
     ============================================================ -->
 
-    <section
-      id="cta"
-      class="industry-cta-section"
-    >
-
+    <section id="cta" class="industry-cta-section">
       <div class="container">
-
         <div class="industry-cta-box">
-
           <div class="cta-eyebrow">
-
             <i class="bi bi-chat-dots"></i>
 
             GET STARTED
-
           </div>
 
-
           <h2 class="industry-cta-title">
-
             Ready to simplify WhatsApp
 
-            <span>
-              communication?
-            </span>
-
+            <span> communication? </span>
           </h2>
 
-
           <p class="industry-cta-text">
-
-            Start managing customer conversations, teams and
-            WhatsApp campaigns from one powerful platform.
-
+            Start managing customer conversations, teams and WhatsApp campaigns
+            from one powerful platform.
           </p>
-
 
           <div
             class="industry-cta-buttons d-flex justify-content-center gap-3 flex-wrap"
           >
-
-            <a
-              href="#"
-              class="btn btn-primary btn-lg"
-            >
-              Get Started
-            </a>
-
+            <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
 
             <a
               href="https://calendly.com/engees/schedule-a-demo"
@@ -1903,262 +1378,158 @@
             >
               Contact Sales
             </a>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- ============================================================
          FOOTER
     ============================================================ -->
 
     <footer class="position-relative">
-
       <div class="footer-layer-effect"></div>
 
       <div class="container">
-
         <div class="footer-grid">
-
-
           <!-- BRAND -->
 
           <div class="footer-brand">
-
-            <div class="logo">
-              11<span>za</span>.
-            </div>
-
+            <div class="logo">11<span>za</span>.</div>
 
             <p>
-
-              11za observed the need for an influential yet
-              simple platform with clear pricing for business
-              to hold WhatsApp Business efficiently in local
-              market. WhatsApp is something that is used by
-              everyone, both customer and vendor.
-
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
             </p>
-
           </div>
-
 
           <!-- USEFUL LINKS -->
 
           <div class="footer-column">
+            <h4>Useful Links</h4>
 
-            <h4>
-              Useful Links
-            </h4>
+            <a href="index.html"> Home </a>
 
+            <a href="about.html"> About Us </a>
 
-            <a href="index.html">
-              Home
-            </a>
+            <a href="contact.html"> Contact Us </a>
 
-            <a href="about.html">
-              About Us
-            </a>
+            <a href="pricing.html"> Pricing </a>
 
-            <a href="contact.html">
-              Contact Us
-            </a>
+            <a href="integration.html"> Integrations </a>
 
-            <a href="pricing.html">
-              Pricing
-            </a>
-
-            <a href="integration.html">
-              Integrations
-            </a>
-
-            <a href="industry.html">
-              Industries
-            </a>
-
+            <a href="industry.html"> Industries </a>
           </div>
-
 
           <!-- OTHER LINKS -->
 
           <div class="footer-column">
+            <h4>Other Links</h4>
 
-            <h4>
-              Other Links
-            </h4>
+            <a href="#"> Terms &amp; Conditions </a>
 
+            <a href="#"> Privacy Policy </a>
 
-            <a href="#">
-              Terms &amp; Conditions
-            </a>
+            <a href="#"> API Documentation </a>
 
-            <a href="#">
-              Privacy Policy
-            </a>
-
-            <a href="#">
-              API Documentation
-            </a>
-
-            <a href="#">
-              11za Documentation
-            </a>
-
+            <a href="#"> 11za Documentation </a>
           </div>
-
 
           <!-- CONTACT -->
 
           <div class="footer-column">
-
-            <h4>
-              Contact Us
-            </h4>
-
+            <h4>Contact Us</h4>
 
             <a href="tel:+919726654060">
-
               <i class="fa-solid fa-phone me-3"></i>
 
               (+91) 97266 54060
-
             </a>
 
-
             <a href="mailto:hello@11za.com">
-
               <i class="fa-solid fa-envelope me-3"></i>
 
               hello@11za.com
-
             </a>
 
-
             <a href="#">
-
               <i class="fa-solid fa-clock me-3"></i>
 
               Mon - Sat | 10am - 7pm
-
             </a>
-
           </div>
-
-
         </div>
-
 
         <!-- FOOTER BOTTOM -->
 
         <div
           class="footer-bottom d-flex align-items-center justify-content-between"
         >
-
-          <span>
-            © 2026 11za. All rights reserved.
-          </span>
-
+          <span> © 2026 11za. All rights reserved. </span>
 
           <div>
-
             <ul
               class="social-nav widget social-widget d-flex align-items-center gap-3"
             >
-
               <li>
-
                 <a
                   href="https://www.linkedin.com/company/11za"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
                 >
-
                   <i class="fab fa-linkedin"></i>
-
                 </a>
-
               </li>
 
-
               <li>
-
                 <a
                   href="https://twitter.com/11zaofficial"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Twitter"
                 >
-
                   <i class="fab fa-twitter"></i>
-
                 </a>
-
               </li>
 
-
               <li>
-
                 <a
                   href="https://www.instagram.com/11zaofficial/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
                 >
-
                   <i class="fab fa-instagram"></i>
-
                 </a>
-
               </li>
 
-
               <li>
-
                 <a
                   href="https://www.facebook.com/11zaofficial/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Facebook"
                 >
-
                   <i class="fab fa-facebook-f"></i>
-
                 </a>
-
               </li>
-
             </ul>
-
           </div>
-
         </div>
-
       </div>
-
     </footer>
-
 
     <!-- ============================================================
          BOOTSTRAP JS
     ============================================================ -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CUSTOM JS -->
 
-    <script
-      src="assets/js/script.js"
-      defer
-    ></script>
-
+    <script src="assets/js/script.js" defer></script>
   </body>
 </html>
