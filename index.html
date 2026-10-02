@@ -40,7 +40,7 @@
     />
   </head>
   <body>
-    <header class="site-header" data-nav data-testid="nav-sticky-header">
+    <header class="site-header bg-white" data-nav data-testid="nav-sticky-header">
       <nav class="container nav-inner" aria-label="Main navigation">
         <!-- LOGO -->
         <a href="index.html" class="brand" data-testid="nav-logo-11za">
@@ -204,9 +204,271 @@
     </div>
 
     <main>
+      <style>
+        
+        /* ===== Hero 2 ===== */
+        .hero2 {
+          position: relative;
+          overflow: hidden;
+          color: #fff;
+          padding: 140px 0 40px;
+          background:
+            radial-gradient(
+              1000px 500px at 85% 10%,
+              #103710 0%,
+              transparent 60%
+            ),
+            linear-gradient(135deg, #103710 0%, #103710 55%, #103710 100%);
+        }
+        .hero2::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-image: radial-gradient(
+            rgba(255, 255, 255, 0.12) 1px,
+            transparent 1px
+          );
+          background-size: 26px 26px;
+          mask-image: linear-gradient(to bottom, #000 30%, transparent 90%);
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            #000 30%,
+            transparent 90%
+          );
+        }
+        .hero2 .blob {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(70px);
+          opacity: 0.45;
+        }
+        .hero2 .b1 {
+          width: 340px;
+          height: 340px;
+          background: #25d366;
+          top: -90px;
+          left: -80px;
+        }
+        .hero2 .b2 {
+          width: 300px;
+          height: 300px;
+          background: #0ea5a5;
+          bottom: -120px;
+          right: 20%;
+        }
+        .pill2 {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          padding: 0.45rem 1rem;
+          border-radius: 50px;
+          font-weight: 600;
+          font-size: 0.85rem;
+          backdrop-filter: blur(6px);
+        }
+        .pill2 .dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #4ade80;
+          box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.25);
+        }
+        .hero2 h1 {
+          font-weight: 800;
+          font-size: clamp(2.3rem, 5vw, 3.7rem);
+          line-height: 1.08;
+          letter-spacing: -1.5px;
+        }
+        .hero2 .grad {
+          background: linear-gradient(90deg, #86efac, #fde68a);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+        .lead2 {
+          font-size: 1.15rem;
+          color: rgba(255, 255, 255, 0.82);
+          
+        }
+        .btn-lite {
+          background: #fff;
+          color: #065f3f;
+          border-radius: 50px;
+          padding: 0.85rem 1.8rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+        .btn-lite:hover {
+          background: #eafff4;
+          color: #065f3f;
+          transform: translateY(-2px);
+        }
+        .btn-outline-lite {
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          color: #fff;
+          border-radius: 50px;
+          padding: 0.8rem 1.8rem;
+        }
+        .btn-outline-lite:hover {
+          background: #fff;
+          color: #065f3f;
+        }
+        .checks li {
+          font-size: 0.92rem;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        .stage {
+          position: relative;
+          max-width: 460px;
+          margin: auto;
+          padding: 20px;
+        }
+        .stage::before {
+          content: "";
+          position: absolute;
+          inset: 8% 4%;
+          border-radius: 40px;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          transform: rotate(-4deg);
+        }
+        .stage .hero-img {
+          position: relative;
+          display: block;
+          width: 100%;
+          max-width: 380px;
+          margin: auto;
+          filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.35));
+        }
+        .float-card {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: #fff;
+          color: #0f1f2e;
+          padding: 10px 16px 10px 12px;
+          border-radius: 16px;
+          box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+          animation: floaty 5s ease-in-out infinite;
+        }
+        .float-card span {
+          font-size: 1.5rem;
+        }
+        .float-card b {
+          display: block;
+          font-size: 0.9rem;
+          line-height: 1.1;
+        }
+        .float-card small {
+          color: #5d6b78;
+          font-size: 0.75rem;
+        }
+        .fc1 {
+          top: 6%;
+          left: -4%;
+        }
+        .fc2 {
+          top: 46%;
+          right: -6%;
+          animation-delay: 1.2s;
+        }
+        .fc3 {
+          bottom: 6%;
+          left: -2%;
+          animation-delay: 2.4s;
+        }
+        @keyframes floaty {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-12px);
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .float-card {
+            animation: none;
+          }
+        }
+        .works-with {
+          margin-top: 50px;
+          padding-top: 26px;
+          border-top: 1px solid rgba(255, 255, 255, 0.15);
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 14px;
+          justify-content: center;
+          align-items: center;
+        }
+        .works-with small {
+          opacity: 0.7;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 700;
+          margin-right: 6px;
+        }
+        .works-with span {
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          padding: 0.35rem 0.95rem;
+          border-radius: 50px;
+          font-weight: 700;
+          font-size: 0.85rem;
+        }
+        @media (max-width: 991px) {
+          .hero2 {
+            padding-top: 60px;
+          }
+          .fc1 {
+            left: 0;
+          }
+          .fc2 {
+            right: 0;
+          }
+          .fc3 {
+            left: 0;
+          }
+        }
+      </style>
+      <section class="hero2" id="top">
+        <span class="blob b1"></span><span class="blob b2"></span>
+        <div class="container position-relative" data-aos="fade-up">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-9 mx-auto text-center text-white">
+              <span class="pill2"
+                ><i class="dot"></i> Official WhatsApp Business API for
+                Ecommerce</span
+              >
+              <h1 class="mt-4">
+                Grow your online store with <span class="grad">WhatsApp</span>
+              </h1>
+              <p class="lead2 my-4">
+                Confirm COD orders, recover abandoned carts, share tracking
+                updates and run personalised campaigns, automatically, for
+                Shopify, WooCommerce or your own website.
+              </p>
+              <div class="flex-wrap gap-3">
+                <a href="#" class="btn btn-lite">Get Started Free</a>
+                <a href="#templates" class="btn btn-outline-lite"
+                  >See Message Templates</a
+                >
+              </div>
+            </div>
+            
+          </div>
+          <div class="works-with text-center text-white">
+            <small>Works with</small>
+            <span>Shopify</span><span>WooCommerce</span><span>Shiprocket</span
+            ><span>Razorpay</span><span>Pabbly</span>
+          </div>
+        </div>
+      </section>
       <!-- ==================== HERO ==================== -->
       <section id="hero" class="hero hero-glow" data-aos="fade-up">
-        <div class="dots dot-grid mask-fade-top" aria-hidden="true"></div>
         <div class="container hero-inner">
           <div
             style="max-width: 64rem; margin-inline: auto; text-align: center"
@@ -221,9 +483,7 @@
               Unlock Business
               <span>Growth</span>
             </h1>
-            <!-- <h1 data-testid="hero-headline">
-              Grow Your Business <span>with WhatsApp</span>
-            </h1> -->
+           
             <p class="hero-sub">
               One platform to manage customer conversations, automate
               engagement, generate leads and grow your business on WhatsApp.
@@ -349,6 +609,156 @@
         </div>
       </section>
 
+      <style>
+  .demo-gap{height:70vh}
+ 
+  /* ===== Core Capabilities: only what Bootstrap can't do ===== */
+  .cc{
+    --cc-ink:#10241c; --cc-green:#1fa855; --cc-line:#dfe8e2;
+    background:#f5f8f5; color:var(--cc-ink);
+    height:400vh;               /* 100vh of scrolling per capability */
+    position:relative;
+  }
+  .cc-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
+  .cc-sticky .container{height:100%;display:flex;flex-direction:column;padding-top:clamp(24px,6vh,60px);padding-bottom:clamp(20px,5vh,48px)}
+  .cc-body{flex:1;min-height:0}
+  .cc-body .row{height:100%}
+ 
+  /* tabs */
+  .cc-tab{
+    text-align:left;border:0;border-top:1px solid var(--cc-line);background:none;width:100%;
+    padding:18px 0 18px 22px;position:relative;cursor:pointer;
+  }
+  .cc-tab:last-child{border-bottom:1px solid var(--cc-line)}
+  .cc-tab::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:4px;background:var(--cc-green);transform:scaleY(0);transform-origin:top;transition:transform .35s}
+  .cc-tab.on::before{transform:scaleY(1)}
+  .cc-tab .cc-title{font-size:1.3rem;font-weight:700;color:#8a9a92;transition:color .2s}
+  .cc-tab:hover .cc-title,.cc-tab.on .cc-title{color:var(--cc-ink)}
+  .cc-tab:focus-visible{outline:3px solid var(--cc-green);outline-offset:-3px}
+ 
+  .cc-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+  .cc-tab.on .cc-more{grid-template-rows:1fr}
+  .cc-more>div{overflow:hidden}
+  .cc-more li{position:relative;padding-left:16px;font-size:.9rem}
+  .cc-more li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;border-radius:50%;background:var(--cc-green)}
+ 
+  /* image stack */
+  .cc-media{position:relative;height:100%;min-height:0;overflow:hidden;background:#cfe0d6}
+  .cc-media figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .6s}
+  .cc-media figure.on{opacity:1}
+  .cc-media img{width:100%;height:100%;object-fit:cover}
+ 
+  @media (max-width:991.98px){
+    .cc{height:420vh}
+    .cc-body .row{display:flex;flex-direction:column;flex-wrap:nowrap}
+    .cc-media-col{flex:1;min-height:0;width:100%}
+    .cc-tabs-col{flex:0 0 auto;width:100%}
+    .cc-tab{padding:10px 0 10px 16px}
+    .cc-tab .cc-title{font-size:1.05rem}
+    .cc-more p{display:none}
+    .cc-more li{font-size:.8rem}
+  }
+  @media (prefers-reduced-motion:reduce){.cc *{transition:none!important}}
+</style>
+<section class="cc" id="core-capabilities" aria-label="Core capabilities">
+  <div class="cc-sticky">
+    <div class="container">
+ 
+      <!-- Heading above -->
+      <div class="text-center mb-3 mb-lg-4">
+        <h2 class="fw-bold mb-2 fs-2 fs-lg-1">Everything you need to run business on WhatsApp</h2>
+        <p class="text-secondary mx-auto mb-0 d-none d-lg-block" style="max-width:56ch">
+          Talk to customers, send campaigns, automate the routine work and connect your existing tools, all from one platform.
+        </p>
+      </div>
+ 
+      <!-- Tabs left, image right -->
+      <div class="cc-body">
+        <div class="row g-3 g-lg-5 align-items-stretch">
+ 
+          <div class="col-lg-5 cc-tabs-col d-flex flex-column justify-content-center order-2 order-lg-1" role="tablist" aria-label="Core capabilities">
+            <button class="cc-tab on" role="tab" aria-selected="true">
+              <div class="cc-title">Chat</div>
+              <div class="cc-more"><div>
+                <p class="text-secondary mt-2 mb-2">One shared inbox for your whole team.</p>
+                <ul class="list-unstyled row row-cols-2 g-2 mb-0">
+                  <li class="col">Shared team inbox</li><li class="col">Auto-assignment</li><li class="col">Internal notes</li><li class="col">Rich media</li>
+                </ul>
+              </div></div>
+            </button>
+            <button class="cc-tab" role="tab" aria-selected="false">
+              <div class="cc-title">Broadcast</div>
+              <div class="cc-more"><div>
+                <p class="text-secondary mt-2 mb-2">Campaigns that reach thousands at once.</p>
+                <ul class="list-unstyled row row-cols-2 g-2 mb-0">
+                  <li class="col">Bulk messaging</li><li class="col">Campaign scheduler</li><li class="col">Dynamic variables</li><li class="col">Real-time analytics</li>
+                </ul>
+              </div></div>
+            </button>
+            <button class="cc-tab" role="tab" aria-selected="false">
+              <div class="cc-title">Automation</div>
+              <div class="cc-more"><div>
+                <p class="text-secondary mt-2 mb-2">Chatbots and alerts that work 24/7.</p>
+                <ul class="list-unstyled row row-cols-2 g-2 mb-0">
+                  <li class="col">No-code bot builder</li><li class="col">Order updates</li><li class="col">Abandoned cart recovery</li><li class="col">Auto-replies</li>
+                </ul>
+              </div></div>
+            </button>
+            <button class="cc-tab" role="tab" aria-selected="false">
+              <div class="cc-title">Integration</div>
+              <div class="cc-more"><div>
+                <p class="text-secondary mt-2 mb-2">Works with the tools you already use.</p>
+                <ul class="list-unstyled row row-cols-2 g-2 mb-0">
+                  <li class="col">Shopify &amp; WooCommerce</li><li class="col">HubSpot, Zoho, Meta Lead Ads</li><li class="col">Razorpay &amp; Pabbly</li><li class="col">Webhooks &amp; custom APIs</li>
+                </ul>
+              </div></div>
+            </button>
+          </div>
+ 
+          <!-- Replace these image URLs with your own product screenshots -->
+          <div class="col-lg-7 cc-media-col order-1 order-lg-2">
+            <div class="cc-media rounded-4 shadow-lg">
+              <figure class="on"><img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1200&q=80" alt="Shared team inbox" loading="lazy"></figure>
+              <figure><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Broadcast campaign manager" loading="lazy"></figure>
+              <figure><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="No-code bot builder" loading="lazy"></figure>
+              <figure><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Integrations and analytics" loading="lazy"></figure>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<script>
+(function(){
+  var sec=document.getElementById('core-capabilities');
+  var tabs=sec.querySelectorAll('.cc-tab'), figs=sec.querySelectorAll('.cc-media figure');
+  var n=tabs.length, cur=-1;
+ 
+  function show(i){
+    if(i===cur) return; cur=i;
+    tabs.forEach(function(t,j){t.classList.toggle('on',j===i);t.setAttribute('aria-selected',j===i)});
+    figs.forEach(function(f,j){f.classList.toggle('on',j===i)});
+  }
+  function range(){return sec.offsetHeight-window.innerHeight}
+  function onScroll(){
+    var p=Math.min(Math.max(-sec.getBoundingClientRect().top/range(),0),0.999);
+    show(Math.floor(p*n));
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){
+      var top=sec.getBoundingClientRect().top+window.pageYOffset;
+      window.scrollTo({top:top+(i+0.5)/n*range(),behavior:'smooth'});
+    });
+  });
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+})();
+</script>
       <!-- ==================== PROBLEM / SOLUTION ==================== -->
       <!-- <section id="problem" class="section">
         <div class="container">
@@ -2117,29 +2527,49 @@
         </div>
         <div class="footer-apps w-100 d-flex justify-content-end">
           <div class="app-badges">
-            <a href="https://apps.apple.com/in/app/11za/id6443972158" target="_blank" aria-label="Download on App Store">
+            <a
+              href="https://apps.apple.com/in/app/11za/id6443972158"
+              target="_blank"
+              aria-label="Download on App Store"
+            >
               <img
                 src="assets/images/googleplay.png"
-                alt="Download on App Store" height="40px"
+                alt="Download on App Store"
+                height="40px"
               />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.engees11za" target="_blank" aria-label="Get it on Google Play">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.engees11za"
+              target="_blank"
+              aria-label="Get it on Google Play"
+            >
               <img
                 src="assets/images/appstore.png"
-                alt="Get it on Google Play" height="40px"
+                alt="Get it on Google Play"
+                height="40px"
               />
             </a>
-            <a href="https://apps.apple.com/in/app/11za/id6443972158" target="_blank" aria-label="Download on App Store">
+            <a
+              href="https://apps.apple.com/in/app/11za/id6443972158"
+              target="_blank"
+              aria-label="Download on App Store"
+            >
               <img
                 src="assets/images/googleplay.png"
-                alt="Download on App Store" height="40px"
+                alt="Download on App Store"
+                height="40px"
               />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.engees11za" target="_blank" aria-label="Get it on Google Play">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.engees11za"
+              target="_blank"
+              aria-label="Get it on Google Play"
+            >
               <img
                 src="assets/images/appstore.png"
-                alt="Get it on Google Play" height="40px"
-              /> 
+                alt="Get it on Google Play"
+                height="40px"
+              />
             </a>
           </div>
         </div>
