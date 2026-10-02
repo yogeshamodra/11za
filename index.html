@@ -40,11 +40,7 @@
     />
   </head>
   <body>
-    <header
-      class="site-header bg-white"
-      data-nav
-      data-testid="nav-sticky-header"
-    >
+    <header class="site-header bg-white" data-nav data-testid="nav-sticky-header">
       <nav class="container nav-inner" aria-label="Main navigation">
         <!-- LOGO -->
         <a href="index.html" class="brand" data-testid="nav-logo-11za">
@@ -209,6 +205,7 @@
 
     <main>
       <style>
+        
         /* ===== Hero 2 ===== */
         .hero2 {
           position: relative;
@@ -293,6 +290,7 @@
         .lead2 {
           font-size: 1.15rem;
           color: rgba(255, 255, 255, 0.82);
+          
         }
         .btn-lite {
           background: #fff;
@@ -446,7 +444,7 @@
                 Ecommerce</span
               >
               <h1 class="mt-4">
-                Unlock Business <span class="grad">Growth</span>
+                Grow your online store with <span class="grad">WhatsApp</span>
               </h1>
               <p class="lead2 my-4">
                 Confirm COD orders, recover abandoned carts, share tracking
@@ -454,10 +452,13 @@
                 Shopify, WooCommerce or your own website.
               </p>
               <div class="flex-wrap gap-3">
-                <a href="#" class="btn btn-lite">Get Started</a>
-                <a href="#templates" class="btn btn-outline-lite">Book Demo</a>
+                <a href="#" class="btn btn-lite">Get Started Free</a>
+                <a href="#templates" class="btn btn-outline-lite"
+                  >See Message Templates</a
+                >
               </div>
             </div>
+            
           </div>
           <div class="works-with text-center text-white">
             <small>Works with</small>
@@ -482,7 +483,7 @@
               Unlock Business
               <span>Growth</span>
             </h1>
-
+           
             <p class="hero-sub">
               One platform to manage customer conversations, automate
               engagement, generate leads and grow your business on WhatsApp.
@@ -608,348 +609,7 @@
         </div>
       </section>
 
-      <style>
-        .demo-gap {
-          height: 70vh;
-        }
-
-        /* ===== Core Capabilities: only what Bootstrap can't do ===== */
-        .cc {
-          --cc-ink: #10241c;
-          --cc-green: #1fa855;
-          --cc-line: #dfe8e2;
-          background: #f5f8f5;
-          color: var(--cc-ink);
-          height: 400vh; /* 100vh of scrolling per capability */
-          position: relative;
-        }
-        .cc-sticky {
-          position: sticky;
-          top: 0;
-          height: 100vh;
-          overflow: hidden;
-        }
-        .cc-sticky .container {
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          padding-top: clamp(24px, 6vh, 60px);
-          padding-bottom: clamp(20px, 5vh, 48px);
-        }
-        .cc-body {
-          flex: 1;
-          min-height: 0;
-        }
-        .cc-body .row {
-          height: 100%;
-        }
-
-        /* tabs */
-        .cc-tab {
-          text-align: left;
-          border: 0;
-          border-top: 1px solid var(--cc-line);
-          background: none;
-          width: 100%;
-          padding: 18px 0 18px 22px;
-          position: relative;
-          cursor: pointer;
-        }
-        .cc-tab:last-child {
-          border-bottom: 1px solid var(--cc-line);
-        }
-        .cc-tab::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: -1px;
-          bottom: -1px;
-          width: 4px;
-          background: var(--cc-green);
-          transform: scaleY(0);
-          transform-origin: top;
-          transition: transform 0.35s;
-        }
-        .cc-tab.on::before {
-          transform: scaleY(1);
-        }
-        .cc-tab .cc-title {
-          font-size: 35px;
-          font-weight: 700;
-          color: #8a9a92;
-          transition: color 0.2s;
-        }
-        .cc-tab:hover .cc-title,
-        .cc-tab.on .cc-title {
-          color: var(--cc-ink);
-        }
-        .cc-tab:focus-visible {
-          outline: 3px solid var(--cc-green);
-          outline-offset: -3px;
-        }
-
-        .cc-more {
-          display: grid;
-          grid-template-rows: 0fr;
-          transition: grid-template-rows 0.4s;
-        }
-        .cc-tab.on .cc-more {
-          grid-template-rows: 1fr;
-        }
-        .cc-more > div {
-          overflow: hidden;
-        }
-        .cc-more li {
-          position: relative;
-          padding-left: 16px;
-          font-size: 0.9rem;
-        }
-        .cc-more li::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0.5em;
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: var(--cc-green);
-        }
-
-        /* image stack */
-        .cc-media {
-          position: relative;
-          height: 600px;
-          min-height: 0;
-          overflow: hidden;
-          background: #cfe0d6;
-        }
-        .cc-media figure {
-          position: absolute;
-          inset: 0;
-          margin: 0;
-          opacity: 0;
-          transition: opacity 0.6s;
-        }
-        .cc-media figure.on {
-          opacity: 1;
-        }
-        .cc-media img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        @media (max-width: 991.98px) {
-          .cc {
-            height: 420vh;
-          }
-          .cc-body .row {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-          }
-          .cc-media-col {
-            flex: 1;
-            min-height: 0;
-            width: 100%;
-          }
-          .cc-tabs-col {
-            flex: 0 0 auto;
-            width: 100%;
-          }
-          .cc-tab {
-            padding: 10px 0 10px 16px;
-          }
-          .cc-tab .cc-title {
-            font-size: 1.05rem;
-          }
-          .cc-more p {
-            display: none;
-          }
-          .cc-more li {
-            font-size: 0.8rem;
-          }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .cc * {
-            transition: none !important;
-          }
-        }
-      </style>
-      <section class="cc" id="core-capabilities" aria-label="Core capabilities">
-        <div class="cc-sticky">
-          <div class="container">
-            <!-- Heading above -->
-          
-
-            <!-- Tabs left, image right -->
-            <div class="cc-body">
-              <div class="row g-3 g-lg-5 align-items-stretch">
-                <div
-                  class="col-lg-6 cc-tabs-col d-flex flex-column justify-content-center order-2 order-lg-1"
-                  role="tablist"
-                  aria-label="Core capabilities"
-                >
-                  <div class=" mb-3 mb-lg-4">
-              <h2 class="fw-bold mb-2 fs-2 fs-lg-1">
-                Everything you need to run business on WhatsApp
-              </h2>
-              <p
-                class="text-secondary mx-auto mb-0 d-none d-lg-block"
-              
-              >
-                Talk to customers, send campaigns, automate the routine work and
-                connect your existing tools, all from one platform.
-              </p>
-            </div>
-                  <button class="cc-tab on" role="tab" aria-selected="true">
-                    <div class="cc-title">Chat</div>
-                    <div class="cc-more">
-                      <div>
-                        <p class="text-secondary mt-2 mb-2">
-                          One shared inbox for your whole team.
-                        </p>
-                        <ul class="list-unstyled row row-cols-2 g-2 mb-0">
-                          <li class="col">Shared team inbox</li>
-                          <li class="col">Auto-assignment</li>
-                          <li class="col">Internal notes</li>
-                          <li class="col">Rich media</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </button>
-                  <button class="cc-tab" role="tab" aria-selected="false">
-                    <div class="cc-title">Broadcast</div>
-                    <div class="cc-more">
-                      <div>
-                        <p class="text-secondary mt-2 mb-2">
-                          Campaigns that reach thousands at once.
-                        </p>
-                        <ul class="list-unstyled row row-cols-2 g-2 mb-0">
-                          <li class="col">Bulk messaging</li>
-                          <li class="col">Campaign scheduler</li>
-                          <li class="col">Dynamic variables</li>
-                          <li class="col">Real-time analytics</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </button>
-                  <button class="cc-tab" role="tab" aria-selected="false">
-                    <div class="cc-title">Automation</div>
-                    <div class="cc-more">
-                      <div>
-                        <p class="text-secondary mt-2 mb-2">
-                          Chatbots and alerts that work 24/7.
-                        </p>
-                        <ul class="list-unstyled row row-cols-2 g-2 mb-0">
-                          <li class="col">No-code bot builder</li>
-                          <li class="col">Order updates</li>
-                          <li class="col">Abandoned cart recovery</li>
-                          <li class="col">Auto-replies</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </button>
-                  <button class="cc-tab" role="tab" aria-selected="false">
-                    <div class="cc-title">Integration</div>
-                    <div class="cc-more">
-                      <div>
-                        <p class="text-secondary mt-2 mb-2">
-                          Works with the tools you already use.
-                        </p>
-                        <ul class="list-unstyled row row-cols-2 g-2 mb-0">
-                          <li class="col">Shopify &amp; WooCommerce</li>
-                          <li class="col">HubSpot, Zoho, Meta Lead Ads</li>
-                          <li class="col">Razorpay &amp; Pabbly</li>
-                          <li class="col">Webhooks &amp; custom APIs</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-
-                <!-- Replace these image URLs with your own product screenshots -->
-                <div class="col-lg-6 cc-media-col order-1 order-lg-2 d-flex flex-column justify-content-center">
-                  <div class="cc-media rounded-4 shadow-lg">
-                    <figure class="on">
-                      <img
-                        src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1200&q=80"
-                        alt="Shared team inbox"
-                        loading="lazy"
-                      />
-                    </figure>
-                    <figure>
-                      <img
-                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
-                        alt="Broadcast campaign manager"
-                        loading="lazy"
-                      />
-                    </figure>
-                    <figure>
-                      <img
-                        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
-                        alt="No-code bot builder"
-                        loading="lazy"
-                      />
-                    </figure>
-                    <figure>
-                      <img
-                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-                        alt="Integrations and analytics"
-                        loading="lazy"
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script>
-        (function () {
-          var sec = document.getElementById("core-capabilities");
-          var tabs = sec.querySelectorAll(".cc-tab"),
-            figs = sec.querySelectorAll(".cc-media figure");
-          var n = tabs.length,
-            cur = -1;
-
-          function show(i) {
-            if (i === cur) return;
-            cur = i;
-            tabs.forEach(function (t, j) {
-              t.classList.toggle("on", j === i);
-              t.setAttribute("aria-selected", j === i);
-            });
-            figs.forEach(function (f, j) {
-              f.classList.toggle("on", j === i);
-            });
-          }
-          function range() {
-            return sec.offsetHeight - window.innerHeight;
-          }
-          function onScroll() {
-            var p = Math.min(
-              Math.max(-sec.getBoundingClientRect().top / range(), 0),
-              0.999,
-            );
-            show(Math.floor(p * n));
-          }
-          tabs.forEach(function (t, i) {
-            t.addEventListener("click", function () {
-              var top = sec.getBoundingClientRect().top + window.pageYOffset;
-              window.scrollTo({
-                top: top + ((i + 0.5) / n) * range(),
-                behavior: "smooth",
-              });
-            });
-          });
-          window.addEventListener("scroll", onScroll, { passive: true });
-          window.addEventListener("resize", onScroll);
-          onScroll();
-        })();
-      </script>
+      
       <!-- ==================== PROBLEM / SOLUTION ==================== -->
       <!-- <section id="problem" class="section">
         <div class="container">
