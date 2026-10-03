@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+    <style>
+    
+     
+      /* Hero Section */
+      .hero {
+        background: radial-gradient(circle at 10% 20%, #0d3b1e 0%, #072315 100%);
+        color: #ffffff;
+        padding: 100px;
+        position: relative;
+        overflow: hidden;
+      }
+      @media (max-width : 600px) {
+        .hero {
+          padding-top: 100px;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          padding-bottom: 50px;
+        }
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(34, 197, 94, 0.12) 0%, transparent 60%);
+        pointer-events: none;
+      }
+
+      .eyebrow-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #4ade80;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 1.2px;
+        padding: 6px 16px;
+        border-radius: 50rem;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.25rem, 5vw, 3.75rem);
+        font-weight: 700;
+        line-height: 1.15;
+      }
+
+      /* Modern Article Cards */
+      .card-post {
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-post:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
+        border-color: rgba(34, 197, 94, 0.4);
+      }
+
+      .blog-img-wrap {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+        background-color: #f1f5f9;
+      }
+
+      .blog-img-wrap img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .card-post:hover .blog-img-wrap img {
+        transform: scale(1.05);
+      }
+
+      .category-pill {
+        display: inline-block;
+        background-color: #eab30815;
+        color: #854d0e;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .card-post .blog-link {
+        color: #0f172a;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.15rem;
+        line-height: 1.35;
+        transition: color 0.2s ease;
+      }
+
+      .card-post:hover .blog-link {
+        color: #22c55e;
+      }
+
+      .explore-link {
+        color:#0d3b1e;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s ease;
+      }
+
+      .card-post:hover .explore-link {
+        gap: 10px;
+        color: #22c55e;
+      }
+    </style>
+  
+  <body>
+  <header
+      class="site-header bg-white"
+      data-nav
+      data-testid="nav-sticky-header"
+    >
+      <nav class="container nav-inner" aria-label="Main navigation">
+        <!-- LOGO -->
+        <a href="index.html" class="brand" data-testid="nav-logo-11za">
+          <img
+            src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links mb-0 ps-0 list-unstyled">
+          <li>
+            <a href="index.html" data-testid="nav-link-home"> Home </a>
+          </li>
+
+          <li>
+            <a href="about.html" data-testid="nav-link-about"> About </a>
+          </li>
+
+          <li>
+            <a href="pricing.html" data-testid="nav-link-pricing"> Pricing </a>
+          </li>
+
+          <li>
+            <a href="ecommerce.html" data-testid="nav-link-integrations">
+              Ecommerce
+            </a>
+          </li>
+          <li>
+            <a href="integration.html" data-testid="nav-link-integrations">
+              Integrations
+            </a>
+          </li>
+
+          <li>
+            <a href="solutions.html" data-testid="nav-link-solutions">
+              Solutions
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" data-testid="nav-link-contact"> Contact </a>
+          </li>
+        </ul>
+
+        <!-- DESKTOP CTA -->
+        <div class="nav-ctas">
+          <a href="#cta" class="nav-login" data-testid="nav-login-btn">
+            Login
+          </a>
+
+          <a href="#cta" class="nav-start" data-testid="nav-get-started-btn">
+            Sign Up
+          </a>
+
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="nav-demo"
+            data-testid="nav-book-demo-btn"
+          >
+            Book a Demo
+          </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+          class="nav-burger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
+          aria-label="Toggle menu"
+          data-testid="nav-mobile-menu-btn"
+        >
+          <div class="open-menu">
+            <img src="assets/images/menu-icon.svg" alt="" height="27px" />
+          </div>
+          <div class="close-menu">
+            <img src="assets/images/close-icon.svg" alt="" height="27px" />
+          </div>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+     MOBILE SIDEBAR / OFFCANVAS
+============================================================ -->
+
+    <div
+      class="offcanvas offcanvas-end mobile-sidebar"
+      tabindex="-1"
+      id="mobileSidebar"
+      aria-labelledby="mobileSidebarLabel"
+      data-mobile-panel
+    >
+      <!-- SIDEBAR CONTENT -->
+      <div class="offcanvas-body">
+        <ul class="mobile-nav list-unstyled mb-0">
+          <li>
+            <a class="mlink" href="index.html" data-bs-dismiss="offcanvas">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="about.html" data-bs-dismiss="offcanvas">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="pricing.html" data-bs-dismiss="offcanvas">
+              Pricing
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="mlink"
+              href="integration.html"
+              data-bs-dismiss="offcanvas"
+            >
+              Integrations
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="solutions.html" data-bs-dismiss="offcanvas">
+              Solutions
+            </a>
+          </li>
+
+          <li>
+            <a class="mlink" href="contact.html" data-bs-dismiss="offcanvas">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- MOBILE CTA -->
+        <div class="mctas">
+          <a href="#cta" class="m-start" data-bs-dismiss="offcanvas">
+            Sign Up
+          </a>
+
+          <a
+            href="https://calendly.com/engees/schedule-a-demo"
+            target="_blank"
+            rel="noreferrer"
+            class="m-demo"
+          >
+            Book a Demo
+          </a>
+        </div>
+      </div>
+    </div>
+    <main id="main">
+      <!-- HERO SECTION -->
+      <section class="hero text-center" data-aos="fade-down">
+        <div class="container position-relative z-1 py-4">
+          <span class="eyebrow-badge mb-3">
+            <i class="bi bi-stars"></i> 11za Insights
+          </span>
+          <h1 class="col-lg-9 mx-auto mb-3">Ideas for better business conversations.</h1>
+          <p class="lead col-lg-7 mx-auto opacity-75 fw-normal fs-5">
+            Practical insights on WhatsApp marketing, automation, customer engagement, and conversational commerce.
+          </p>
+        </div>
+      </section>
+
+      <!-- ARTICLES SECTION -->
+      <section class="py-5" id="latest">
+        <div class="container py-3">
+        
+          <!-- ARTICLE GRID -->
+          <div class="row g-4" id="articleGrid">
+            <!-- Article 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <article class="card-post">
+                <div class="blog-img-wrap">
+                  <img src="assets/images/case-study-1.png" alt="Automation Workflow" />
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="mb-2">
+                    <span class="category-pill">Automation</span>
+                  </div>
+                  <h3 class="mb-2">
+                    <a href="#" class="blog-link">5 WhatsApp automation workflows every growing business should use</a>
+                  </h3>
+                  <p class="text-muted small mb-4 flex-grow-1">
+                    Turn repetitive conversations into useful, reliable customer journeys effortlessly.
+                  </p>
+                  <div>
+                    <a href="#" class="explore-link">Explore More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <article class="card-post">
+                <div class="blog-img-wrap">
+                  <img src="assets/images/case-study-1.png" alt="E-commerce Journey" />
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="mb-2">
+                    <span class="category-pill">E-commerce</span>
+                  </div>
+                  <h3 class="mb-2">
+                    <a href="#" class="blog-link">How WhatsApp can improve the e-commerce customer journey</a>
+                  </h3>
+                  <p class="text-muted small mb-4 flex-grow-1">
+                    From product discovery to order updates, map conversations to key purchasing moments.
+                  </p>
+                  <div>
+                    <a href="#" class="explore-link">Explore More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <article class="card-post">
+                <div class="blog-img-wrap">
+                  <img src="assets/images/case-study-1.png" alt="WhatsApp Broadcasts" />
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="mb-2">
+                    <span class="category-pill">Marketing</span>
+                  </div>
+                  <h3 class="mb-2">
+                    <a href="#" class="blog-link">WhatsApp broadcasts: a practical guide for modern teams</a>
+                  </h3>
+                  <p class="text-muted small mb-4 flex-grow-1">
+                    Learn how to plan useful broadcasts without turning your customer channel into spam.
+                  </p>
+                  <div>
+                    <a href="#" class="explore-link">Explore More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4 d-md-none">
+            <a href="#" class="btn btn-outline-dark rounded-pill px-4">View all →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+ <!-- =========================
+       FOOTER
+  ========================== -->
+
+    <footer class="position-relative">
+      <style>
+        .startup-img img {
+          width: 200px;
+        }
+        .whatsapp-icon {
+          position: fixed;
+    left: 33px;
+    bottom: 27px;
+    z-index: 999;
+    width: 60px;
+}
+      </style>
+      <div class="footer-layer-effect"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">11<span>za</span>.</div>
+            <div>One Company. One Chat.</div>
+            <p>
+              11za observed the need for an influential yet simple platform with
+              clear pricing for business to hold WhatsApp Business efficiently
+              in local market. WhatsApp is something that is used by everyone,
+              both customer and vendor.
+            </p>
+            <div>
+              <div class="startup-img">
+                <img src="assets/images/startupindia.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Solutions</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Other Links</h4>
+            <a href="blog.html">Blogs</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="knowledge-series.html">Knowledge Series</a>
+            <!-- <a href="#">Api Documentation</a>
+            <a href="#">11za Documentation</a> -->
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <a href="#"
+              ><a href="tel:(+91) 97266 54060"
+                ><i class="fa-solid fa-phone me-3"></i> (+91) 97266 54060</a
+              ></a
+            >
+            <a href="mailto:hello@11za.com"
+              ><i class="fa-solid fa-envelope me-3"></i> hello@11za.com</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-clock me-3"></i> Mon - Sat | 10am - 7pm</a
+            >
+          </div>
+          <!-- App / Platform Badges Section -->
+        </div>
+        <div class="footer-apps w-100 d-flex justify-content-end">
+          <div class="app-badges">
+            <a
+              href="https://apps.apple.com/in/app/11za/id6443972158"
+              target="_blank"
+              aria-label="Download on App Store"
+            >
+              <img
+                src="assets/images/googleplay.png"
+                alt="Download on App Store"
+                height="40px"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.engees11za"
+              target="_blank"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="assets/images/appstore.png"
+                alt="Get it on Google Play"
+                height="40px"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com/in/app/11za/id6443972158"
+              target="_blank"
+              aria-label="Download on App Store"
+            >
+              <img
+                src="assets/images/woo.png"
+                alt="Download on App Store"
+                height="40px"
+              />
+            </a>
+            <a
+              href="https://apps.shopify.com/11za-waba-api"
+              target="_blank"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="assets/images/shopify.png"
+                alt="Get it on Google Play"
+                height="40px"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 11za. All rights reserved. </span>
+
+          <div>
+            <ul
+              class="social-nav widget social-widget d-flex align-items-center gap-3 ps-0"
+            >
+              <li>
+                <a href="https://www.linkedin.com/company/11za" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/11zaofficial" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/11zaofficial/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/11zaofficial/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="whatsapp-icon">
+	<a href="https://wa.me/919726654060" target="_blank">
+		<img width="60" height="60" src="assets/images/whatsapp.png" alt="whatsapp-icon">
+	</a>
+</div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="assets/js/script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("[data-nav]");
+
+        if (!header) return;
+
+        function updateHeader() {
+          header.classList.toggle("scrolled", window.scrollY > 30);
+        }
+
+        updateHeader();
+
+        window.addEventListener("scroll", updateHeader, { passive: true });
+      });
+    </script>
+  </body>
+</html>

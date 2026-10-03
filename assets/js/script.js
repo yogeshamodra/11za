@@ -119,7 +119,7 @@
 
  $(document).ready(function () {
     $('.marquee-track').slick({
-      slidesToShow: 3,
+      slidesToShow: 6,
       slidesToScroll: 1,
       autoplay: true,
     

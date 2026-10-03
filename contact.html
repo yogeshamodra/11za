@@ -1,777 +1,686 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
-  <meta name="description" content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics.">
-  <link rel="canonical" href="https://11za.com/">
-  <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>11za — WhatsApp Business API Platform for Customer Engagement</title>
+    <meta
+      name="description"
+      content="11za helps businesses turn WhatsApp into a growth engine — shared team inbox, WhatsApp automation, chatbots, broadcast campaigns, lead management and analytics."
+    />
+    <link rel="canonical" href="https://11za.com/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
->
- <!-- Bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <style>
+      :root {
+        --bg: #f7f9fc;
+        --text: #101828;
+        --border: #e4e7ec;
+        --green: #16a34a;
 
-  <style>
+        --dark: #0d1420;
+        --dark-2: #151e2b;
+      }
 
-    :root {
-     
-      --bg: #f7f9fc;
-      --text: #101828;
-      --border: #e4e7ec;
-      --green: #16a34a;
-      
-     
-      --dark: #0d1420;
-      --dark-2: #151e2b;
-      
-      
-    }
-
-
-    /* =========================
+      /* =========================
        RESET
     ========================= */
 
-   
-
-
-
-
-    /* =========================
+      /* =========================
        HERO
     ========================= */
 
-    .hero {
-      padding: 95px 0 70px;
+      .hero {
+        padding: 95px 0 70px;
 
-      text-align: center;
+        text-align: center;
 
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          #e9fff0 0,
-          transparent 50%
-        ),
-        #fff;
-    }
+        background:
+          radial-gradient(circle at 50% 0%, #e9fff0 0, transparent 50%), #fff;
+      }
 
+      .eyebrow {
+        display: inline-flex;
 
-    .eyebrow {
-      display: inline-flex;
+        align-items: center;
+        gap: 8px;
 
-      align-items: center;
-      gap: 8px;
+        padding: 7px 13px;
 
-      padding: 7px 13px;
+        background: var(--green-light);
 
-      background: var(--green-light);
+        border: 1px solid #ccefd8;
 
-      border: 1px solid #ccefd8;
+        color: var(--green-dark);
 
-      color: var(--green-dark);
+        border-radius: 999px;
 
-      border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
 
-      font-size: 12px;
-      font-weight: 700;
+        margin-bottom: 23px;
+      }
 
-      margin-bottom: 23px;
-    }
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
 
+        border-radius: 50%;
 
-    .eyebrow-dot {
-      width: 7px;
-      height: 7px;
+        background: var(--green);
+      }
 
-      border-radius: 50%;
+      .hero p {
+        max-width: 650px;
 
-      background: var(--green);
-    }
+        margin: 22px auto 0;
 
+        color: var(--muted);
 
+        font-size: 18px;
+      }
 
-    .hero p {
-      max-width: 650px;
-
-      margin: 22px auto 0;
-
-      color: var(--muted);
-
-      font-size: 18px;
-    }
-
-
-    /* =========================
+      /* =========================
        CONTACT AREA
     ========================= */
 
-    .contact-section {
-      padding: 25px 0 110px;
+      .contact-section {
+        padding: 25px 0 110px;
 
-      background:
-        linear-gradient(
+        background: linear-gradient(
           #fff 0,
           #fff 35%,
           var(--bg) 35%,
           var(--bg) 100%
         );
-    }
+      }
 
+      .contact-grid {
+        display: grid;
 
-    .contact-grid {
-      display: grid;
+        grid-template-columns: 0.85fr 1.35fr;
 
-      grid-template-columns:
-        0.85fr 1.35fr;
+        gap: 24px;
 
-      gap: 24px;
+        align-items: stretch;
+      }
 
-      align-items: stretch;
-    }
-
-
-    /* =========================
+      /* =========================
        LEFT PANEL
     ========================= */
 
-    .contact-info {
-      position: relative;
+      .contact-info {
+        position: relative;
 
-      overflow: hidden;
+        overflow: hidden;
 
-      padding: 42px;
+        padding: 42px;
 
-      border-radius: 28px;
+        border-radius: 28px;
 
-      background: var(--dark);
+        background: var(--dark);
 
-      color: white;
-    }
+        color: white;
+      }
 
+      .contact-info::before {
+        content: "";
 
-    .contact-info::before {
-      content: "";
+        position: absolute;
 
-      position: absolute;
+        width: 380px;
+        height: 380px;
 
-      width: 380px;
-      height: 380px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
 
-      border: 1px solid rgba(255,255,255,.08);
+        border-radius: 50%;
 
-      border-radius: 50%;
+        top: -210px;
+        right: -180px;
+      }
 
-      top: -210px;
-      right: -180px;
-    }
+      .contact-info::after {
+        content: "";
 
+        position: absolute;
 
-    .contact-info::after {
-      content: "";
+        width: 250px;
+        height: 250px;
 
-      position: absolute;
+        background: rgba(22, 163, 74, 0.12);
 
-      width: 250px;
-      height: 250px;
+        border-radius: 50%;
 
-      background: rgba(22,163,74,.12);
+        bottom: -120px;
+        left: -100px;
+      }
 
-      border-radius: 50%;
+      .info-content {
+        position: relative;
+        z-index: 2;
+      }
 
-      bottom: -120px;
-      left: -100px;
-    }
+      .info-label {
+        color: #6ee294;
 
+        font-size: 12px;
 
-    .info-content {
-      position: relative;
-      z-index: 2;
-    }
+        text-transform: uppercase;
 
+        letter-spacing: 1.5px;
 
-    .info-label {
-      color: #6ee294;
+        font-weight: 800;
+      }
 
-      font-size: 12px;
+      .contact-info h2 {
+        margin-top: 15px;
 
-      text-transform: uppercase;
+        font-family: "Manrope", sans-serif;
 
-      letter-spacing: 1.5px;
+        font-size: 38px;
 
-      font-weight: 800;
-    }
+        line-height: 1.12;
 
+        letter-spacing: -1.5px;
+      }
 
-    .contact-info h2 {
-      margin-top: 15px;
+      .contact-info > p {
+        margin-top: 17px;
 
-      font-family: "Manrope", sans-serif;
+        color: #aeb8c5;
+      }
 
-      font-size: 38px;
-
-      line-height: 1.12;
-
-      letter-spacing: -1.5px;
-    }
-
-
-    .contact-info > p {
-      margin-top: 17px;
-
-      color: #aeb8c5;
-
-    }
-
-
-    /* =========================
+      /* =========================
        CONTACT ITEMS
     ========================= */
 
-    .contact-items {
-      display: grid;
+      .contact-items {
+        display: grid;
 
-      gap: 24px;
+        gap: 24px;
 
-      margin-top: 45px;
-    }
+        margin-top: 45px;
+      }
 
+      .contact-item {
+        display: flex;
 
-    .contact-item {
-      display: flex;
+        gap: 15px;
 
-      gap: 15px;
+        align-items: flex-start;
+      }
 
-      align-items: flex-start;
-    }
+      .contact-icon {
+        width: 43px;
+        height: 43px;
 
+        flex-shrink: 0;
 
-    .contact-icon {
-      width: 43px;
-      height: 43px;
+        display: grid;
+        place-items: center;
 
-      flex-shrink: 0;
+        border-radius: 12px;
 
-      display: grid;
-      place-items: center;
+        background: rgba(255, 255, 255, 0.08);
 
-      border-radius: 12px;
+        color: #6ee294;
 
-      background: rgba(255,255,255,.08);
+        font-size: 15px;
 
-      color: #6ee294;
+        font-weight: 800;
+      }
 
-      font-size: 15px;
+      .contact-item h4 {
+        font-size: 14px;
+      }
 
-      font-weight: 800;
-    }
+      .contact-item p,
+      .contact-item a {
+        margin-top: 3px;
 
+        color: #9ba6b5;
+      }
 
-    .contact-item h4 {
-      font-size: 14px;
-    }
+      .contact-item a:hover {
+        color: white;
 
+      }
+      .contact-item a:hover .location-arrow {
+         transform: translateX(6px);
+      }
 
-    .contact-item p,
-    .contact-item a {
-      margin-top: 3px;
-
-      color: #9ba6b5;
-
-    }
-
-
-    .contact-item a:hover {
-      color: white;
-    }
-
-
-    /* =========================
+      /* =========================
        RESPONSE BOX
     ========================= */
 
-    .response-box {
-      margin-top: 15px;
+      .response-box {
+        margin-top: 15px;
 
-      padding: 10px;
+        padding: 10px;
 
-      border: 1px solid rgba(255,255,255,.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
 
-      border-radius: 15px;
+        border-radius: 15px;
 
-      background: rgba(255,255,255,.04);
-    }
+        background: rgba(255, 255, 255, 0.04);
+      }
 
+      .response-box strong {
+        display: block;
+      }
 
-    .response-box strong {
-      display: block;
+      .response-box span {
+        display: block;
 
-    }
+        margin-top: 4px;
 
+        color: #99a4b2;
 
-    .response-box span {
-      display: block;
+        font-size: 14px;
+      }
 
-      margin-top: 4px;
-
-      color: #99a4b2;
-
-      font-size: 14px;
-    }
-
-
-    /* =========================
+      /* =========================
        FORM CARD
     ========================= */
 
-    .form-card {
-      padding: 42px;
+      .form-card {
+        padding: 42px;
 
-      border-radius: 28px;
+        border-radius: 28px;
 
-      background: white;
+        background: white;
 
-      border: 1px solid var(--border);
+        border: 1px solid var(--border);
 
-      box-shadow:
-        0 25px 70px
-        rgba(16,24,40,.07);
-    }
+        box-shadow: 0 25px 70px rgba(16, 24, 40, 0.07);
+      }
 
+      .form-header h2 {
+        font-family: "Manrope", sans-serif;
 
-    .form-header h2 {
-      font-family: "Manrope", sans-serif;
+        font-size: 30px;
 
-      font-size: 30px;
+        letter-spacing: -1px;
+      }
 
-      letter-spacing: -1px;
-    }
+      .form-header p {
+        margin-top: 7px;
 
+        color: var(--muted);
+      }
 
-    .form-header p {
-      margin-top: 7px;
-
-      color: var(--muted);
-
-    }
-
-
-    /* =========================
+      /* =========================
        FORM
     ========================= */
 
-    .form-grid {
-      display: grid;
+      .form-grid {
+        display: grid;
 
-      grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
-      gap: 18px;
+        gap: 18px;
 
-      margin-top: 30px;
-    }
+        margin-top: 30px;
+      }
 
+      .form-group {
+        display: flex;
 
-    .form-group {
-      display: flex;
+        flex-direction: column;
 
-      flex-direction: column;
+        gap: 7px;
+      }
 
-      gap: 7px;
-    }
+      .form-group.full {
+        grid-column: 1 / -1;
+      }
 
+      .form-group label {
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
 
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
+      .required {
+        color: #ef4444;
+      }
 
+      input,
+      select,
+      textarea {
+        width: 100%;
 
-    .form-group label {
-          font-weight: 700;
-          margin-bottom: 10px;
-    }
+        border: 1px solid #dfe3e8;
 
+        background: white;
 
-    .required {
-      color: #ef4444;
+        border-radius: 11px;
 
-    }
+        padding: 13px 14px;
 
+        outline: none;
 
-    input,
-    select,
-    textarea {
-      width: 100%;
+        color: var(--text);
 
-      border: 1px solid #dfe3e8;
+        font-size: 16px;
 
-      background: white;
+        transition: 0.2s ease;
+      }
 
-      border-radius: 11px;
+      input::placeholder,
+      textarea::placeholder {
+        color: #98a2b3;
+      }
 
-      padding: 13px 14px;
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--green);
 
-      outline: none;
+        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.09);
+      }
 
-      color: var(--text);
+      textarea {
+        min-height: 120px;
 
-      font-size: 16px;
+        resize: vertical;
+      }
 
-      transition: .2s ease;
-    }
-
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #98a2b3;
-    }
-
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--green);
-
-      box-shadow:
-        0 0 0 3px
-        rgba(22,163,74,.09);
-    }
-
-
-    textarea {
-      min-height: 120px;
-
-      resize: vertical;
-    }
-
-
-    /* =========================
+      /* =========================
        REASON SELECTOR
     ========================= */
 
-    .reason-grid {
-      display: grid;
+      .reason-grid {
+        display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
-      gap: 9px;
-    }
+        gap: 9px;
+      }
 
+      .reason-option {
+        position: relative;
+      }
 
-    .reason-option {
-      position: relative;
-    }
+      .reason-option input {
+        position: absolute;
 
+        opacity: 0;
 
-    .reason-option input {
-      position: absolute;
+        pointer-events: none;
+      }
 
-      opacity: 0;
+      .reason-option label {
+        display: block;
 
-      pointer-events: none;
-    }
+        padding: 11px 13px;
 
+        border: 1px solid var(--border);
 
-    .reason-option label {
-      display: block;
+        border-radius: 10px;
 
-      padding: 11px 13px;
+        color: #475467;
 
-      border: 1px solid var(--border);
+        font-size: 12px;
 
-      border-radius: 10px;
+        font-weight: 600;
 
-      color: #475467;
+        cursor: pointer;
 
-      font-size: 12px;
+        transition: 0.2s ease;
+      }
 
-      font-weight: 600;
+      .reason-option label:hover {
+        border-color: #b8c0ca;
+      }
 
-      cursor: pointer;
+      .reason-option input:checked + label {
+        border-color: var(--green);
 
-      transition: .2s ease;
-    }
+        color: var(--green-dark);
 
+        background: var(--green-light);
+      }
 
-    .reason-option label:hover {
-      border-color: #b8c0ca;
-    }
-
-
-    .reason-option input:checked + label {
-      border-color: var(--green);
-
-      color: var(--green-dark);
-
-      background: var(--green-light);
-    }
-
-
-    /* =========================
+      /* =========================
        CHECKBOX
     ========================= */
 
+      .submit-row {
+        margin-top: 25px;
 
-    .submit-row {
-      margin-top: 25px;
+        display: flex;
 
-      display: flex;
+        align-items: center;
 
-      align-items: center;
+        justify-content: space-between;
 
-      justify-content: space-between;
+        gap: 15px;
+      }
 
-      gap: 15px;
-    }
+      .submit-row button {
+        border: 0;
 
+        padding: 14px 25px;
 
-    .submit-row button {
-      border: 0;
+        border-radius: 11px;
 
-      padding: 14px 25px;
+        background: var(--green);
 
-      border-radius: 11px;
+        color: white;
 
-      background: var(--green);
+        font-size: 14px;
 
-      color: white;
+        font-weight: 700;
 
-      font-size: 14px;
+        cursor: pointer;
 
-      font-weight: 700;
+        transition: 0.2s ease;
+      }
 
-      cursor: pointer;
+      .submit-row button:hover {
+        background: var(--green-dark);
 
-      transition: .2s ease;
-    }
+        transform: translateY(-2px);
+      }
 
-
-    .submit-row button:hover {
-      background: var(--green-dark);
-
-      transform: translateY(-2px);
-    }
-
-    /* =========================
+      /* =========================
        HELP CARDS
     ========================= */
 
-    .help-section {
-      padding: 105px 0;
+      .help-section {
+        padding: 105px 0;
 
-      background: var(--bg);
-    }
+        background: var(--bg);
+      }
 
+      .section-heading {
+        max-width: 720px;
 
-    .section-heading {
-      max-width: 720px;
+        margin: auto;
 
-      margin: auto;
+        text-align: center;
+      }
 
-      text-align: center;
-    }
+      .section-label {
+        color: var(--green-dark);
 
+        font-size: 12px;
 
-    .section-label {
-      color: var(--green-dark);
+        text-transform: uppercase;
 
-      font-size: 12px;
+        letter-spacing: 1.5px;
 
-      text-transform: uppercase;
+        font-weight: 800;
 
-      letter-spacing: 1.5px;
+        margin-bottom: 14px;
+      }
 
-      font-weight: 800;
+      .section-title {
+        font-family: "Manrope", sans-serif;
 
-      margin-bottom: 14px;
-    }
+        font-size: clamp(34px, 4vw, 50px);
 
+        line-height: 1.08;
 
-    .section-title {
-      font-family: "Manrope", sans-serif;
+        letter-spacing: -2px;
 
-      font-size: clamp(
-        34px,
-        4vw,
-        50px
-      );
+        font-weight: 800;
+      }
 
-      line-height: 1.08;
+      .section-description {
+        margin-top: 17px;
 
-      letter-spacing: -2px;
+        color: var(--muted);
 
-      font-weight: 800;
-    }
+        font-size: 16px;
+      }
 
+      .help-grid {
+        margin-top: 55px;
 
-    .section-description {
-      margin-top: 17px;
+        display: grid;
 
-      color: var(--muted);
+        grid-template-columns: repeat(4, 1fr);
 
-      font-size: 16px;
-    }
+        gap: 17px;
+      }
 
+      .help-card {
+        padding: 28px;
 
-    .help-grid {
-      margin-top: 55px;
+        background: white;
 
-      display: grid;
+        border: 1px solid var(--border);
 
-      grid-template-columns:
-        repeat(4, 1fr);
+        border-radius: 20px;
 
-      gap: 17px;
-    }
+        transition: 0.2s ease;
+      }
 
+      .help-card:hover {
+        transform: translateY(-5px);
 
-    .help-card {
-      padding: 28px;
+        box-shadow: 0 18px 50px rgba(16, 24, 40, 0.07);
+      }
 
-      background: white;
+      .help-icon {
+        width: 46px;
+        height: 46px;
 
-      border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
 
-      border-radius: 20px;
+        border-radius: 13px;
 
-      transition: .2s ease;
-    }
+        background: var(--green-light);
 
+        color: var(--green-dark);
 
-    .help-card:hover {
-      transform: translateY(-5px);
+        font-size: 13px;
 
-      box-shadow:
-        0 18px 50px
-        rgba(16,24,40,.07);
-    }
+        font-weight: 800;
+      }
 
+      .help-card h3 {
+        margin-top: 19px;
 
-    .help-icon {
-      width: 46px;
-      height: 46px;
+        font-family: "Manrope", sans-serif;
 
-      display: grid;
-      place-items: center;
+        font-size: 18px;
+      }
 
-      border-radius: 13px;
+      .help-card p {
+        margin-top: 7px;
 
-      background: var(--green-light);
+        color: var(--muted);
+      }
 
-      color: var(--green-dark);
-
-      font-size: 13px;
-
-      font-weight: 800;
-    }
-
-
-    .help-card h3 {
-      margin-top: 19px;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 18px;
-    }
-
-
-    .help-card p {
-      margin-top: 7px;
-
-      color: var(--muted);
-
-    }
-
-
-    /* =========================
+      /* =========================
        WHATSAPP CTA
     ========================= */
 
-    .whatsapp-section {
-      padding: 0 0 105px;
+      .whatsapp-section {
+        padding: 0 0 105px;
 
-      background: var(--bg);
-    }
+        background: var(--bg);
+      }
 
+      .whatsapp-card {
+        display: flex;
 
-    .whatsapp-card {
-      display: flex;
+        align-items: center;
 
-      align-items: center;
+        justify-content: space-between;
 
-      justify-content: space-between;
+        gap: 30px;
 
-      gap: 30px;
+        padding: 35px 40px;
 
-      padding: 35px 40px;
+        border-radius: 22px;
 
-      border-radius: 22px;
+        background: #eaf9ef;
 
-      background: #eaf9ef;
+        border: 1px solid #ccefd8;
+      }
 
-      border: 1px solid #ccefd8;
-    }
+      .whatsapp-content {
+        display: flex;
 
+        align-items: center;
 
-    .whatsapp-content {
-      display: flex;
+        gap: 18px;
+      }
 
-      align-items: center;
+      .whatsapp-icon {
+        width: 52px;
+        height: 52px;
 
-      gap: 18px;
-    }
+        display: grid;
+        place-items: center;
 
+        border-radius: 15px;
 
-    .whatsapp-icon {
-      width: 52px;
-      height: 52px;
+        background: var(--green);
 
-      display: grid;
-      place-items: center;
+        color: white;
 
-      border-radius: 15px;
+        font-size: 18px;
 
-      background: var(--green);
+        font-weight: 800;
+      }
 
-      color: white;
+      .whatsapp-card h3 {
+        font-family: "Manrope", sans-serif;
 
-      font-size: 18px;
+        font-size: 20px;
+      }
 
-      font-weight: 800;
-    }
+      .whatsapp-card p {
+        margin-top: 3px;
 
+        color: #4f6858;
+      }
+    </style>
 
-    .whatsapp-card h3 {
-      font-family: "Manrope", sans-serif;
-
-      font-size: 20px;
-    }
-
-
-    .whatsapp-card p {
-      margin-top: 3px;
-
-      color: #4f6858;
-
-    }
-
-
-  </style>
-
-  <!-- =====================================
+    <!-- =====================================
        NAVBAR
   ====================================== -->
-<header class="site-header" data-nav data-testid="nav-sticky-header">
+    <header class="site-header" data-nav data-testid="nav-sticky-header">
       <nav class="container nav-inner" aria-label="Main navigation">
         <!-- LOGO -->
         <a href="index.html" class="brand" data-testid="nav-logo-11za">
@@ -860,85 +769,58 @@
         </button>
       </nav>
     </header>
-  <main>
-
-
-    <!-- =====================================
+    <main>
+      <!-- =====================================
          HERO
     ====================================== -->
 
-    <section class="hero">
+      <section class="hero">
+        <div class="container">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
 
-      <div class="container">
+            We're here to help
+          </div>
 
-        <div class="eyebrow">
+          <h1>
+            Let's talk about
+            <span>your business.</span>
+          </h1>
 
-          <span class="eyebrow-dot"></span>
-
-          We're here to help
-
+          <p>
+            Whether you're exploring WhatsApp Business API, looking to automate
+            customer conversations, or need help with your existing 11za
+            account, our team is ready to help.
+          </p>
         </div>
+      </section>
 
-
-        <h1>
-
-          Let's talk about
-          <span>your business.</span>
-
-        </h1>
-
-
-        <p>
-
-          Whether you're exploring WhatsApp Business API,
-          looking to automate customer conversations, or
-          need help with your existing 11za account,
-          our team is ready to help.
-
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================
+      <!-- =====================================
          CONTACT FORM
     ====================================== -->
 
-    <section class="contact-section">
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- LEFT -->
 
-      <div class="container">
+            <div class="contact-info">
+              <div class="info-content">
+                <div class="info-label">Get in touch</div>
 
-        <div class="contact-grid">
+                <h2>We're Here to Help</h2>
 
+                <p>
+                  Have a question about 11za? Need help choosing a plan? Want to
+                  discuss an integration or WhatsApp Business setup?
+                </p>
+                <p>
+                  Reach out to us and our team will get back to you during
+                  business hours.
+                </p>
 
-          <!-- LEFT -->
-
-          <div class="contact-info">
-
-            <div class="info-content">
-
-              <div class="info-label">
-                Get in touch
-              </div>
-
-
-              <h2>
-               We're Here to Help
-              </h2>
-
-
-              <p>
-                Have a question about 11za? Need help choosing a plan? Want to discuss an integration or WhatsApp Business setup?
-              </p>
-              <p>Reach out to us and our team will get back to you during business hours.</p>
-
-              <div class="contact-items">
-
-
-                <!-- <div class="contact-item">
+                <div class="contact-items">
+                  <!-- <div class="contact-item">
 
                   <div class="contact-icon">
                     S
@@ -958,8 +840,7 @@
 
                 </div> -->
 
-
-                <!-- <div class="contact-item">
+                  <!-- <div class="contact-item">
 
                   <div class="contact-icon">
                     H
@@ -978,212 +859,139 @@
                   </div>
 
                 </div> -->
-                <div class="contact-item">
+                  <div class="contact-item">
+                    <div class="contact-icon">E</div>
 
-                  <div class="contact-icon">
-                    E
+                    <div>
+                      <h4>Email</h4>
+
+                      <a href="mailto:hello@11za.com"> hello@11za.com </a>
+                    </div>
                   </div>
 
-                  <div>
+                  <div class="contact-item">
+                    <div class="contact-icon">P</div>
 
-                    <h4>
-                     Email
-                    </h4>
+                    <div>
+                      <h4>Phone</h4>
 
-                    <a href="mailto:hello@11za.com">
-                       hello@11za.com
-                    </a>
-
+                      <a href="tel:+91 97266 54060"> +91 97266 54060 </a>
+                    </div>
                   </div>
 
+                  <div class="contact-item">
+                    <div class="contact-icon">L</div>
+
+                    <div>
+                      <h4>Office</h4>
+
+                      <p>Engees Communications Private Limited</p>
+                      <a href="">
+                        509 – NEMI EMINENT, New City Light Road, Above MG Select
+                        Showroom, Opp. St. Thomas School, Surat, Gujarat –
+                        395007, India <img src="assets/images/right-arrow.svg" alt="" width="15px" class="location-arrow">
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
+                <div class="response-box">
+                  <strong> Typical response time </strong>
 
-                <div class="contact-item">
-
-                  <div class="contact-icon">
-                    P
-                  </div>
-
-                  <div>
-
-                    <h4>
-                      Phone
-                    </h4>
-
-                    <a href="tel:+91 97266 54060">
-                     +91 97266 54060
-                    </a>
-
-                  </div>
-
+                  <span>
+                    Sales enquiries are generally answered during business
+                    hours.
+                  </span>
                 </div>
-
-
-                <div class="contact-item">
-
-                  <div class="contact-icon">
-                    L
-                  </div>
-
-                  <div>
-
-                    <h4>
-                      Office
-                    </h4>
-
-                    <p>
-                      Engees Communications Private Limited
-                    </p>
-                    <p>
-                      509 – NEMI EMINENT, New City Light Road,
-Above MG Select Showroom, Opp. St. Thomas School,
-Surat, Gujarat – 395007, India
-                    </p>
-                  </div>
-
-                </div>
-
               </div>
-
-
-              <div class="response-box">
-
-                <strong>
-                  Typical response time
-                </strong>
-
-                <span>
-                  Sales enquiries are generally answered
-                  during business hours.
-                </span>
-
-              </div>
-
             </div>
 
-          </div>
+            <!-- RIGHT FORM -->
 
+            <div class="form-card">
+              <div class="form-header">
+                <h2>Tell Us How We Can Help</h2>
 
+                <p>Fill out the form and our team will contact you.</p>
+              </div>
 
-          <!-- RIGHT FORM -->
+              <form id="contactForm">
+                <div class="form-grid">
+                  <!-- NAME -->
 
-          <div class="form-card">
+                  <div class="form-group">
+                    <label>
+                      Full name
+                      <span class="required">*</span>
+                    </label>
 
-            <div class="form-header">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
 
-              <h2>
-                Tell Us How We Can Help
-              </h2>
+                  <!-- EMAIL -->
 
-              <p>
-                Fill out the form and our team will
-                contact you.
-              </p>
+                  <div class="form-group">
+                    <label>
+                      Business email
+                      <span class="required">*</span>
+                    </label>
 
-            </div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@company.com"
+                      required
+                    />
+                  </div>
 
+                  <!-- PHONE -->
 
-            <form id="contactForm">
+                  <div class="form-group">
+                    <label>
+                      Phone number
+                      <span class="required">*</span>
+                    </label>
 
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+91 98765 43210"
+                      required
+                    />
+                  </div>
 
-              <div class="form-grid">
+                  <!-- COMPANY -->
 
+                  <div class="form-group">
+                    <label> Company name </label>
 
-                <!-- NAME -->
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Your company"
+                    />
+                  </div>
 
-                <div class="form-group">
+                  <!-- WEBSITE -->
 
-                  <label>
-                    Full name
-                    <span class="required">*</span>
-                  </label>
+                  <div class="form-group full">
+                    <label> Business website </label>
 
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                  />
+                    <input
+                      type="url"
+                      name="website"
+                      placeholder="https://yourcompany.com"
+                    />
+                  </div>
 
-                </div>
+                  <!-- COMPANY SIZE -->
 
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                  <label>
-                    Business email
-                    <span class="required">*</span>
-                  </label>
-
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="you@company.com"
-                    required
-                  />
-
-                </div>
-
-
-                <!-- PHONE -->
-
-                <div class="form-group">
-
-                  <label>
-                    Phone number
-                    <span class="required">*</span>
-                  </label>
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="+91 98765 43210"
-                    required
-                  />
-
-                </div>
-
-
-                <!-- COMPANY -->
-
-                <div class="form-group">
-
-                  <label>
-                    Company name
-                  </label>
-
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="Your company"
-                  />
-
-                </div>
-
-
-                <!-- WEBSITE -->
-
-                <div class="form-group full">
-
-                  <label>
-                    Business website
-                  </label>
-
-                  <input
-                    type="url"
-                    name="website"
-                    placeholder="https://yourcompany.com"
-                  />
-
-                </div>
-
-
-                <!-- COMPANY SIZE -->
-
-                <!-- <div class="form-group">
+                  <!-- <div class="form-group">
 
                   <label>
                     Company size
@@ -1219,10 +1027,9 @@ Surat, Gujarat – 395007, India
 
                 </div> -->
 
+                  <!-- MONTHLY VOLUME -->
 
-                <!-- MONTHLY VOLUME -->
-
-                <!-- <div class="form-group">
+                  <!-- <div class="form-group">
 
                   <label>
                     Expected WhatsApp volume
@@ -1258,10 +1065,9 @@ Surat, Gujarat – 395007, India
 
                 </div> -->
 
+                  <!-- REASON -->
 
-                <!-- REASON -->
-
-                <!-- <div class="form-group full">
+                  <!-- <div class="form-group full">
 
                   <label>
                     What can we help you with?
@@ -1372,384 +1178,151 @@ Surat, Gujarat – 395007, India
 
                 </div> -->
 
+                  <!-- MESSAGE -->
 
-                <!-- MESSAGE -->
+                  <div class="form-group full">
+                    <label> Tell us more </label>
 
-                <div class="form-group full">
-
-                  <label>
-                    Tell us more
-                  </label>
-
-                  <textarea
-                    name="message"
-                    placeholder="Tell us about your business, your WhatsApp use case, or what you'd like to achieve..."
-                  ></textarea>
-
+                    <textarea
+                      name="message"
+                      placeholder="Tell us about your business, your WhatsApp use case, or what you'd like to achieve..."
+                    ></textarea>
+                  </div>
                 </div>
 
-              </div>
+                <!-- SUBMIT -->
 
-              <!-- SUBMIT -->
-
-              <div class="submit-row">
-
-                <button type="submit">
-                  Send Enquiry
-                </button>
-              </div>
-            </form>
-
+                <div class="submit-row">
+                  <button type="submit">Send Enquiry</button>
+                </div>
+              </form>
+            </div>
           </div>
-
         </div>
+      </section>
 
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================
+      <!-- =====================================
          HOW CAN WE HELP
     ====================================== -->
 
-    <section class="help-section">
+      <section class="help-section">
+        <div class="container">
+          <div class="section-heading">
+            <div class="section-label">Talk to the right team</div>
 
-      <div class="container">
+            <h2 class="section-title">What can we help you with?</h2>
 
-        <div class="section-heading">
-
-          <div class="section-label">
-            Talk to the right team
+            <p class="section-description">
+              Not sure where to start? Choose what you're looking for and we'll
+              connect you with the appropriate team.
+            </p>
           </div>
 
+          <div class="help-grid">
+            <div class="help-card">
+              <div class="help-icon">API</div>
 
-          <h2 class="section-title">
-            What can we help you with?
-          </h2>
+              <h3>WhatsApp API</h3>
 
+              <p>
+                Need help connecting your WhatsApp Business number or
+                understanding API setup?
+              </p>
+            </div>
 
-          <p class="section-description">
-           Not sure where to start? Choose what you're looking for and we'll connect you with the appropriate team.
-          </p>
+            <div class="help-card">
+              <div class="help-icon">AI</div>
 
+              <h3>Automation & AI</h3>
+
+              <p>
+                Want to automate customer support, lead qualification or
+                repetitive conversations?
+              </p>
+            </div>
+
+            <div class="help-card">
+              <div class="help-icon">CRM</div>
+
+              <h3>Integrations</h3>
+
+              <p>
+                Looking to connect 11za with your CRM, website, ERP or other
+                business software?
+              </p>
+            </div>
+
+            <div class="help-card">
+              <div class="help-icon">✓</div>
+
+              <h3>Existing Customer</h3>
+
+              <p>
+                Already using 11za? Get help with your account, campaigns, API
+                or technical issues.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-
-        <div class="help-grid">
-
-
-          <div class="help-card">
-
-            <div class="help-icon">
-              API
-            </div>
-
-            <h3>
-              WhatsApp API
-            </h3>
-
-            <p>
-              Need help connecting your WhatsApp
-              Business number or understanding API setup?
-            </p>
-          </div>
-
-
-          <div class="help-card">
-
-            <div class="help-icon">
-              AI
-            </div>
-
-            <h3>
-              Automation & AI
-            </h3>
-
-            <p>
-              Want to automate customer support,
-              lead qualification or repetitive conversations?
-            </p>
-          </div>
-
-
-          <div class="help-card">
-
-            <div class="help-icon">
-              CRM
-            </div>
-
-            <h3>
-              Integrations
-            </h3>
-
-            <p>
-              Looking to connect 11za with your CRM,
-              website, ERP or other business software?
-            </p>
-          </div>
-
-
-          <div class="help-card">
-
-            <div class="help-icon">
-              ✓
-            </div>
-
-            <h3>
-              Existing Customer
-            </h3>
-
-            <p>
-              Already using 11za? Get help with your
-              account, campaigns, API or technical issues.
-            </p>
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================
+      <!-- =====================================
          WHATSAPP CTA
     ====================================== -->
 
-    <section class="whatsapp-section">
+      <section class="whatsapp-section">
+        <div class="container">
+          <div class="whatsapp-card">
+            <div class="whatsapp-content">
+              <div class="whatsapp-icon">WA</div>
 
-      <div class="container">
+              <div>
+                <h3>Prefer WhatsApp?</h3>
 
-        <div class="whatsapp-card">
-
-
-          <div class="whatsapp-content">
-
-            <div class="whatsapp-icon">
-              WA
+                <p>Start a conversation with our team directly on WhatsApp.</p>
+              </div>
             </div>
 
-
-            <div>
-
-              <h3>
-                Prefer WhatsApp?
-              </h3>
-
-              <p>
-                Start a conversation with our team
-                directly on WhatsApp.
-              </p>
-
-            </div>
-
+            <a
+              href="https://wa.me/910000000000"
+              class="btn btn-green"
+              target="_blank"
+            >
+              Chat with 11za
+            </a>
           </div>
-
-
-          <a
-            href="https://wa.me/910000000000"
-            class="btn btn-green"
-            target="_blank"
-          >
-            Chat with 11za
-          </a>
-
-
         </div>
+      </section>
 
-      </div>
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Ready to simplify WhatsApp communication?</h2>
 
-    </section>
+            <p>
+              Start managing customer conversations, teams and WhatsApp
+              campaigns from one powerful platform.
+            </p>
 
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
 
+              <a
+                href="https://calendly.com/engees/schedule-a-demo"
+                class="btn btn-outline-light btn-lg"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- =====================================
-         FAQ
-    ====================================== -->
-
-    <section class="faq-section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="section-label">
-            Contact FAQs
-          </div>
-
-
-          <h2 class="section-title">
-            Before you reach out.
-          </h2>
-
-        </div>
-
-
-        <div class="faq">
-
-
-          <div class="faq-item">
-
-            <button class="faq-question">
-
-              How quickly will someone contact me?
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-
-            <div class="faq-answer">
-
-              Our team will review your enquiry and
-              respond during business hours. Response
-              times can vary depending on the type of
-              request.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="faq-item">
-
-            <button class="faq-question">
-
-              Can you help me set up WhatsApp Business API?
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-
-            <div class="faq-answer">
-
-              Yes. Our team can guide you through the
-              WhatsApp Business Platform onboarding,
-              number setup and configuration process.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="faq-item">
-
-            <button class="faq-question">
-
-              Can I migrate from another WhatsApp API provider?
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-
-            <div class="faq-answer">
-
-              Contact our sales team and share your
-              current setup. We can discuss your migration
-              requirements and the appropriate onboarding
-              process.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="faq-item">
-
-            <button class="faq-question">
-
-              Do you provide API and integration support?
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-
-            <div class="faq-answer">
-
-              Yes. If you need to connect WhatsApp with
-              your CRM, website, application or other
-              business systems, our team can discuss
-              the integration requirements.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="faq-item">
-
-            <button class="faq-question">
-
-              Can I request a product demo?
-
-              <span class="faq-plus">
-                +
-              </span>
-
-            </button>
-
-
-            <div class="faq-answer">
-
-             Absolutely. Book a demo with our team and we'll walk you through the platform and discuss how it can fit your business workflow.
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
- <section class="cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Ready to simplify WhatsApp communication?</h2>
-
-          <p>
-            Start managing customer conversations, teams and WhatsApp campaigns
-            from one powerful platform.
-          </p>
-
-          <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="#" class="btn btn-primary btn-lg"> Get Started </a>
-
-            <a href="https://calendly.com/engees/schedule-a-demo" class="btn btn-outline-light btn-lg"> Contact Sales </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-
-
-  <!-- =====================================
        FOOTER
   ====================================== -->
-   
+
     <footer class="position-relative">
       <div class="footer-layer-effect"></div>
       <div class="container">
@@ -1886,76 +1459,6 @@ Surat, Gujarat – 395007, India
       </div>
     </footer>
 
-<script src="assets/js/script.js" defer></script>
-<script>
-
-
-    /* =========================
-       FAQ
-    ========================= */
-
-    const faqQuestions =
-      document.querySelectorAll(
-        ".faq-question"
-      );
-
-
-    faqQuestions.forEach(question => {
-
-      question.addEventListener(
-        "click",
-        () => {
-
-          const item =
-            question.parentElement;
-
-
-          const isOpen =
-            item.classList.contains(
-              "open"
-            );
-
-
-          document
-            .querySelectorAll(
-              ".faq-item"
-            )
-            .forEach(faq => {
-
-              faq.classList.remove(
-                "open"
-              );
-
-            });
-
-
-          if (!isOpen) {
-
-            item.classList.add(
-              "open"
-            );
-
-          }
-
-        }
-      );
-
-    });
-
-
-  </script>
-</body>
-</html>
-
-
-
-
-  <!-- =====================================
-       JAVASCRIPT
-  ====================================== -->
-
-  
-
-
-</body>
+    <script src="assets/js/script.js" defer></script>
+  </body>
 </html>
