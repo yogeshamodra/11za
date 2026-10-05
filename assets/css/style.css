@@ -2727,6 +2727,7 @@ body:has(#mobileSidebar.show) .nav-burger .close-menu {
 
 footer {
     background: #0b1018;
+    border-top: 1px solid #6c757d;
     color: #fff;
     padding: 70px 0 25px;
     background: radial-gradient(circle at 20% 20%, rgba(134, 239, 172, 0.18), transparent 25%), radial-gradient(circle at 80% 80%, rgba(134, 239, 172, 0.15), transparent 25%), #111827;
