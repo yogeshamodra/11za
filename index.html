@@ -437,17 +437,7 @@
             left: 0;
           }
         }
-        .hero-mock-wrap {
-          position: relative;
-          z-index: 5;
-          width: calc(100% - 32px);
-          max-width: 900px;
 
-          border-radius: 20px;
-          overflow: hidden;
-          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-          background: #000;
-        }
         @media (max-width: 991px) {
           .hero2 {
             padding-bottom: 160px;
@@ -2576,89 +2566,770 @@
         });
       </script>
       <!-- ==================== AI ==================== -->
+      <!-- ============================================================
+     11za · AI VOICE SECTION
+     Replaces the "AI Engine / An AI teammate inside every conversation" section.
+     Needs Bootstrap 5 + Bootstrap Icons (CDN links below are safe to keep if already loaded).
+     ============================================================ -->
+      <style>
+        /* ---- Tokens: map these to your site's existing variables if they differ ---- */
+        .vz-aivoice {
+          --vz-primary: var(--primary, #16a34a);
+          --vz-primary-dark: var(--primary-dark, #0f7a37);
+          --vz-primary-soft: rgba(22, 163, 74, 0.1);
+          --vz-ink: var(--heading, #0f1f17);
+          --vz-text: var(--text, #5b6b62);
+          --vz-line: rgba(15, 31, 23, 0.1);
+          --vz-radius: 20px;
+          position: relative;
+          padding: 96px 0;
+          background:
+            radial-gradient(
+              900px 400px at 85% 10%,
+              var(--vz-primary-soft),
+              transparent 70%
+            ),
+            #f6faf7;
+          overflow: hidden;
+        }
+        .vz-aivoice *,
+        .vz-aivoice *::before,
+        .vz-aivoice *::after {
+          box-sizing: border-box;
+        }
+
+        /* ---- Left column ---- */
+        .vz-eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 6px 14px;
+          border-radius: 999px;
+          background: var(--vz-primary-soft);
+          color: var(--vz-primary-dark);
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+        }
+        .vz-eyebrow i {
+          font-size: 0.95rem;
+        }
+        .vz-aivoice h2 {
+          margin: 18px 0 16px;
+          color: var(--vz-ink);
+          font-size: clamp(2rem, 4.2vw, 3.2rem);
+          line-height: 1.12;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+        }
+        .vz-lead {
+          color: var(--vz-text);
+          font-size: 1.08rem;
+          line-height: 1.7;
+          max-width: 520px;
+          margin-bottom: 28px;
+        }
+
+        .vz-features {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 32px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
+        }
+        .vz-feature {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 14px 16px;
+          background: #fff;
+          border: 1px solid var(--vz-line);
+          border-radius: 14px;
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: var(--vz-ink);
+          transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+        }
+        .vz-feature:hover {
+          transform: translateY(-3px);
+          border-color: rgba(22, 163, 74, 0.4);
+          box-shadow: 0 10px 24px rgba(15, 31, 23, 0.08);
+        }
+        .vz-feature .vz-ico {
+          flex: 0 0 38px;
+          height: 38px;
+          display: grid;
+          place-items: center;
+          border-radius: 10px;
+          background: var(--vz-primary-soft);
+          color: var(--vz-primary-dark);
+          font-size: 1.15rem;
+        }
+
+        .vz-btn {
+          padding: 12px 26px;
+          border-radius: 999px;
+          font-weight: 600;
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+        }
+        .vz-btn:hover {
+          transform: translateY(-2px);
+        }
+        .vz-btn-primary {
+          background: var(--vz-primary);
+          border: 1px solid var(--vz-primary);
+          color: #fff;
+          box-shadow: 0 8px 20px rgba(22, 163, 74, 0.28);
+        }
+        .vz-btn-primary:hover {
+          background: var(--vz-primary-dark);
+          border-color: var(--vz-primary-dark);
+          color: #fff;
+        }
+        .vz-btn-ghost {
+          background: #fff;
+          border: 1px solid var(--vz-line);
+          color: var(--vz-ink);
+        }
+        .vz-btn-ghost:hover {
+          border-color: var(--vz-primary);
+          color: var(--vz-primary-dark);
+        }
+
+        /* ---- Call card ---- */
+        .vz-call-wrap {
+          position: relative;
+          max-width: 480px;
+          margin-inline: auto;
+        }
+        .vz-call-wrap::before {
+          /* soft glow behind the card */
+          content: "";
+          position: absolute;
+          inset: 8% -6% -6% 8%;
+          z-index: 0;
+          background: radial-gradient(
+            circle,
+            rgba(22, 163, 74, 0.28),
+            transparent 65%
+          );
+          filter: blur(30px);
+        }
+        .vz-call {
+          position: relative;
+          z-index: 1;
+          background: #0e1a14;
+          color: #e8f3ec;
+          border-radius: 28px;
+          padding: 22px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          box-shadow: 0 30px 70px rgba(15, 31, 23, 0.35);
+          transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease;
+        }
+        .vz-call:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 38px 80px rgba(15, 31, 23, 0.42);
+        }
+
+        .vz-call-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 18px;
+        }
+        .vz-live {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          color: #ff6b6b;
+        }
+        .vz-live::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #ff4d4d;
+          animation: vz-blink 1.2s infinite;
+        }
+        .vz-timer {
+          font-variant-numeric: tabular-nums;
+          font-size: 0.95rem;
+          color: #a9c2b3;
+          display: inline-flex;
+          gap: 6px;
+          align-items: center;
+        }
+
+        .vz-agent {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+        .vz-avatar {
+          position: relative;
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background: linear-gradient(135deg, #22c55e, #0f7a37);
+          color: #fff;
+          font-size: 1.5rem;
+          animation: vz-glow 2.6s ease-in-out infinite;
+        }
+        .vz-agent-name {
+          font-weight: 700;
+          font-size: 1.05rem;
+          line-height: 1.2;
+        }
+        .vz-status {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 0.85rem;
+          color: #7be3a1;
+        }
+        .vz-status .vz-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #22c55e;
+          animation: vz-pulse 1.4s ease-out infinite;
+        }
+
+        .vz-wave {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          height: 74px;
+          margin: 18px 0 14px;
+          padding: 0 14px;
+          border-radius: 16px;
+          background: rgba(255, 255, 255, 0.04);
+        }
+        .vz-wave span {
+          width: 4px;
+          height: 100%;
+          border-radius: 4px;
+          transform-origin: center;
+          background: linear-gradient(180deg, #4ade80, #16a34a);
+          animation: vz-bar 1.1s ease-in-out infinite;
+          transform: scaleY(0.2);
+        }
+        .vz-wave.is-idle span {
+          animation-play-state: paused;
+          opacity: 0.35;
+        }
+
+        .vz-customer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 12px;
+          margin-bottom: 14px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.05);
+          font-size: 0.88rem;
+          color: #a9c2b3;
+        }
+        .vz-customer strong {
+          color: #fff;
+          font-weight: 600;
+        }
+        .vz-customer .vz-cav {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: #3b4f44;
+          display: grid;
+          place-items: center;
+          color: #fff;
+          font-size: 0.8rem;
+          font-weight: 700;
+        }
+
+        .vz-transcript {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          min-height: 250px;
+        }
+        .vz-msg {
+          max-width: 88%;
+          padding: 10px 14px;
+          border-radius: 16px;
+          font-size: 0.88rem;
+          line-height: 1.5;
+          opacity: 0;
+          transform: translateY(8px);
+          animation: vz-in 0.5s ease forwards;
+        }
+        .vz-msg small {
+          display: block;
+          margin-bottom: 2px;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          opacity: 0.75;
+        }
+        .vz-msg.ai {
+          align-self: flex-start;
+          background: rgba(34, 197, 94, 0.14);
+          border: 1px solid rgba(34, 197, 94, 0.28);
+          border-bottom-left-radius: 4px;
+        }
+        .vz-msg.cu {
+          align-self: flex-end;
+          background: rgba(255, 255, 255, 0.09);
+          border-bottom-right-radius: 4px;
+        }
+        .vz-typing {
+          align-self: flex-start;
+          display: inline-flex;
+          gap: 4px;
+          padding: 10px 14px;
+          border-radius: 16px;
+          background: rgba(34, 197, 94, 0.14);
+        }
+        .vz-typing i {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #4ade80;
+          animation: vz-blink 1s infinite;
+        }
+        .vz-typing i:nth-child(2) {
+          animation-delay: 0.15s;
+        }
+        .vz-typing i:nth-child(3) {
+          animation-delay: 0.3s;
+        }
+
+        .vz-controls {
+          display: flex;
+          justify-content: center;
+          gap: 18px;
+          margin-top: 18px;
+          padding-top: 18px;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .vz-ctrl {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          border: 0;
+          display: grid;
+          place-items: center;
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          font-size: 1.25rem;
+          cursor: pointer;
+          transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+        }
+        .vz-ctrl:hover {
+          transform: scale(1.08);
+          background: rgba(255, 255, 255, 0.18);
+        }
+        .vz-ctrl:focus-visible {
+          outline: 3px solid #4ade80;
+          outline-offset: 3px;
+        }
+        .vz-ctrl.is-on {
+          background: #fff;
+          color: #0e1a14;
+        }
+        .vz-ctrl.vz-end {
+          background: #ef4444;
+        }
+        .vz-ctrl.vz-end:hover {
+          background: #dc2626;
+        }
+
+        /* ---- Animations ---- */
+        @keyframes vz-bar {
+          0%,
+          100% {
+            transform: scaleY(0.18);
+          }
+          50% {
+            transform: scaleY(1);
+          }
+        }
+        @keyframes vz-in {
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+        @keyframes vz-blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.25;
+          }
+        }
+        @keyframes vz-pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+          }
+          100% {
+            box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+          }
+        }
+        @keyframes vz-glow {
+          0%,
+          100% {
+            box-shadow:
+              0 0 0 4px rgba(34, 197, 94, 0.18),
+              0 0 18px rgba(34, 197, 94, 0.35);
+          }
+          50% {
+            box-shadow:
+              0 0 0 7px rgba(34, 197, 94, 0.1),
+              0 0 32px rgba(34, 197, 94, 0.6);
+          }
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 991.98px) {
+          .vz-aivoice {
+            padding: 72px 0;
+          }
+          .vz-lead {
+            max-width: none;
+          }
+        }
+        @media (max-width: 575.98px) {
+          .vz-aivoice {
+            padding: 56px 0;
+          }
+          .vz-features {
+            grid-template-columns: 1fr;
+          }
+          .vz-cta .btn {
+            width: 100%;
+          }
+          .vz-call {
+            padding: 16px;
+            border-radius: 22px;
+          }
+          .vz-transcript {
+            min-height: 270px;
+          }
+          .vz-msg {
+            max-width: 94%;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .vz-aivoice *,
+          .vz-aivoice *::before {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition: none !important;
+          }
+          .vz-msg {
+            opacity: 1;
+            transform: none;
+          }
+          .vz-wave span {
+            transform: scaleY(0.6);
+          }
+        }
+      </style>
+
       <section
-        id="ai"
-        class="section ai"
-        data-testid="ai-capabilities-container"
+        class="vz-aivoice"
+        id="ai-voice"
+        aria-labelledby="vz-aivoice-title"
       >
-        <div
-          class="dots dot-grid-dark mask-fade-dark-ai"
-          aria-hidden="true"
-        ></div>
-        <div class="blob" aria-hidden="true"></div>
-        <div class="container" style="position: relative">
-          <div class="ai-grid">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <!-- LEFT -->
             <div class="col-lg-6">
-              <div class="sec-head on-dark">
-                <p class="chapter-label on-dark reveal">AI Engine</p>
-                <h2 class="reveal" data-delay="0.08">
-                  An AI teammate inside every conversation
-                </h2>
-                <p class="sub reveal" data-delay="0.16">
-                  11za's AI assists your agents and automates the routine — so
-                  humans focus on conversations that need them.
-                </p>
-              </div>
-              <div class="ai-features">
-                <div class="reveal">
-                  <div class="ai-f">
-                    <h3>AI-assisted replies</h3>
-                    <p>
-                      Draft on-brand responses agents can send with one tap.
-                    </p>
-                  </div>
-                </div>
-                <div class="reveal" data-delay="0.06">
-                  <div class="ai-f">
-                    <h3>Automated FAQs</h3>
-                    <p>
-                      Instant answers to pricing, order status and policy
-                      questions.
-                    </p>
-                  </div>
-                </div>
-                <div class="reveal" data-delay="0.12">
-                  <div class="ai-f">
-                    <h3>Lead qualification</h3>
-                    <p>
-                      AI asks the right questions and scores intent before
-                      handoff.
-                    </p>
-                  </div>
-                </div>
-                <div class="reveal" data-delay="0.18">
-                  <div class="ai-f">
-                    <h3>Conversation summaries</h3>
-                    <p>
-                      Long threads distilled into crisp context for your team.
-                    </p>
-                  </div>
-                </div>
-                <div class="reveal" data-delay="0.24">
-                  <div class="ai-f">
-                    <h3>Smart routing</h3>
-                    <p>
-                      Chats land with the right agent based on topic and
-                      priority.
-                    </p>
-                  </div>
-                </div>
-                <div class="reveal" data-delay="0.3">
-                  <div class="ai-f">
-                    <h3>Automated support</h3>
-                    <p>
-                      Resolve common requests end-to-end, escalate the rest.
-                    </p>
-                  </div>
-                </div>
+              <span class="vz-eyebrow"
+                ><i class="bi bi-mic-fill"></i> AI VOICE</span
+              >
+              <h2 id="vz-aivoice-title">
+                Talk to Your Customers. Automatically.
+              </h2>
+              <p class="vz-lead">
+                11za AI Voice makes and receives intelligent customer calls for
+                you. It handles support, qualifies leads, confirms orders and
+                appointments, and passes the call to your team when a human is
+                needed.
+              </p>
+
+              <ul class="vz-features">
+                <li class="vz-feature">
+                  <span class="vz-ico"><i class="bi bi-chat-heart"></i></span
+                  >Natural AI Conversations
+                </li>
+                <li class="vz-feature">
+                  <span class="vz-ico"><i class="bi bi-clock-history"></i></span
+                  >24/7 Voice Support
+                </li>
+                <li class="vz-feature">
+                  <span class="vz-ico"><i class="bi bi-bullseye"></i></span
+                  >Smart Lead Qualification
+                </li>
+                <li class="vz-feature">
+                  <span class="vz-ico"
+                    ><i class="bi bi-person-lines-fill"></i></span
+                  >Human Handoff
+                </li>
+              </ul>
+
+              <div class="vz-cta d-flex flex-wrap gap-3">
+                <a href="#cta" class="btn vz-btn vz-btn-primary"
+                  >Try AI Voice</a
+                >
+                <a
+                  href="https://calendly.com/engees/schedule-a-demo"
+                  class="btn vz-btn vz-btn-ghost"
+                  >Book a Demo</a
+                >
               </div>
             </div>
-            <div class="" data-delay="0.15">
-              <img src="assets/images/example1.png" alt="" class="" />
+
+            <!-- RIGHT -->
+            <div class="col-lg-6">
+              <div class="vz-call-wrap">
+                <article
+                  class="vz-call"
+                  aria-label="Live AI voice call example"
+                >
+                  <div class="vz-call-top">
+                    <span class="vz-live">LIVE</span>
+                    <span class="vz-timer"
+                      ><i class="bi bi-telephone-fill"></i
+                      ><span id="vzTimer">02:18</span></span
+                    >
+                  </div>
+
+                  <div class="vz-agent">
+                    <div class="vz-avatar" aria-hidden="true">
+                      <i class="bi bi-robot"></i>
+                    </div>
+                    <div>
+                      <div class="vz-agent-name">11za AI Voice</div>
+                      <div class="vz-status" aria-live="polite">
+                        <span class="vz-dot"></span
+                        ><span id="vzStatus">AI is speaking...</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="vz-wave" id="vzWave" aria-hidden="true"></div>
+
+                  <div class="vz-customer">
+                    <span class="vz-cav">R</span>
+                    <span>On call with <strong>Rahul Mehta</strong></span>
+                  </div>
+
+                  <div
+                    class="vz-transcript"
+                    id="vzTranscript"
+                    aria-live="polite"
+                  ></div>
+
+                  <div class="vz-controls">
+                    <button
+                      class="vz-ctrl"
+                      type="button"
+                      id="vzMic"
+                      aria-label="Microphone"
+                    >
+                      <i class="bi bi-mic-fill"></i>
+                    </button>
+                    <button
+                      class="vz-ctrl"
+                      type="button"
+                      id="vzMute"
+                      aria-label="Mute"
+                      aria-pressed="false"
+                    >
+                      <i class="bi bi-volume-up-fill"></i>
+                    </button>
+                    <button
+                      class="vz-ctrl vz-end"
+                      type="button"
+                      id="vzEnd"
+                      aria-label="End call"
+                    >
+                      <i class="bi bi-telephone-x-fill"></i>
+                    </button>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <script>
+        (function () {
+          var root = document.getElementById("ai-voice");
+          if (!root) return;
+
+          /* Waveform bars: varied heights/delays so it looks like real speech */
+          var wave = document.getElementById("vzWave");
+          for (var i = 0; i < 36; i++) {
+            var b = document.createElement("span");
+            b.style.animationDuration =
+              (0.7 + Math.random() * 0.9).toFixed(2) + "s";
+            b.style.animationDelay = (-Math.random() * 1.5).toFixed(2) + "s";
+            b.style.maxHeight = (35 + Math.random() * 65).toFixed(0) + "%";
+            wave.appendChild(b);
+          }
+
+          /* Call timer (starts at 02:18) */
+          var seconds = 138,
+            timerEl = document.getElementById("vzTimer"),
+            ticking = true;
+          function fmt(s) {
+            return (
+              String(Math.floor(s / 60)).padStart(2, "0") +
+              ":" +
+              String(s % 60).padStart(2, "0")
+            );
+          }
+          var tick = setInterval(function () {
+            if (ticking) {
+              seconds++;
+              timerEl.textContent = fmt(seconds);
+            }
+          }, 1000);
+
+          /* Conversation script */
+          var script = [
+            {
+              who: "ai",
+              name: "AI Voice",
+              text: "Hi Rahul, I'm calling from 11za. You recently showed interest in our WhatsApp automation platform. Can I help you with any questions?",
+            },
+            {
+              who: "cu",
+              name: "Rahul",
+              text: "Yes, I'd like to know how the automation works.",
+            },
+            {
+              who: "ai",
+              name: "AI Voice",
+              text: "Absolutely. I can explain the features or connect you with our sales team.",
+            },
+          ];
+          var box = document.getElementById("vzTranscript");
+          var statusEl = document.getElementById("vzStatus");
+          var timeouts = [],
+            ended = false;
+
+          function later(fn, ms) {
+            timeouts.push(setTimeout(fn, ms));
+          }
+          function setSpeaking(isAI) {
+            statusEl.textContent = isAI
+              ? "AI is speaking..."
+              : "Listening to Rahul...";
+            wave.classList.toggle("is-idle", !isAI);
+          }
+          function addMsg(m) {
+            var d = document.createElement("div");
+            d.className = "vz-msg " + m.who;
+            var s = document.createElement("small");
+            s.textContent = m.name;
+            d.appendChild(s);
+            d.appendChild(document.createTextNode(m.text));
+            box.appendChild(d);
+          }
+          function play() {
+            box.innerHTML = "";
+            ended = false;
+            ticking = true;
+            var t = 300;
+            script.forEach(function (m, i) {
+              later(function () {
+                setSpeaking(m.who === "ai");
+                if (m.who === "ai") {
+                  var typing = document.createElement("div");
+                  typing.className = "vz-typing";
+                  typing.innerHTML = "<i></i><i></i><i></i>";
+                  box.appendChild(typing);
+                  later(function () {
+                    typing.remove();
+                    addMsg(m);
+                  }, 700);
+                } else {
+                  addMsg(m);
+                }
+              }, t);
+              t += (m.who === "ai" ? 700 : 0) + 2600;
+            });
+            later(function () {
+              setSpeaking(true);
+            }, t);
+            later(play, t + 7000); /* loop the demo */
+          }
+          play();
+
+          /* Controls */
+          var mic = document.getElementById("vzMic"),
+            mute = document.getElementById("vzMute"),
+            end = document.getElementById("vzEnd");
+          mic.addEventListener("click", function () {
+            mic.classList.toggle("is-on");
+          });
+          mute.addEventListener("click", function () {
+            var on = mute.classList.toggle("is-on");
+            mute.setAttribute("aria-pressed", on);
+            mute.firstElementChild.className = on
+              ? "bi bi-volume-mute-fill"
+              : "bi bi-volume-up-fill";
+          });
+          end.addEventListener("click", function () {
+            if (ended) {
+              play();
+              end.firstElementChild.className = "bi bi-telephone-x-fill";
+              end.setAttribute("aria-label", "End call");
+              return;
+            }
+            ended = true;
+            ticking = false;
+            timeouts.forEach(clearTimeout);
+            timeouts = [];
+            statusEl.textContent = "Call ended — tap to replay";
+            wave.classList.add("is-idle");
+            end.firstElementChild.className = "bi bi-arrow-repeat";
+            end.setAttribute("aria-label", "Replay demo call");
+          });
+
+          /* Pause work when the section is off-screen */
+          if ("IntersectionObserver" in window) {
+            new IntersectionObserver(function (e) {
+              root.querySelector(".vz-call").style.animationPlayState = e[0]
+                .isIntersecting
+                ? "running"
+                : "paused";
+            }).observe(root);
+          }
+        })();
+      </script>
       <!-- ==================== INTEGRATIONS ==================== -->
       <section id="integrations" class="section section-alt" data-aos="fade-up">
         <div class="container">
@@ -2719,6 +3390,44 @@
                 </div>
                 <h3>WooCommerce</h3>
               </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="hero-mock-wrap" data-testid="hero-dashboard-preview">
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                border-radius: inherit;
+              "
+            >
+              <iframe
+                src="https://www.youtube.com/embed/fvNMMzVcy60?&mute=1&loop=1&playlist=fvNMMzVcy60&modestbranding=1"
+                title="Send Your E-commerce order updates to your customer on WhatsApp | 11za"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                "
+              ></iframe>
             </div>
           </div>
         </div>
@@ -2996,7 +3705,6 @@
 ================================ -->
       <section class="latest-case-studies py-5">
         <div class="container py-lg-5">
-          
           <div class="row align-items-end mb-5">
             <div class="col-lg-8">
               <span class="cs-section-label"> CASE STUDIES </span>
@@ -3021,10 +3729,8 @@
           </div>
 
           <div class="row g-4">
-           
             <div class="col-lg-4 col-md-6">
               <article class="cs-card">
-               
                 <a
                   href="/11za-new/case-study/facebook-leads.html"
                   class="cs-image-link"
@@ -3036,21 +3742,16 @@
                   />
                 </a>
 
-               
                 <div class="cs-card-body">
                   <h3 class="cs-card-title">
                     Customised Checkout Flow for ScrapBazar.in
                   </h3>
-
-                 
                 </div>
               </article>
             </div>
 
-         
             <div class="col-lg-4 col-md-6">
               <article class="cs-card">
-               
                 <a
                   href="/11za-new/case-study/indiamart.html"
                   class="cs-image-link"
@@ -3062,20 +3763,16 @@
                   />
                 </a>
 
-               
                 <div class="cs-card-body">
                   <h3 class="cs-card-title">
                     Connect with your Indiamart Leads directly on WhatsApp
                   </h3>
-
-                 
                 </div>
               </article>
             </div>
 
             <div class="col-lg-4 col-md-6">
               <article class="cs-card">
-              
                 <a
                   href="/11za-new/case-study/scrapbazar.html"
                   class="cs-image-link"
@@ -3087,19 +3784,15 @@
                   />
                 </a>
 
-              
                 <div class="cs-card-body">
                   <h3 class="cs-card-title">
                     Get your Facebook Leads directly to WhatsApp
                   </h3>
-
-                
                 </div>
               </article>
             </div>
           </div>
 
-        
           <div class="text-center mt-5"></div>
         </div>
       </section>
@@ -3158,7 +3851,7 @@
                   class="btn btn-light"
                   data-testid="pricing-talk-to-sales-btn"
                   >Talk to Sales
-                  <svg class="ic"><use href="#i-arrow-right" /></svg></a>
+                  </a>
               </div>
             </div>
             <div class="reveal" data-delay="0.12">
@@ -3221,11 +3914,45 @@
           </div>
         </div>
       </section>
+      <style>
+        .api-partner{
+          padding-top: 25px;
+          padding-bottom: 25px;
+          text-align: center;
+          font-size: 20px;
+        }
+        .ap-1 {
+          background-color: #09AF72;
+          color :white;
+        }
+        .ap-2 {
+          background-color: #111827;
+          color: white;
+
+        }
+      </style>
+      <section class="api-partner-section">
+        <div class="row">
+
+          <div class="col-lg-6 api-partner ap-1" >
+            <div>
+              Meta Business Partner
+            </div>
+          </div>
+          <div class="col-lg-6 api-partner ap-2">
+            <div>
+              Powered by Official <strong>WhatsApp Business API</strong>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- =========================
        FOOTER
   ========================== -->
+    <section>
 
+    </section>
     <footer class="position-relative">
       <style>
         .startup-img img {
@@ -3233,11 +3960,11 @@
         }
         .whatsapp-icon {
           position: fixed;
-    left: 33px;
-    bottom: 27px;
-    z-index: 999;
-    width: 60px;
-}
+          left: 33px;
+          bottom: 27px;
+          z-index: 999;
+          width: 60px;
+        }
       </style>
       <div class="footer-layer-effect"></div>
       <div class="container">
@@ -3380,10 +4107,15 @@
       </div>
     </footer>
     <div class="whatsapp-icon">
-	<a href="https://wa.me/919726654060" target="_blank">
-		<img width="60" height="60" src="assets/images/whatsapp.png" alt="whatsapp-icon">
-	</a>
-</div>
+      <a href="https://wa.me/919726654060" target="_blank">
+        <img
+          width="60"
+          height="60"
+          src="assets/images/whatsapp.png"
+          alt="whatsapp-icon"
+        />
+      </a>
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

@@ -1091,8 +1091,8 @@ body:has(#mobileSidebar.show) .nav-burger .close-menu {
 
 .hero-mock-wrap {
     position: relative;
-    margin: 64px auto 0;
-    max-width: 64rem;
+    /* margin: 64px auto 0;
+    max-width: 64rem; */
     animation: heroMock 1.1s var(--ease) 0.85s both;
 }
 
@@ -1235,12 +1235,7 @@ body:has(#mobileSidebar.show) .nav-burger .close-menu {
     }
 }
 
-.hero-mock-wrap {
-    position: relative;
-    margin: 64px auto 0;
-    max-width: 64rem;
-    animation: heroMock 1.1s var(--ease) 0.85s both;
-}
+
 /* Heading */
 
 .trust-label {

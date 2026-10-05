@@ -423,8 +423,390 @@
           </div>
         </div>
       </section>
-
-      <section id="templates" class="bg-soft">
+<style>
+/* ---- Base tokens (same as 11za site) ---- */
+:root{--brand:#0b8f5a;--brand-d:#076b43;--ink:#0f1f2e;--soft:#eefaf4;--muted:#5d6b78}
+body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;background:var(--soft)}
+section{padding:80px 0}
+.bg-soft{background:var(--soft)}
+.eyebrow{color:var(--brand);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+.title{font-weight:800;letter-spacing:-.5px}
+.btn-brand{background:var(--brand);color:#fff;border:0;font-weight:700;padding:.8rem 1.6rem;border-radius:50px;transition:background .25s,transform .25s}
+.btn-brand:hover{background:var(--brand-d);color:#fff;transform:translateY(-2px)}
+@media(max-width:767px){section{padding:56px 0}}
+ 
+/* ---- Template showcase: stacking cards (pure CSS, no JS) ---- */
+/* ==========================================================
+   Template Showcase — stacking cards
+   All templates are laid out as cards. On tall desktop screens each card
+   sticks to the top while the next one scrolls up and covers it.
+   Pure CSS, no JavaScript. Wrap markup in .tpl-showcase.
+   Uses the page's brand tokens (--brand, --soft, --ink, --muted) with fallbacks.
+   ========================================================== */
+ 
+.tpl-showcase {
+  --ts-brand: var(--brand, #0b8f5a);
+  --ts-brand-d: var(--brand-d, #076b43);
+  --ts-ink: var(--ink, #0f1f2e);
+  --ts-muted: var(--muted, #5d6b78);
+  --ts-soft: var(--soft, #eefaf4);
+  --ts-line: #e6eef0;
+  --ts-radius: 28px;
+  --ts-pin-top: 96px;       /* clears the sticky site header */
+  --ts-peek: 14px;          /* how much of each covered card stays visible */
+  --ts-stage-h: 500px;
+}
+ 
+/* ---------- Section header ---------- */
+.ts-head {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.ts-head .title {
+  margin: 8px 0 14px;
+  font-size: clamp(1.9rem, 4.2vw, 2.75rem);
+  line-height: 1.15;
+}
+.ts-head p {
+  margin: 0 auto;
+  max-width: 620px;
+  color: var(--ts-muted);
+  font-size: 1.05rem;
+}
+ 
+/* ---------- Stack ---------- */
+.ts-stack {
+  display: grid;
+  gap: 28px;
+}
+ 
+/* ---------- Card ---------- */
+.ts-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: #fff;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  box-shadow: 0 -18px 40px -22px rgba(15, 31, 46, 0.22),
+    0 30px 70px -34px rgba(15, 31, 46, 0.28);
+  overflow: hidden;
+}
+ 
+/* ---------- Copy ---------- */
+.ts-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 56px);
+}
+.ts-copy .eyebrow {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--ts-soft);
+}
+.ts-copy h3 {
+  margin: 14px 0 10px;
+  font-weight: 800;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--ts-ink);
+}
+.ts-copy > p {
+  margin: 0 0 18px;
+  color: var(--ts-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+.ts-benefits {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+.ts-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--ts-ink);
+  line-height: 1.4;
+}
+.ts-benefits li::before {
+  content: "";
+  flex: 0 0 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--ts-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b8f5a' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+    center / 13px no-repeat;
+}
+.ts-cta { align-self: flex-start; }
+.ts-cta:focus-visible { outline: 3px solid rgba(11, 143, 90, 0.4); outline-offset: 2px; }
+ 
+/* ---------- Stage (WhatsApp preview) ---------- */
+.ts-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 28px 28px;
+  background: radial-gradient(120% 90% at 50% 0%, #fff 0%, rgba(255, 255, 255, 0) 60%),
+    var(--ts-soft);
+  border-left: 1px solid var(--ts-line);
+}
+.ts-chip,
+.ts-index {
+  position: absolute;
+  top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--ts-line);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ts-ink);
+  box-shadow: 0 4px 12px -6px rgba(15, 31, 46, 0.2);
+}
+.ts-chip { left: 20px; }
+.ts-chip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.25);
+}
+.ts-index { right: 20px; color: var(--ts-muted); font-variant-numeric: tabular-nums; }
+.ts-index strong { color: var(--ts-ink); }
+ 
+/* Frame hugs the screenshot's own aspect ratio (--ar): no stretch, no crop. */
+.ts-device {
+  --pad: 0px;
+  --img-h: calc(var(--ts-stage-h) - 92px - 2 * var(--pad));
+  width: min(100%, calc(var(--img-h) * var(--ar, 0.7) + 2 * var(--pad)));
+  max-width: 100%;
+  margin: 0;
+}
+.ts-device img { display: block; width: 100%; height: auto; }
+.ts-device--bezel {            /* bare chat screenshots get a phone bezel */
+  --pad: 9px;
+  padding: var(--pad);
+  background: #0f1f2e;
+  border-radius: 38px;
+  box-shadow: 0 30px 50px -22px rgba(15, 31, 46, 0.55),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.12);
+}
+.ts-device--bezel img { border-radius: 29px; background: #ece5dd; }
+.ts-device--bare img { filter: drop-shadow(0 22px 28px rgba(15, 31, 46, 0.18)); }
+ 
+/* ---------- Stacking (tall desktop screens only) ---------- */
+@media (min-width: 992px) and (min-height: 700px) {
+  .tpl-showcase { --ts-stage-h: clamp(440px, calc(100vh - 310px), 540px); }
+  .ts-stack { gap: 40px; }
+  .ts-panel {
+    position: sticky;
+    top: calc(var(--ts-pin-top) + (var(--i, 1) - 1) * var(--ts-peek));
+    height: var(--ts-stage-h);
+  }
+  .ts-copy { padding: 24px clamp(32px, 4vw, 56px); }
+}
+ 
+/* ---------- Responsive (plain stacked list, no overlap) ---------- */
+@media (max-width: 1100px) { .tpl-showcase { --ts-stage-h: 480px; } }
+@media (max-width: 991px) {
+  .ts-copy { padding: 32px 28px; }
+  .ts-stage { padding: 60px 20px 24px; }
+  .ts-device { --img-h: 380px; }
+}
+@media (max-width: 767px) {
+  .tpl-showcase { --ts-radius: 22px; }
+  .ts-head { margin-bottom: 26px; }
+  .ts-panel { grid-template-columns: minmax(0, 1fr); }
+  .ts-copy { padding: 26px 22px 24px; }
+  .ts-cta { align-self: stretch; }
+  .ts-stage { border-left: 0; border-top: 1px solid var(--ts-line); padding: 60px 16px 24px; }
+  .ts-device { --img-h: 380px; }
+  .ts-device--bezel { --pad: 8px; border-radius: 32px; }
+  .ts-device--bezel img { border-radius: 24px; }
+}
+@media (max-width: 400px) { .ts-device { --img-h: 340px; } }
+ 
+</style>
+<section id="templates" class="bg-soft">
+        <div class="container">
+          <div class="tpl-showcase">
+            <header class="ts-head">
+              <div class="eyebrow">Template Messages</div>
+              <h2 class="title">Personalised messages for every order stage</h2>
+              <p>
+                Scroll through every stage and see exactly what your customers
+                receive on WhatsApp, from order confirmation to delivery,
+                recovery and feedback.
+              </p>
+            </header>
+ 
+            <div class="ts-stack">
+<article class="ts-panel" style="--i: 1" aria-labelledby="ts-title-1">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 01</span>
+                <h3 id="ts-title-1">COD Order Confirmation Message</h3>
+                <p>Ask customers to confirm their COD order right on WhatsApp, so fake orders never turn into extra logistics charges.</p>
+                <ul class="ts-benefits">
+                      <li>Cut extra logistics charges from fake COD orders</li>
+                      <li>One-tap Confirm / Cancel buttons</li>
+                      <li>Sent automatically on every COD order</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>01</strong> / 07</span>
+                <figure class="ts-device ts-device--bare" style="--ar: 0.736">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/example1.png" width="423" height="575" data-ts-img
+                       alt="COD Order Confirmation Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+<article class="ts-panel" style="--i: 2" aria-labelledby="ts-title-2">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 02</span>
+                <h3 id="ts-title-2">Prepaid Confirmation Message</h3>
+                <p>Confirm every paid order instantly with a personalised message and a View Order button, right on WhatsApp.</p>
+                <ul class="ts-benefits">
+                      <li>Instant confirmation once payment is received</li>
+                      <li>View Order button inside the message</li>
+                      <li>Personalised with name and order details</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>02</strong> / 07</span>
+                <figure class="ts-device ts-device--bare" style="--ar: 0.736">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/example2.png" width="423" height="575" data-ts-img
+                       alt="Prepaid Confirmation Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+<article class="ts-panel" style="--i: 3" aria-labelledby="ts-title-3">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 03</span>
+                <h3 id="ts-title-3">Shipping Confirmation Message</h3>
+                <p>Share tracking details and status updates on WhatsApp so customers always know where their order is.</p>
+                <ul class="ts-benefits">
+                      <li>Tracking details shared automatically</li>
+                      <li>Status updates at every step</li>
+                      <li>Fewer “where is my order?” queries</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>03</strong> / 07</span>
+                <figure class="ts-device ts-device--bare" style="--ar: 0.745">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/example3.png" width="423" height="568" data-ts-img
+                       alt="Shipping Confirmation Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+<article class="ts-panel" style="--i: 4" aria-labelledby="ts-title-4">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 04</span>
+                <h3 id="ts-title-4">Abandoned Cart Recovery Message</h3>
+                <p>Nudge shoppers back with a personalised message, a coupon code and a link straight to your checkout page.</p>
+                <ul class="ts-benefits">
+                      <li>Coupon code included in the message</li>
+                      <li>One-click redirect to your checkout page</li>
+                      <li>Win back customers who left at checkout</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>04</strong> / 07</span>
+                <figure class="ts-device ts-device--bare" style="--ar: 0.745">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/example4.png" width="423" height="568" data-ts-img
+                       alt="Abandoned Cart Recovery Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+<article class="ts-panel" style="--i: 5" aria-labelledby="ts-title-5">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 05</span>
+                <h3 id="ts-title-5">Customer Feedback Message</h3>
+                <p>Thank customers and collect their feedback with a personalised message, directly on WhatsApp.</p>
+                <ul class="ts-benefits">
+                      <li>Thank-you message with a feedback request</li>
+                      <li>Quick tap replies, recorded in 11za</li>
+                      <li>Feedback captured directly on WhatsApp</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>05</strong> / 07</span>
+                <figure class="ts-device ts-device--bezel" style="--ar: 0.700">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/cod_order.png" width="1035" height="1479" data-ts-img
+                       alt="Customer Feedback Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+<article class="ts-panel" style="--i: 6" aria-labelledby="ts-title-6">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 06</span>
+                <h3 id="ts-title-6">COD to Prepaid Convert Message</h3>
+                <p>Turn COD orders into prepaid ones with a personalised message, a coupon code and a direct checkout link.</p>
+                <ul class="ts-benefits">
+                      <li>Coupon nudges customers to pay online</li>
+                      <li>Direct link to your checkout page</li>
+                      <li>Lower COD handling risk</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>06</strong> / 07</span>
+                <figure class="ts-device ts-device--bezel" style="--ar: 0.560">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/confirm_order.png" width="1403" height="2504" data-ts-img
+                       alt="COD to Prepaid Convert Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+<article class="ts-panel" style="--i: 7" aria-labelledby="ts-title-7">
+              <div class="ts-copy">
+                <span class="eyebrow">Template 07</span>
+                <h3 id="ts-title-7">Order Cancellation Message</h3>
+                <p>Notify customers on WhatsApp the moment an order is cancelled, and invite them to shop again.</p>
+                <ul class="ts-benefits">
+                      <li>Instant cancellation notice to the customer</li>
+                      <li>Keeps customers informed and builds trust</li>
+                      <li>Prompt to shop again</li>
+                </ul>
+                <a href="#" class="btn btn-brand ts-cta">Use This Template</a>
+              </div>
+              <div class="ts-stage">
+                <span class="ts-chip">WhatsApp Preview</span>
+                <span class="ts-index"><strong>07</strong> / 07</span>
+                <figure class="ts-device ts-device--bezel" style="--ar: 0.675">
+                  <img src="https://yogeshamodra.github.io/11za/assets/images/customer-feedback.png" width="999" height="1479" data-ts-img
+                       alt="Order Cancellation Message demo on WhatsApp" />
+                </figure>
+              </div>
+            </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="templates" class="bg-soft">
         <div class="container">
           <div class="col-lg-9 mx-auto text-center mb-5">
             <div class="eyebrow">Template Messages</div>
@@ -620,8 +1002,69 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
+       <!-- ==================== INTEGRATIONS ==================== -->
+      <section id="integrations" class="section section-alt" data-aos="fade-up">
+        <div class="container">
+          <div class="sec-head center">
+          
+            <h2 class="reveal" data-delay="0.08">
+             Other Integrations
+            </h2>
+           
+          </div>
+          <div class="int-grid" data-testid="integrations-category-grid">
+            <div class="reveal">
+              <article class="int-card">
+                <div class="int-logo">
+                  <img src="assets/images/pabbly.png" alt="Pabbly" />
+                </div>
+                <h3>Pabbly</h3>
+              </article>
+            </div>
+
+            <div class="reveal" data-delay="0.08">
+              <article class="int-card">
+                <div class="int-logo">
+                  <img src="assets/images/shiprocket.png" alt="Shiprocket" />
+                </div>
+                <h3>Shiprocket</h3>
+              </article>
+            </div>
+
+            <div class="reveal" data-delay="0.16">
+              <article class="int-card">
+                <div class="int-logo">
+                  <img src="assets/images/calendly.png" alt="Calendly" />
+                </div>
+                <h3>Calendly</h3>
+              </article>
+            </div>
+
+            <div class="reveal">
+              <article class="int-card">
+                <div class="int-logo">
+                  <img src="assets/images/ic_tallyprime.png" alt="TallyPrime" />
+                </div>
+                <h3>TallyPrime</h3>
+              </article>
+            </div>
+
+            <div class="reveal" data-delay="0.08">
+              <article class="int-card">
+                <div class="int-logo">
+                  <img
+                    src="assets/images/ic_woocommerc.png"
+                    alt="WooCommerce"
+                  />
+                </div>
+                <h3>WooCommerce</h3>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- =========================================================
      CTA
 ========================================================= -->
