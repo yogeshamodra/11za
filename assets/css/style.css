@@ -88,7 +88,9 @@ h3,
 .font-display {
     font-family: "Outfit", "DM Sans", sans-serif;
 }
-
+.h-vh {
+    height: 100vh;
+}
 .mono {
     font-family: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -461,7 +463,7 @@ footer[id] {
     background: #09AF72;
     color: #fff;
     border: 0;
-    padding: 12px 22px;
+    padding: 20px 20px;
     border-radius: 10px;
     font-weight: 700;
 }
@@ -617,7 +619,8 @@ body:has(#mobileSidebar.show) .nav-burger .close-menu {
     display: block;
 
     width: 120px;
-    height: 40px;
+    /* height: 40px; */
+    height: 60px;
 
     object-fit: contain;
 }
@@ -2318,7 +2321,7 @@ body:has(#mobileSidebar.show) .nav-burger .close-menu {
 /* case study */
 
 .latest-case-studies {
-    background: #ffffff;
+    background: #f4f7f4;
 }
 
 

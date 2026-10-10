@@ -99,8 +99,9 @@
       /* PRICING */
 
       .pricing-section {
-        padding: 40px 0 100px;
-        background: var(--light-bg);
+        padding: 150px 0 100px;
+        background: linear-gradient(160deg, #f7faf9 0%, #e8f8f1 45%, #eef2ff 100%);
+        /* background: var(--light-bg); */
       }
 
       .section-title {
@@ -131,22 +132,8 @@
       }
 
       .pricing-card.featured {
-        border: 2px solid var(--primary);
-        box-shadow: 0 20px 60px rgba(22, 163, 74, 0.12);
-      }
-
-      .popular {
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #09af72;
-        color: #fff;
-        padding: 7px 18px;
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 800;
-        white-space: nowrap;
+       background-color: #0D163F;
+       color: white;
       }
 
       .plan-name {
@@ -172,9 +159,9 @@
       }
 
       .price-note {
-        color: var(--muted);
+        color: white;
         min-height: 45px;
-        font-size: 14px;
+        font-size: 16px;
       }
 
       .feature-list {
@@ -187,15 +174,37 @@
         display: flex;
         gap: 10px;
         margin-bottom: 14px;
-        color: #475569;
-        font-size: 15px;
+        /* color: #475569; */
+        color: white;
+        font-size: 20px;
       }
 
       .feature-list i {
         color: var(--primary);
         font-size: 18px;
       }
+      .feature-box {
+        background-color: #0D163F !important;
+        margin-top: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 20px;
+      }
 
+      .popular {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #09af72;
+        color: #fff;
+        padding: 7px 18px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
       /* FEATURES */
 
       .features-section {
@@ -388,7 +397,7 @@
     </header>
     <!-- HERO -->
 
-    <section class="hero text-center">
+    <!-- <section class="hero text-center">
       <div class="container">
         <div class="badge-soft mb-4">
           <i class="bi bi-whatsapp"></i>
@@ -438,7 +447,7 @@
           </span>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- PRICING -->
     <section class="pricing-section" id="pricing">
@@ -456,8 +465,8 @@
 
         <div class="row g-4 justify-content-center">
           <!-- 6 MONTH -->
-          <div class="col-lg-4 col-md-6">
-            <div class="pricing-card">
+          <div class="col-lg-6 col-md-6">
+            <div class="pricing-card text-center">
               <div class="plan-name">Half Yearly</div>
 
               <h3 class="price position-relative">
@@ -467,148 +476,98 @@
                 >
               </h3>
 
-              <p class="price-note">6 months of 11za platform access.</p>
+              <p class="price-note text-black">6 months of 11za platform access.</p>
 
-              <hr />
+              <a href="#" class="btn btn-outline-custom w-100"> Contact Us </a>
+             
+            </div>
+          </div>
 
+          <!-- YEARLY -->
+          <div class="col-lg-6 col-md-6">
+            <div class="pricing-card featured text-center">
+                         <div class="plan-name">Yearly</div>
+                  <div class="popular">MOST POPULAR</div>
+              <h3 class="price">₹15,000</h3>
+
+              <p class="price-note">12 months of 11za platform access.</p>
+
+              <a href="#" class="btn btn-primary w-100"> Get Started </a>
+            </div>
+          </div>
+        </div>
+         <div class="mt-3">
+                <span style="color: red">*</span> GST and WhatsApp messaging
+                charges are applicable separately.
+              </div>
+        <div class="feature-box bg-white row justify-content-center">
+          <div class="col-lg-10 row justify-content-between">
+
+            <div class="col-lg-5">
               <ul class="feature-list">
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Realtime Chat
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Bulk Broadcast Messages
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Teams & Permissions
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Customer Management
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Auto Reply Messages
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Quick Replies
                 </li>
               </ul>
-
-              <a href="#" class="btn btn-outline-custom w-100"> Contact Us </a>
-              <div class="mt-3">
-                <span style="color: red">*</span> GST and WhatsApp messaging
-                charges are applicable separately.
-              </div>
             </div>
-          </div>
-
-          <!-- YEARLY -->
-          <div class="col-lg-4 col-md-6">
-            <div class="pricing-card featured">
-              <div class="popular">MOST POPULAR</div>
-
-              <div class="plan-name">Yearly</div>
-
-              <h3 class="price">₹15,000</h3>
-
-              <p class="price-note">12 months of 11za platform access.</p>
-
-              <hr />
-
+            <div class="col-lg-5">
               <ul class="feature-list">
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Everything in Half Yearly
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   One Customer to Multiple Agents
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Private Team Messages
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Interactive Buttons
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Files Manager
                 </li>
-
+  
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
                   Rich Multimedia Support
                 </li>
               </ul>
-
-              <a href="#" class="btn btn-primary w-100"> Get Started </a>
-            </div>
-          </div>
-
-          <!-- CUSTOM -->
-          <div class="col-lg-4 col-md-8">
-            <div class="pricing-card">
-              <div class="plan-name">Custom</div>
-
-              <h3 class="price">₹50,000</h3>
-
-              <p class="price-note">
-                One-time setup cost extra. Designed for businesses with custom
-                requirements.
-              </p>
-
-              <hr />
-
-              <ul class="feature-list">
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  Custom implementation
-                </li>
-
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  Advanced requirements
-                </li>
-
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  Dedicated assistance
-                </li>
-
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  Business onboarding
-                </li>
-
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  Custom integrations
-                </li>
-
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  Enterprise requirements
-                </li>
-              </ul>
-
-              <a href="#" class="btn btn-outline-custom w-100">
-                Talk to Sales
-              </a>
             </div>
           </div>
         </div>
@@ -798,11 +757,22 @@
       </div>
     </section>
     <style>
-        .video-section {
-          padding: 50px;
-          background: radial-gradient(circle at 20% 20%, rgba(134, 239, 172, 0.18), transparent 25%), radial-gradient(circle at 80% 80%, rgba(134, 239, 172, 0.15), transparent 25%), #111827;
-        }
-      </style>
+      .video-section {
+        padding: 50px;
+        background:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(134, 239, 172, 0.18),
+            transparent 25%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(134, 239, 172, 0.15),
+            transparent 25%
+          ),
+          #111827;
+      }
+    </style>
     <section class="video-section position-relative">
       <div class="container">
         <div class="hero-mock-wrap" data-testid="hero-dashboard-preview">

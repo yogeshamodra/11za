@@ -48,8 +48,16 @@
       <nav class="container nav-inner" aria-label="Main navigation">
         <!-- LOGO -->
         <a href="index.html" class="brand" data-testid="nav-logo-11za">
-          <img
+          <!-- <img
             src="assets/images/11za_logo.svg"
+            alt=""
+            class="logo-icon"
+            width="120"
+            height="40"
+          /> -->
+          
+          <img
+            src="assets/images/11za_new_logo.svg"
             alt=""
             class="logo-icon"
             width="120"
@@ -1250,8 +1258,7 @@
                         <i
                           class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
                         ></i>
-                        <span
-                          ><strong>Shared Team Inbox:</strong> Single central
+                        <span><strong>Shared Team Inbox:</strong> Single central
                           WhatsApp API number.</span
                         >
                       </li>
@@ -1259,8 +1266,7 @@
                         <i
                           class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
                         ></i>
-                        <span
-                          ><strong>Auto-Assignment:</strong> Route chats based
+                        <span><strong>Auto-Assignment:</strong> Route chats based
                           on agent load.</span
                         >
                       </li>
@@ -1268,8 +1274,7 @@
                         <i
                           class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
                         ></i>
-                        <span
-                          ><strong>Internal Notes:</strong> Tag teammates inside
+                        <span><strong>Internal Notes:</strong> Tag teammates inside
                           conversation threads.</span
                         >
                       </li>
@@ -1277,8 +1282,7 @@
                         <i
                           class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"
                         ></i>
-                        <span
-                          ><strong>Rich Media:</strong> Support interactive
+                        <span><strong>Rich Media:</strong> Support interactive
                           buttons, catalogs & files.</span
                         >
                       </li>
@@ -3396,7 +3400,6 @@
         }
       </style>
       <section class="video-section position-relative">
-        
         <div class="container">
           <div class="hero-mock-wrap col-lg-9 mx-auto text-center" data-testid="hero-dashboard-preview">
             <div
@@ -3701,7 +3704,95 @@
           </div>
         </div>
       </section> -->
-
+<!-- ==================== PRICING ==================== -->
+      <section id="pricing" class="section section-alt" data-aos="fade-up">
+        <div class="container">
+          <div class="sec-head center">
+            <p class="chapter-label center reveal">Pricing</p>
+            <h2 class="reveal" data-delay="0.08">
+              Simple, honest pricing — sized to your business
+            </h2>
+            <p class="sub reveal" data-delay="0.16">
+              No one-size-fits-all plans. 11za pricing depends on your team size
+              and requirements, so you only pay for what you need.
+            </p>
+          </div>
+          <div class="pr-grid" data-testid="pricing-plans-container">
+            <div class="reveal">
+              <div class="pr-dark">
+                <div class="dots dot-grid-dark" aria-hidden="true"></div>
+                <div class="blob" aria-hidden="true"></div>
+                <span class="chip-dark">11za Platform</span>
+                <h3>Talk to Sales</h3>
+                <p class="sub">
+                  Get a plan tailored to your team — inbox agents, automation,
+                  campaigns, chatbots, integrations and onboarding support
+                  included.
+                </p>
+                <ul class="pr-list ps-0">
+                  <li>
+                    <span class="ck"
+                      ><svg class="ic"><use href="#i-check" /></svg></span
+                    >Shared team inbox on one number
+                  </li>
+                  <li>
+                    <span class="ck"
+                      ><svg class="ic"><use href="#i-check" /></svg></span
+                    >Automation, chatbots &amp; campaigns
+                  </li>
+                  <li>
+                    <span class="ck"
+                      ><svg class="ic"><use href="#i-check" /></svg></span
+                    >Free onboarding &amp; team training
+                  </li>
+                  <li>
+                    <span class="ck"
+                      ><svg class="ic"><use href="#i-check" /></svg></span
+                    >Dedicated support group
+                  </li>
+                </ul>
+                <a
+                  href="https://calendly.com/engees/schedule-a-demo"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-light"
+                  data-testid="pricing-talk-to-sales-btn"
+                  >Talk to Sales
+                  </a>
+              </div>
+            </div>
+            <div class="reveal" data-delay="0.12">
+              <div class="pr-light">
+                <span class="chip-light">Meta Messaging Charges</span>
+                <h3>Transparent, pay-as-you-go</h3>
+                <p class="sub">
+                  Meta charges per 24-hour conversation, billed by category at
+                  country-specific rates. These pass through to Meta — 11za
+                  doesn't mark them up.
+                </p>
+                <div class="meta-cats">
+                  <div>
+                    <p class="c1">Marketing</p>
+                    <p class="c2">per-conversation</p>
+                  </div>
+                  <div>
+                    <p class="c1">Utility</p>
+                    <p class="c2">per-conversation</p>
+                  </div>
+                  <div>
+                    <p class="c1">Authentication</p>
+                    <p class="c2">per-conversation</p>
+                  </div>
+                  <div>
+                    <p class="c1">Service</p>
+                    <p class="c2">per-conversation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- ================================
      LATEST CASE STUDIES
 ================================ -->
@@ -3802,95 +3893,7 @@
         </div>
       </section>
 
-      <!-- ==================== PRICING ==================== -->
-      <section id="pricing" class="section section-alt" data-aos="fade-up">
-        <div class="container">
-          <div class="sec-head center">
-            <p class="chapter-label center reveal">Pricing</p>
-            <h2 class="reveal" data-delay="0.08">
-              Simple, honest pricing — sized to your business
-            </h2>
-            <p class="sub reveal" data-delay="0.16">
-              No one-size-fits-all plans. 11za pricing depends on your team size
-              and requirements, so you only pay for what you need.
-            </p>
-          </div>
-          <div class="pr-grid" data-testid="pricing-plans-container">
-            <div class="reveal">
-              <div class="pr-dark">
-                <div class="dots dot-grid-dark" aria-hidden="true"></div>
-                <div class="blob" aria-hidden="true"></div>
-                <span class="chip-dark">11za Platform</span>
-                <h3>Talk to Sales</h3>
-                <p class="sub">
-                  Get a plan tailored to your team — inbox agents, automation,
-                  campaigns, chatbots, integrations and onboarding support
-                  included.
-                </p>
-                <ul class="pr-list ps-0">
-                  <li>
-                    <span class="ck"
-                      ><svg class="ic"><use href="#i-check" /></svg></span
-                    >Shared team inbox on one number
-                  </li>
-                  <li>
-                    <span class="ck"
-                      ><svg class="ic"><use href="#i-check" /></svg></span
-                    >Automation, chatbots &amp; campaigns
-                  </li>
-                  <li>
-                    <span class="ck"
-                      ><svg class="ic"><use href="#i-check" /></svg></span
-                    >Free onboarding &amp; team training
-                  </li>
-                  <li>
-                    <span class="ck"
-                      ><svg class="ic"><use href="#i-check" /></svg></span
-                    >Dedicated support group
-                  </li>
-                </ul>
-                <a
-                  href="https://calendly.com/engees/schedule-a-demo"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="btn btn-light"
-                  data-testid="pricing-talk-to-sales-btn"
-                  >Talk to Sales
-                  </a>
-              </div>
-            </div>
-            <div class="reveal" data-delay="0.12">
-              <div class="pr-light">
-                <span class="chip-light">Meta Messaging Charges</span>
-                <h3>Transparent, pay-as-you-go</h3>
-                <p class="sub">
-                  Meta charges per 24-hour conversation, billed by category at
-                  country-specific rates. These pass through to Meta — 11za
-                  doesn't mark them up.
-                </p>
-                <div class="meta-cats">
-                  <div>
-                    <p class="c1">Marketing</p>
-                    <p class="c2">per-conversation</p>
-                  </div>
-                  <div>
-                    <p class="c1">Utility</p>
-                    <p class="c2">per-conversation</p>
-                  </div>
-                  <div>
-                    <p class="c1">Authentication</p>
-                    <p class="c2">per-conversation</p>
-                  </div>
-                  <div>
-                    <p class="c1">Service</p>
-                    <p class="c2">per-conversation</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- =========================================================
      CTA
@@ -3919,36 +3922,40 @@
           </div>
         </div>
       </section>
-      <style>
-        .api-partner{
-          padding-top: 25px;
-          padding-bottom: 25px;
-          text-align: center;
-          font-size: 20px;
-        }
-        .ap-1 {
-          background-color: #09AF72;
-          color :white;
-        }
-        .ap-2 {
-          background-color: #111827;
-          color: white;
-
-        }
-      </style>
       <section class="api-partner-section overflow-hidden">
+        <style>
+          .api-partner{
+            padding-top: 25px;
+            padding-bottom: 25px;
+            text-align: center;
+            font-size: 20px;
+          }
+          .ap-1 {
+            background-color: #111827;
+            color :white;
+          }
+          .ap-2 {
+            background-color: #09AF72;
+            color: white;
+
+          }
+        </style>
         <div class="row">
 
-          <div class="col-lg-6 api-partner ap-1" >
+          <div class="col-lg-6 api-partner ap-1 d-flex align-items-center justify-content-center gap-2" >
+             <div>
+                <img src="assets/images/meta-logo.png" alt="" style="height: 30px;">
+              </div>
             <div>
-              Meta Business Partner
+              Meta Tech Partner
             </div>
           </div>
           <div class="col-lg-6 api-partner ap-2 px-4 px-sm-0">
             <div class="d-flex gap-2 align-items-center justify-content-center" data-aos="zoom-in"> 
 
               <div>
-                <img src="assets/images/whatsapp.png" alt="" style="height: 30px;">
+                <!-- <img src="assets/images/whatsapp-black.svg" alt="" style="height: 30px;"> -->
+                <img src="assets/images/whatsapp-white.svg" alt="" style="height: 30px;">
               </div>
               <div class="" >
                 Powered by Official <strong>WhatsApp Business API</strong>
