@@ -1506,17 +1506,6 @@ body:has(#mobileSidebar.show) .nav-burger .close-menu {
     filter: blur(80px);
 }
 
-.show-panel .card {
-    height: 600px;
-
-}
-
-@media (max-width: 900px) {
-    .show-panel .card {
-        height: 400px;
-    }
-}
-
 /* Respect reduced motion */
 
 
